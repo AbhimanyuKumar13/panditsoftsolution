@@ -1,0 +1,104 @@
+.section {
+  padding: 4.5rem 1.5rem;
+  background: var(--header-bg);
+}
+
+/* Container */
+.box {
+  max-width: 900px;
+  margin: auto;
+  background: var(--body-bg);
+  border-radius: 16px;
+  border: 1px solid var(--hover-bg);
+  padding: 2.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* Founder Card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 1.8rem 1.2rem;
+  border-radius: 14px;
+  background: var(--header-bg);
+  border: 1px solid var(--hover-bg);
+}
+
+/* Avatar framing */
+.avatarWrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--hover-bg),
+    transparent
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.avatarWrap img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Name */
+.card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+
+/* Role */
+.card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Mobile-first enhancement */
+@media (max-width: 640px) {
+  .section {
+    padding: 3.5rem 1rem;
+  }
+
+  .box {
+    padding: 2rem 1.2rem;
+    gap: 2.5rem;
+  }
+
+  .card {
+    padding: 2.2rem 1.4rem;
+  }
+
+  .avatarWrap {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 1.2rem;
+  }
+
+  .avatarWrap img {
+    width: 180px;
+  }
+
+  .card h3 {
+    font-size: 1.25rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}
+

@@ -1,0 +1,20 @@
+.appShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area */
+.mainContent {
+  flex: 1;
+  padding-top: 72px; /* header height */
+  padding-bottom: 80px; /* space for mobile bottom nav */
+}
+
+/* Desktop adjustments */
+@media (max-width: 769px) {
+  .mainContent {
+    padding-top: 0;
+    padding-bottom: 0; /* no bottom nav on desktop */
+  }
+}

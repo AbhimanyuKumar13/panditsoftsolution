@@ -1,0 +1,33 @@
+.floatingBtn {
+  position: fixed;
+  z-index: 999;
+  display: flex; 
+  align-items: center;
+  justify-content: center;  
+  flex-direction: row;
+  gap: 10px;
+  background: green; 
+  padding: 1.2rem 2.5rem; 
+  border-radius: 15px;  
+  transition: all;
+}
+.container{
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .floatingBtn {
+    top: 10rem;
+    right: 3rem;
+    align-items: flex-end;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .floatingBtn { 
+    display: none;
+  }
+} 

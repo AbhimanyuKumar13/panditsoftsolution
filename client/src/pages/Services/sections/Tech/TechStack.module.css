@@ -1,0 +1,26 @@
+.section {
+  padding: 4rem 1.2rem;
+  background: var(--header-bg);
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.list span {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: var(--body-bg);
+  border: 1px solid var(--hover-bg);
+  font-size: 0.85rem;
+  color: var(--text);
+}

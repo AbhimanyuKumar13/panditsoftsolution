@@ -1,0 +1,32 @@
+.cta {
+  padding: 4.5rem 1.2rem;
+  background: var(--body-bg);
+  border-top: 1px solid var(--hover-bg);
+}
+
+.inner {
+  max-width: 680px;
+  margin: auto;
+  text-align: center;
+}
+
+.inner h2 {
+  margin: 0;
+  color: var(--text);
+}
+
+.inner p {
+  margin-top: 0.8rem;
+  color: var(--muted);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1.6rem;
+  padding: 0.7rem 1.6rem;
+  background: var(--accent);
+  color: #111;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}

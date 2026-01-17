@@ -1,0 +1,24 @@
+.section {
+  padding: 4rem 1.2rem;
+  background: var(--header-bg);
+}
+
+.box {
+  max-width: 800px;
+  margin: auto;
+  background: var(--body-bg);
+  border-radius: 12px;
+  border: 1px solid var(--hover-bg);
+  padding: 2rem;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+p {
+  margin-top: 0.8rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}

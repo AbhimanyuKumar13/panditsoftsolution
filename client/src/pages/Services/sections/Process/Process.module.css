@@ -1,0 +1,40 @@
+.section {
+  padding: 4rem 1.2rem;
+  background: var(--body-bg);
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--text);
+}
+
+.steps {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.6rem;
+}
+
+.step {
+  padding: 1.4rem;
+  background: var(--header-bg);
+  border-radius: 10px;
+  border: 1px solid var(--hover-bg);
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.step span {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.step p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,35 @@
+.section {
+  padding: 3rem 1.2rem;
+  background: var(--header-bg);
+}
+
+.box {
+  max-width: 720px;
+  margin: auto;
+  background: var(--body-bg);
+  border-radius: 12px;
+  border: 1px solid var(--hover-bg);
+  padding: 2rem;
+}
+
+h3 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.note {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}

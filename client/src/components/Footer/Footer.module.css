@@ -1,0 +1,97 @@
+.footer {
+  background: var(--header-bg);
+  color: var(--text);
+  border-top: 1px solid var(--hover-bg);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.brand h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.brand p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact h5,
+.map h5 {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+} 
+
+.contact p {
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+.email{
+  text-decoration: none;
+}
+
+.map a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.map a:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid var(--hover-bg);
+} 
+@media (max-width: 700px) {
+  .footer{
+    margin-bottom: 4rem;
+  }
+  .inner {
+    grid-template-columns: 1fr; /* force single column */
+    padding: 2.2rem 1.2rem;
+    gap: 1.8rem;
+  }
+
+  .brand h4 {
+    font-size: 1.2rem;
+  }
+
+  .brand p {
+    font-size: 0.9rem;
+  }
+
+  .contact p {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .map a {
+    display: inline-block;
+    margin-top: 0.3rem;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .copy {
+    font-size: 0.8rem;
+    padding: 0.9rem 0.5rem;
+  }
+
+  .footer {
+    margin-bottom: 4rem; /* you already had this – good */
+  }
+}

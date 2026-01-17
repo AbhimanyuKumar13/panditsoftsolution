@@ -1,0 +1,52 @@
+.section {
+  padding: 4rem 1.2rem;
+  background: var(--body-bg);
+}
+
+.form {
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  color: var(--muted);
+}
+
+input,
+textarea {
+  padding: 0.6rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid var(--hover-bg);
+  background: var(--header-bg);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent);
+  color: #111;
+  font-weight: 500;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: rgb(209, 209, 52);
+}
