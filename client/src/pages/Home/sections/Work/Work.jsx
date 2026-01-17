@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "./Work.module.css";
-import {projects} from "../../../../data/Home/work.data"
+import {projects} from "../../../../data/Home/Work.data"
 
 const Work = () => {
   return (
