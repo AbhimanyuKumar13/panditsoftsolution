@@ -1,5 +1,5 @@
 .hero {
-  min-height: calc(100vh - 72px);
+  min-height: calc(60vh - 72px);
   display: flex;
   align-items: start;
   background: var(--body-bg);

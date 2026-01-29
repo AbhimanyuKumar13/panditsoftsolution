@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import styles from "./Header.module.css";
 import ThemeToggle from "../ThemeToggle/ThemeToggle.jsx";
 import logo from "../../assets/images/pss_no_bg.png";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Header = () => {
   const {
@@ -35,14 +36,23 @@ const Header = () => {
           <Link to="/ourServices">{VITE_NAV_SERVICES}</Link>
           <Link to="/projects">{VITE_NAV_PROJECTS}</Link>
           <Link to="/about">{VITE_NAV_ABOUT}</Link>
+          <Link to="/contact">{VITE_NAV_CONTACT}</Link>
         </nav>
 
         {/* Right actions */}
         <div className={styles.right}>
           <ThemeToggle />
-          <Link to="/contact" className={styles.cta}>
-            {VITE_NAV_CONTACT}
-          </Link>
+          <div
+            className={styles.floatingBtn}
+            aria-label="Training Center"
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <Link className={styles.container} to="/skill-lab">
+              <span> Skill Lab </span> <FaArrowRightLong />
+            </Link>
+          </div>
         </div>
       </div>
     </motion.header>

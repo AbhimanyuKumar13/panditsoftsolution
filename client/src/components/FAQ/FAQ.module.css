@@ -3,14 +3,25 @@
   background: var(--body-bg);
 }
 
-.section h2 {
+.header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+}
+
+.header h2 {
   color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.subtext {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .list {
-  max-width: 720px;
+  max-width: 760px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -20,7 +31,7 @@
 .item {
   background: var(--header-bg);
   border: 1px solid var(--hover-bg);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -28,7 +39,7 @@
   width: 100%;
   background: none;
   border: none;
-  padding: 1rem 1.2rem;
+  padding: 1.1rem 1.3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,12 +51,17 @@
 }
 
 .question:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.qText {
+  max-width: 90%;
 }
 
 .icon {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   transition: transform 0.25s ease;
+  line-height: 1;
 }
 
 .open {
@@ -53,14 +69,19 @@
 }
 
 .answer {
-  padding: 0 1.2rem 1rem;
+  padding: 0 1.3rem 1.1rem;
 }
 
-.answer p {
-  margin: 0.6rem 0 0;
+.answer p,
+.answer li {
   font-size: 0.9rem;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+.answer ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
 }
 
 /* Mobile refinement */
@@ -74,7 +95,8 @@
     font-size: 0.92rem;
   }
 
-  .answer p {
+  .answer p,
+  .answer li {
     font-size: 0.88rem;
   }
 }

@@ -6,19 +6,30 @@ import { points } from "../../../../data/Projects/Approach.data";
 const Approach = () => {
   return (
     <section className={styles.section}>
-      <h2>Our Approach</h2>
+      <header className={styles.header}>
+        <h2>Our Approach</h2>
+        <p>
+          A clear, structured process we follow to deliver reliable results.
+        </p>
+      </header>
 
-      <div className={styles.points}>
+      <div className={styles.flow}>
         {points.map((text, i) => (
           <motion.div
-            key={text}
-            className={styles.point}
-            initial={{ opacity: 0, y: 16 }}
+            key={i}
+            className={styles.step}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
+            transition={{ delay: i * 0.08, duration: 0.4 }}
           >
-            {text}
+            <div className={styles.marker}>
+              {String(i + 1).padStart(2, "0")}
+            </div>
+
+            <div className={styles.content}>
+              <p>{text}</p>
+            </div>
           </motion.div>
         ))}
       </div>

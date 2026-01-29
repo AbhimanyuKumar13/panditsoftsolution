@@ -1,0 +1,32 @@
+.modules {
+  margin-top: 3.5rem;
+}
+
+.modules h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  color: var(--text-primary, #111);
+}
+
+.module {
+  margin-bottom: 2.2rem;
+}
+
+.module h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--accent, #2563eb);
+}
+
+.module ul {
+  padding-left: 1.2rem;
+}
+
+.module li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #444);
+  margin-bottom: 0.4rem;
+}

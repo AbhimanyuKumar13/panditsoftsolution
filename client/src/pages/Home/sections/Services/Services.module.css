@@ -3,68 +3,129 @@
   background: var(--body-bg);
 }
 
-.section h2 {
+/* Header */
+.header {
+  max-width: 620px;
+  margin: 0 auto 3rem;
   text-align: center;
+}
+
+.header h2 {
   color: var(--text);
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.grid {
-  max-width: 1100px;
+.header p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Rail */
+.rail {
+  max-width: 900px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.6rem;
+  position: relative;
 }
 
-.card {
+/* Vertical line */
+.rail::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--hover-bg);
+}
+
+/* Row */
+.row {
+  display: flex;
+  gap: 1.4rem;
+  margin-bottom: 2.4rem;
+  position: relative;
+}
+
+/* Marker */
+.marker {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+/* Content */
+.content {
   background: var(--header-bg);
   border: 1px solid var(--hover-bg);
-  border-radius: 10px;
-  padding: 1.6rem;
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  width: 100%;
 }
 
-.card h3 {
+.content h3 {
   margin: 0;
-  color: var(--text);
   font-size: 1.05rem;
+  color: var(--text);
 }
 
-.card p {
+.content p {
   margin-top: 0.6rem;
   font-size: 0.9rem;
   color: var(--muted);
+  line-height: 1.6;
 }
 
+/* Desktop enhancement */
+@media (min-width: 768px) {
+  .rail::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .row {
+    align-items: center;
+  }
+
+  .row:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .content {
+    width: 45%;
+  }
+}
+
+/* Mobile refinement */
 @media (max-width: 640px) {
   .section {
     padding: 3rem 1rem;
   }
 
-  .section h2 {
-    font-size: 1.35rem;
-    margin-bottom: 2rem;
+  .content {
+    padding: 1.3rem;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
-  .card,
-  .item {
-    padding: 1.4rem;
-    border-radius: 12px;
-  }
-
-  .card h3,
-  .item h3 {
+  .content h3 {
     font-size: 1rem;
   }
 
-  .card p,
-  .item p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+  .content p {
+    font-size: 0.88rem;
   }
 }

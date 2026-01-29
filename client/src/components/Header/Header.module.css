@@ -51,9 +51,9 @@
   justify-content: center;
   gap: 0.8rem;
 }
-
-.cta {
-  padding: 0.45rem 1rem;
+ 
+.floatingBtn {  
+  padding: 0.5rem 1rem;
   border-radius: 6px;
   background: var(--accent);
   color: #111;
@@ -61,18 +61,31 @@
   font-size: 0.9rem;
   font-weight: 500;
 }
-
-/* Mobile cleanup */
+.floatingBtn:hover{
+  background-color: transparent;
+}
+.container{ 
+  text-decoration: none;
+}
+ 
+   
 @media (max-width: 768px) {
-  .nav,
-  .cta {
+  .nav{
     display: none;
   } 
+  .floatingBtn{
+    display: none;
+  }
   .brand img{
     width: 55px;
     height: 55px;
   }
   .name{
     font-size: 28px;
+  }
+}
+@media (max-width: 450px) {
+  .name{
+    font-size: 20px;
   }
 }

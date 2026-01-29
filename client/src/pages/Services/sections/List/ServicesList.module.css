@@ -3,29 +3,59 @@
   background: var(--header-bg);
 }
 
-.grid {
-  max-width: 1100px;
+.wrapper {
+  max-width: 980px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.8rem;
 }
 
-.card {
-  padding: 1.8rem;
-  border-radius: 10px;
+/* Big stacked block */
+.block {
   background: var(--body-bg);
   border: 1px solid var(--hover-bg);
+  border-radius: 16px;
+  padding: 2.2rem 2.4rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.card h3 {
-  margin: 0;
+.block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.block h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: var(--text);
-  font-size: 1.05rem;
 }
 
-.card p {
-  margin-top: 0.6rem;
+.block p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: var(--muted);
-  font-size: 0.9rem;
+  max-width: 820px;
+}
+
+/* Mobile refinement */
+@media (max-width: 640px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .block {
+    padding: 1.8rem 1.5rem;
+    border-radius: 14px;
+  }
+
+  .block h3 {
+    font-size: 1.05rem;
+  }
+
+  .block p {
+    font-size: 0.9rem;
+  }
 }

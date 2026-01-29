@@ -1,0 +1,295 @@
+[
+  {
+    "id": "mern-stack",
+    "slug": "mern-stack",
+    "title": "MERN Stack Developer Program",
+    "duration": "4 Months",
+    "level": "Beginner to Intermediate",
+    "mode": "Live",
+    "commitment": "8–10 hrs/week",
+    "price": "₹4,999",
+    "audience": [
+      "College students (2nd year and above)",
+      "Fresh graduates",
+      "Self-taught developers",
+      "Career switchers"
+    ],
+    "notFor": [
+      "Absolute beginners with no coding experience",
+      "Certificate-only seekers"
+    ],
+    "modules": [
+      {
+        "title": "Developer Foundations",
+        "topics": [
+          "Git & GitHub workflow",
+          "JavaScript fundamentals",
+          "Development environment setup"
+        ]
+      },
+      {
+        "title": "Frontend Engineering",
+        "topics": [
+          "React fundamentals",
+          "Component-driven UI",
+          "State management & data flow"
+        ]
+      },
+      {
+        "title": "Backend Engineering",
+        "topics": [
+          "Node.js & Express",
+          "REST API design",
+          "Authentication & authorization",
+          "Error handling & security basics"
+        ]
+      },
+      {
+        "title": "Database & Data Modeling",
+        "topics": ["MongoDB", "Schema design", "CRUD operations"]
+      },
+      {
+        "title": "Production Practices",
+        "topics": [
+          "Environment variables",
+          "Deployment basics",
+          "Debugging & performance"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "End-to-end MERN application",
+          "Code review",
+          "Live deployment"
+        ]
+      }
+    ],
+    "projects": [
+      "Authentication-based full-stack app",
+      "Admin dashboard",
+      "API-driven system",
+      "Live deployed project"
+    ],
+    "teachingMethod": [
+      "Live sessions by working developers",
+      "Code-along teaching",
+      "Mentor support & doubt clearing",
+      "Code reviews with feedback"
+    ],
+    "schedule": {
+      "sessionsPerWeek": 3,
+      "sessionDuration": "1.5 hours",
+      "recordings": true
+    }
+  },
+  {
+    "id": "frontend-engineer",
+    "slug": "frontend-engineer",
+    "title": "Frontend Engineer (React & UI Engineering)",
+    "duration": "2.5 Months",
+    "level": "Beginner to Intermediate",
+    "mode": "Live",
+    "commitment": "6–8 hrs/week",
+    "price": "₹2,999",
+    "audience": [
+      "Students interested in frontend development",
+      "Design-oriented developers",
+      "Beginners with basic JavaScript knowledge",
+      "Junior developers wanting stronger UI skills"
+    ],
+    "notFor": [
+      "Learners with zero JavaScript knowledge",
+      "Backend-only focused developers"
+    ],
+    "modules": [
+      {
+        "title": "Frontend Foundations",
+        "topics": [
+          "HTML, CSS & modern layout systems",
+          "JavaScript essentials for UI",
+          "Browser rendering basics"
+        ]
+      },
+      {
+        "title": "React Core",
+        "topics": [
+          "Component-based architecture",
+          "Props, state & hooks",
+          "Conditional rendering & lists"
+        ]
+      },
+      {
+        "title": "UI Engineering",
+        "topics": [
+          "Reusable component design",
+          "Form handling & validation",
+          "UI state & user interactions"
+        ]
+      },
+      {
+        "title": "Styling & Performance",
+        "topics": [
+          "CSS Modules & scalable styles",
+          "Responsive design",
+          "Basic performance optimization"
+        ]
+      },
+      {
+        "title": "Frontend Project",
+        "topics": [
+          "Production-ready frontend app",
+          "API integration",
+          "Deployment"
+        ]
+      }
+    ],
+    "projects": [
+      "Responsive multi-page frontend application",
+      "Dashboard-style UI",
+      "API-integrated frontend project"
+    ],
+    "teachingMethod": [
+      "Live code-along sessions",
+      "UI-focused exercises",
+      "Mentor feedback on components",
+      "Best practices discussion"
+    ],
+    "schedule": {
+      "sessionsPerWeek": 3,
+      "sessionDuration": "1.5 hours",
+      "recordings": true
+    }
+  },
+  {
+    "id": "backend-developer",
+    "slug": "backend-developer",
+    "title": "Backend Developer (Node.js & API Engineering)",
+    "duration": "2.5 Months",
+    "level": "Intermediate",
+    "mode": "Live",
+    "commitment": "7–9 hrs/week",
+    "price": "₹2,999",
+    "audience": [
+      "Developers interested in backend systems",
+      "Students with basic JavaScript knowledge",
+      "Frontend developers wanting backend skills"
+    ],
+    "notFor": ["Absolute beginners", "UI-only focused learners"],
+    "modules": [
+      {
+        "title": "Backend Fundamentals",
+        "topics": [
+          "Node.js runtime concepts",
+          "Express.js framework",
+          "REST API principles"
+        ]
+      },
+      {
+        "title": "API Development",
+        "topics": [
+          "CRUD operations",
+          "Request validation",
+          "Error handling strategies"
+        ]
+      },
+      {
+        "title": "Authentication & Security",
+        "topics": [
+          "JWT-based authentication",
+          "Authorization roles",
+          "Security best practices"
+        ]
+      },
+      {
+        "title": "Database Integration",
+        "topics": [
+          "MongoDB integration",
+          "Schema & data modeling",
+          "Optimizing database queries"
+        ]
+      },
+      {
+        "title": "Backend Project",
+        "topics": [
+          "Scalable REST API",
+          "Authentication-enabled backend",
+          "Deployment"
+        ]
+      }
+    ],
+    "projects": [
+      "RESTful API with authentication",
+      "Role-based backend system",
+      "Deployed backend service"
+    ],
+    "teachingMethod": [
+      "Live backend coding sessions",
+      "System design discussions",
+      "Debugging walkthroughs",
+      "Code review & optimization"
+    ],
+    "schedule": {
+      "sessionsPerWeek": 3,
+      "sessionDuration": "1.5 hours",
+      "recordings": true
+    }
+  },
+  {
+    "id": "project-internship",
+    "slug": "project-internship",
+    "title": "Project-Based Internship Program",
+    "duration": "6–8 Weeks",
+    "level": "Beginner to Intermediate",
+    "mode": "Live Mentorship",
+    "commitment": "6–10 hrs/week",
+    "price": "₹1,999",
+    "audience": [
+      "College students needing real project experience",
+      "Freshers building portfolios",
+      "Learners who completed basic training"
+    ],
+    "notFor": [
+      "Learners expecting classroom-style teaching",
+      "Zero coding experience candidates"
+    ],
+    "modules": [
+      {
+        "title": "Project Onboarding",
+        "topics": [
+          "Understanding requirements",
+          "Project planning & task breakdown",
+          "Development workflow"
+        ]
+      },
+      {
+        "title": "Project Development",
+        "topics": ["Feature implementation", "Bug fixing", "Code collaboration"]
+      },
+      {
+        "title": "Review & Improvement",
+        "topics": ["Code review", "Refactoring", "Performance improvements"]
+      },
+      {
+        "title": "Final Delivery",
+        "topics": ["Deployment", "Documentation", "Presentation & walkthrough"]
+      }
+    ],
+    "projects": [
+      "Real-world client-style project",
+      "Team or solo project experience",
+      "Deployed application with documentation"
+    ],
+    "teachingMethod": [
+      "Mentor-guided development",
+      "Weekly reviews",
+      "Industry-style workflow",
+      "Practical feedback"
+    ],
+    "schedule": {
+      "sessionsPerWeek": 2,
+      "sessionDuration": "2 hours",
+      "recordings": false
+    }
+  }
+]

@@ -1,21 +1,11 @@
-import Hero from "./sections/Hero/Hero";
-import Why from "./sections/Why/Why";
-import Audience from "./sections/Audience/Audience";
-import Outcomes from "./sections/Outcomes/Outcomes";
-import Process from "./sections/Process/Process";
-import Tracks from "./sections/Tracks/Tracks";
-import CTA from "./sections/CTA/CTA";
+import Hero from "./sections/Hero/Hero"; 
+import Training from "./sections/Training/Training";
 
 export default function SkillLab() {
   return (
     <>
       <Hero />
-      <Why />
-      <Audience />
-      <Outcomes />
-      <Process />
-      <Tracks />
-      <CTA />
+      <Training />
     </>
   );
 }

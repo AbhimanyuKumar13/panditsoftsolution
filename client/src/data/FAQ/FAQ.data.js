@@ -1,18 +1,42 @@
 export const faqs = [
   {
     q: "What services does PanditSoftSolution provide?",
-    a: "We build secure, scalable websites and web applications for small businesses, startups, and professionals."
+    a: [
+      "Custom websites and web applications",
+      "MERN stack development",
+      "Business websites for startups and SMEs",
+      "Maintenance, optimization, and security support"
+    ]
   },
   {
-    q: "Do you provide ongoing support after delivery?",
-    a: "Yes. We offer maintenance, updates, and security monitoring based on the selected plan."
+    q: "Do you provide support after project delivery?",
+    a: [
+      "Yes, we offer ongoing maintenance and support plans",
+      "Bug fixes, updates, and performance monitoring",
+      "Optional long-term technical partnership"
+    ]
   },
   {
     q: "How long does a typical project take?",
-    a: "Most projects take between 7 to 21 days, depending on complexity and requirements."
+    a:
+      "Project timelines usually range from 7 to 21 days. The exact duration depends on project scope, feature complexity, and client feedback turnaround."
   },
   {
-    q: "Is my data secure?",
-    a: "Security is built-in from day one, including HTTPS, best practices, and secure deployment."
+    q: "How do you handle payments and pricing?",
+    a:
+      "Pricing is based on project scope and defined clearly before work begins. Payments are usually milestone-based and documented through an agreement."
+  },
+  {
+    q: "Is my data and business information secure?",
+    a: [
+      "We follow secure coding and deployment best practices",
+      "HTTPS, access control, and secure hosting are standard",
+      "Client data confidentiality is protected via agreements"
+    ]
+  },
+  {
+    q: "Do you sign NDAs or service agreements?",
+    a:
+      "Yes. We work with NDAs, MSAs, and clear documentation to protect both the client and our team."
   }
 ];

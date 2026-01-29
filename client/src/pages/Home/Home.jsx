@@ -4,6 +4,7 @@ import Services from "./sections/Services/Services";
 import WhyUs from "./sections/WhyUs/WhyUs";
 import Work from "./sections/Work/Work";
 import CTA from "./sections/CTA/CTA";
+import Stats from "./sections/Stats/Stats";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Services />
       <WhyUs />
       <Work />
+      <Stats/>
       <CTA />
     </>
   );

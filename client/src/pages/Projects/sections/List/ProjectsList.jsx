@@ -33,6 +33,10 @@ const ProjectsList = () => {
               <strong>Outcome</strong>
               <p>{project.result}</p>
             </div>
+            <div className={styles.block}>
+              <strong>Client From</strong>
+              <p>{project.location}</p>
+            </div>
           </motion.div>
         ))}
       </div>

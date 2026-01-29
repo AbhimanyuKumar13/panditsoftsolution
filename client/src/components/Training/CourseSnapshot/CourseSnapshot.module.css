@@ -1,0 +1,26 @@
+.snapshot {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 2.4rem;
+}
+
+.snapshot h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+  color: var(--text-primary, #111);
+}
+
+.snapshot ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem 1.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.snapshot li {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #444);
+}

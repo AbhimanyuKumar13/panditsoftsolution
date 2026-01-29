@@ -1,7 +1,8 @@
 export const tech = [
+  "JavaScript",
   "React Js",
   "Next Js",
-  "Node.js",
+  "Node Js",
   "Express Js",
   "MongoDB",
   "mySQL",

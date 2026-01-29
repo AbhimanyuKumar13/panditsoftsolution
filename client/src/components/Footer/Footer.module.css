@@ -7,91 +7,126 @@
 .inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 3.5rem 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 3rem;
 }
 
+.brand{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .brand h4 {
-  font-size: 1.1rem;
+  font-size: 1.45rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .brand p {
   color: var(--muted);
   line-height: 1.6;
+  max-width: 340px;
 }
 
-.contact h5,
-.map h5 {
-  margin-bottom: 0.6rem;
+.social {
+  margin-top: 1.3rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.social a {
+  background: var(--hover-bg);
+  padding: 0.5rem;
+  border-radius: 12px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social a:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+}
+
+.social img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+/* Blocks */
+.block h5 {
   font-size: 0.95rem;
-} 
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
 
-.contact p {
+.block p {
+  font-size: 0.95rem;
   color: var(--muted);
-  margin-bottom: 0.4rem;
-}
-.email{
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
 }
 
-.map a {
-  color: var(--accent);
+.block a {
+  color: var(--text);
   text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.map {
+  display: inline-block;
+  margin-top: 0.4rem;
   font-weight: 500;
 }
 
-.map a:hover {
-  text-decoration: underline;
+/* Legal */
+.links {
+  display: grid;
+  gap: 0.4rem;
 }
 
+.links a {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.links a:hover {
+  color: var(--text);
+}
+
+/* Footer bottom */
 .copy {
+  border-top: 1px solid var(--hover-bg);
   text-align: center;
   padding: 1rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--muted);
-  border-top: 1px solid var(--hover-bg);
-} 
-@media (max-width: 700px) {
-  .footer{
-    margin-bottom: 4rem;
-  }
-  .inner {
-    grid-template-columns: 1fr; /* force single column */
-    padding: 2.2rem 1.2rem;
-    gap: 1.8rem;
-  }
+}
 
-  .brand h4 {
-    font-size: 1.2rem;
+/* Mobile */
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
   }
 
   .brand p {
-    font-size: 0.9rem;
-  }
-
-  .contact p {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 0.9rem;
-  }
-
-  .map a {
-    display: inline-block;
-    margin-top: 0.3rem;
-    padding: 0.5rem 0;
-    font-size: 0.95rem;
-  }
-
-  .copy {
-    font-size: 0.8rem;
-    padding: 0.9rem 0.5rem;
+    max-width: 100%;
   }
 
   .footer {
-    margin-bottom: 4rem; /* you already had this – good */
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 450px) {
+   
+  .social img{
+    width: 28px;
+    height: 28px;
   }
 }

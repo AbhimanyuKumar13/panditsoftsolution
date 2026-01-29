@@ -1,0 +1,115 @@
+.doc {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text);
+  background: var(--body-bg);
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--body-bg);
+  z-index: 5;
+  border-bottom: 1px solid var(--hover-bg);
+}
+
+.headerInner {
+  max-width: 920px;
+  margin: auto;
+  padding: 2.2rem 1.2rem 1.6rem;
+}
+
+.header h1 {
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.updated {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ===== BODY ===== */
+.body {
+  max-width: 920px;
+  margin: auto;
+  padding: 2.5rem 1.2rem 4rem;
+}
+
+/* ===== SECTION ===== */
+.section {
+  position: relative;
+  padding-left: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+/* Vertical guide line */
+.section::before {
+  content: "";
+  position: absolute;
+  left: 0.7rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--hover-bg);
+}
+
+/* Section header */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.index {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sectionHeader h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Content */
+.content p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+  margin-bottom: 0.9rem;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 640px) {
+  .headerInner {
+    padding: 1.8rem 1rem 1.4rem;
+  }
+
+  .body {
+    padding: 2rem 1rem 3.5rem;
+  }
+
+  .section {
+    padding-left: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+}
