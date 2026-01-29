@@ -16,6 +16,7 @@
   font-size: clamp(1.6rem, 2.5vw, 2.2rem);
   font-weight: 700;
   margin-bottom: 0.6rem;
+  color: var(--text);
 }
 
 /* CTA Subtext */
@@ -34,20 +35,23 @@
   gap: 0.5rem;
 
   padding: 0.85rem 1.7rem;
-  background-color: #25d366;
-  color: #0b1f14;
+  background-color: #25d366; /* WhatsApp brand color */
+  color: #0b1f14; /* readable on green */
 
   font-weight: 600;
   border-radius: 999px;
   text-decoration: none;
- 
-  transition: 
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+
+  transition:
     transform 0.15s ease,
     box-shadow 0.15s ease,
     filter 0.15s ease;
 }
 
 .whatsappBtn:hover {
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
   filter: brightness(1.05);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
 }

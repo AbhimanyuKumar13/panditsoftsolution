@@ -1,6 +1,6 @@
 .snapshot {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: var(--hover-bg);
+  border: 1px solid var(--hover-bg);
   border-radius: 14px;
   padding: 2.4rem;
 }
@@ -9,7 +9,7 @@
   font-size: 2.1rem;
   font-weight: 700;
   margin-bottom: 1.6rem;
-  color: var(--text-primary, #111);
+  color: var(--text);
 }
 
 .snapshot ul {
@@ -22,5 +22,5 @@
 
 .snapshot li {
   font-size: 0.95rem;
-  color: var(--text-secondary, #444);
+  color: var(--muted);
 }

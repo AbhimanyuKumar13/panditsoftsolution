@@ -6,7 +6,7 @@
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.8rem;
-  color: var(--text-primary, #111);
+  color: var(--text);
 }
 
 .module {
@@ -17,7 +17,7 @@
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.6rem;
-  color: var(--accent, #2563eb);
+  color: var(--accent);
 }
 
 .module ul {
@@ -27,6 +27,6 @@
 .module li {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--text-secondary, #444);
+  color: var(--muted);
   margin-bottom: 0.4rem;
 }
