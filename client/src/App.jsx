@@ -14,11 +14,10 @@ import Termspage from "./pages/Docs/pages/legal/Terms.jsx";
 import DataProtectionpage from "./pages/Docs/pages/security/DataProtection.jsx";
 import Esoppage from "./pages/Docs/pages/security/Esop.jsx";
 import IncidentResponsepage from "./pages/Docs/pages/security/IncidentResponse.jsx";
-import CodeofConductpage from "./pages/Docs/pages/hr/CodeofConduct.jsx";
+import CodeOfConductpage from "./pages/Docs/pages/hr/CodeofConduct.jsx";
 import Internshippage from "./pages/Docs/pages/hr/Internship.jsx";
 import Msapage from "./pages/Docs/pages/business/Msa.jsx";
-import Ndapage from "./pages/Docs/pages/business/Nda.jsx";
-import Training from "./pages/SkillLab/sections/Training/Training.jsx";
+import Ndapage from "./pages/Docs/pages/business/Nda.jsx"; 
 import CourseDetail from "./pages/SkillLab/sections/CourseDetail/CourseDetail.jsx";
 
 const App = () => {
@@ -49,7 +48,7 @@ const App = () => {
           <Route path="/esop-policy" element={<Esoppage />} />
           <Route
             path="/code-of-conduct-policy"
-            element={<CodeofConductpage />}
+            element={<CodeOfConductpage />}
           />
           <Route path="/internship-policy" element={<Internshippage />} />
           <Route path="/Msa-policy" element={<Msapage />} />
