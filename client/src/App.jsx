@@ -14,7 +14,7 @@ import Termspage from "./pages/Docs/pages/legal/Terms.jsx";
 import DataProtectionpage from "./pages/Docs/pages/security/DataProtection.jsx";
 import Esoppage from "./pages/Docs/pages/security/Esop.jsx";
 import IncidentResponsepage from "./pages/Docs/pages/security/IncidentResponse.jsx";
-import CodeOfConductpage from "./pages/Docs/pages/hr/CodeofConduct.jsx";
+import CodeOfConductpage from "./pages/Docs/pages/hr/CodeOfConduct.jsx";
 import Internshippage from "./pages/Docs/pages/hr/Internship.jsx";
 import Msapage from "./pages/Docs/pages/business/Msa.jsx";
 import Ndapage from "./pages/Docs/pages/business/Nda.jsx"; 
