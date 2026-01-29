@@ -7,7 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 import Facebook from "../../assets/images/facebook.png";
 import Instagram from "../../assets/images/Insta.png";
-import LinkedIn from "../../assets/images/Linkedin.png";
+import LinkedIn from "../../assets/images/linkedin.png";
 import X from "../../assets/images/X.png";
 import Youtube from "../../assets/images/youtube.png";
 
