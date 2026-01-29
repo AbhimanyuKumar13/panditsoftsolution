@@ -2,6 +2,8 @@
   padding: 4rem 6%;
   max-width: 900px;
   margin: 0 auto;
+  background: var(--body-bg);
+  color: var(--text);
 }
 
 .section {
@@ -12,7 +14,7 @@
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.2rem;
-  color: var(--text-primary, #111);
+  color: var(--text);
 }
 
 .section ul {
@@ -23,12 +25,12 @@
   margin-bottom: 0.6rem;
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--text-secondary, #444);
+  color: var(--muted);
 }
 
 /* Visual separation */
 .section:not(:last-child) {
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--hover-bg);
   padding-bottom: 2.5rem;
 }
 

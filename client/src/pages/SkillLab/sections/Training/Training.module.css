@@ -2,6 +2,7 @@
   padding: 4rem 6%;
   max-width: 1280px;
   margin: 0 auto;
+  background: var(--body-bg);
 }
 
 .header {
@@ -13,13 +14,13 @@
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
-  color: var(--text-primary, #111);
+  color: var(--text);
 }
 
 .header p {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: var(--text-secondary, #555);
+  color: var(--muted);
 }
 
 .grid {
