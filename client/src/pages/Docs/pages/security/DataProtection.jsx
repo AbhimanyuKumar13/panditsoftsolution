@@ -1,5 +1,5 @@
 import DocRenderer from "../../DocRenderer.jsx";
-import { DataProtection } from "../../../../data/Docs/security/DataProtection.js";
+import { DataProtection } from "../../../../data/Docs/security/dataProtection.js";
 
 const DataProtectionpage = () => {
   return <DocRenderer doc={DataProtection} />;

@@ -1,5 +1,5 @@
 import DocRenderer from "../../DocRenderer.jsx";
-import { PrivacyPolicy } from "../../../../data/Docs/legal/PrivacyPolicy.js";
+import { PrivacyPolicy } from "../../../../data/Docs/legal/privacyPolicy.js";
 
 const PrivacyPolicypage = () => {
   return <DocRenderer doc={PrivacyPolicy} />;

@@ -1,5 +1,5 @@
 import DocRenderer from "../../DocRenderer.jsx";
-import { IncidentResponse } from "../../../../data/Docs/security/IncidentResponse.js";
+import { IncidentResponse } from "../../../../data/Docs/security/incidentResponse.js";
 
 const IncidentResponsepage = () => {
   return <DocRenderer doc={IncidentResponse} />;
