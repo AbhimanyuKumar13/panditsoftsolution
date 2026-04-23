@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -11,22 +11,24 @@ const Hero = () => {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-      >
-        <h1>
-          We build <span>secure</span>, <span>scalable</span> digital products
+      > 
+
+        <h1> 
+          Power your <span>business</span> with our <br/><span>high-performing</span> websites and apps.
         </h1>
 
         <p>
-          PanditSoftSolution helps startups and businesses turn ideas into
-          reliable web applications — that actually gives Results.
+          At Pandit Soft Solution, we don’t just code — we design fast,
+          scalable, and conversion-focused digital products that help your
+          business grow online.
         </p>
 
         <div className={styles.actions}>
           <Link to="/contact" className={styles.primary}>
-            Get a Free Consultation
+            Start Your Project →
           </Link>
           <Link to="/projects" className={styles.secondary}>
-            View Work
+            See Our Work
           </Link>
         </div>
       </motion.div>

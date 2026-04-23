@@ -10,7 +10,7 @@ const About = () => {
   return (
     <>
       <AboutHero />
-      {/* <Owner/> */}
+      <Owner/>
       <AboutStory />
       <Values />
       <Vision />

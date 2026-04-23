@@ -1,6 +1,9 @@
 .section {
   padding: 4rem 1.2rem;
   background: var(--body-bg);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
 }
 
 .header {
@@ -21,7 +24,8 @@
 }
 
 .list {
-  max-width: 760px;
+  max-width: 760px; 
+  width: 760px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -83,13 +87,35 @@
   margin: 0.6rem 0 0;
   padding-left: 1.1rem;
 }
+.CTAWrapper{
+  margin-top: 2rem;
+  color: var(--text);
+}
+.CTA{
+  border: 1px solid var(--border);
+  padding: 0.75rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  background: transparent;
+
+  transition: all 0.25s ease;
+  margin-left: 1rem;
+}
+.CTA:hover{   
+  background: var(--hover-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+}
 
 /* Mobile refinement */
 @media (max-width: 640px) {
   .section {
     padding: 3rem 1rem;
   }
-
+  .list{
+    width: 400px;
+  }
   .question {
     padding: 1rem;
     font-size: 0.92rem;

@@ -1,33 +1,34 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import { motion } from "framer-motion";
-import styles from "./Work.module.css";
+import styles from "./WorkOffer.module.css";
 import { projects } from "../../../../data/Home/Work.data";
 
-const Work = () => {
+const WorkOffer = () => {
   return (
     <section className={styles.section}>
       <header className={styles.header}>
-        <h2>Featured Work</h2>
+        <h2>What We Offer</h2>
         <p>
-          A glimpse into the kind of digital products we build for real
-          businesses.
-        </p>
+          We build fast, scalable websites and applications for real-world businesses.
+        </p> 
       </header>
 
-      <div className={styles.scroller}>
+      <div className={styles.list}>
         {projects.map((project, i) => (
           <motion.article
             key={project.title}
             className={styles.card}
-            whileTap={{ scale: 0.97 }}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
           >
-            <span className={styles.type}>{project.type}</span>
+            <div className={styles.top}>
+              <span className={styles.type}>{project.type}</span>
+              <h3>{project.title}</h3>
+            </div>
 
-            <h3>{project.title}</h3>
             <p>{project.desc}</p>
 
             <div className={styles.tags}>
@@ -37,8 +38,15 @@ const Work = () => {
           </motion.article>
         ))}
       </div>
+
+      {/* CTA */}
+      <div className={styles.ctaWrap}>
+        <Link to="/ourservices" className={styles.cta}>
+          Explore All Services →
+        </Link>
+      </div>
     </section>
   );
 };
 
-export default Work;
+export default WorkOffer;

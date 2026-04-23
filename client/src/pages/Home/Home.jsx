@@ -1,18 +1,18 @@
 import React from "react";
-import Hero from "./sections/Hero/Hero";
-import Services from "./sections/Services/Services";
+import Hero from "./sections/Hero/Hero"; 
 import WhyUs from "./sections/WhyUs/WhyUs";
-import Work from "./sections/Work/Work";
+import WorkOffer from "./sections/WorkOffer/WorkOffer";
 import CTA from "./sections/CTA/CTA";
 import Stats from "./sections/Stats/Stats";
+import Offer from "./sections/Offer/Offer";
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <Services />
+      <Offer/>
+      <Hero /> 
       <WhyUs />
-      <Work />
+      <WorkOffer />
       <Stats/>
       <CTA />
     </>
@@ -20,3 +20,4 @@ const Home = () => {
 };
 
 export default Home;
+// 

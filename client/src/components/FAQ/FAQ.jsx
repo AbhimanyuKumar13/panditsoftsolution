@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./FAQ.module.css";
 import { faqs } from "../../data/FAQ/FAQ.data";
@@ -15,7 +16,8 @@ const FAQ = () => {
       <header className={styles.header}>
         <h2>Frequently Asked Questions</h2>
         <p className={styles.subtext}>
-          Clear answers to common questions about our process, pricing, and support.
+          Clear answers to common questions about our process, pricing, and
+          support.
         </p>
       </header>
 
@@ -64,6 +66,9 @@ const FAQ = () => {
           </div>
         ))}
       </div>
+      <p className={styles.CTAWrapper}>
+        Still have questions? <Link className={styles.CTA} to="/contact">Talk to us →</Link>
+      </p>
     </section>
   );
 };

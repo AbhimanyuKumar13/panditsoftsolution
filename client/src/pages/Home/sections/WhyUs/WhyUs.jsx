@@ -6,32 +6,39 @@ import { points } from "../../../../data/Home/Whyus.data";
 const WhyUs = () => {
   return (
     <section className={styles.section}>
-      <header className={styles.header}>
-        <h2>Why Choose Us</h2>
-        <p>
-          Principles that guide how we design, build, and deliver software.
-        </p>
-      </header>
+      <div className={styles.wrapper}>
+        <header className={styles.header}>
+          <h2>Why Choose Us</h2> 
+        </header>
 
-      <div className={styles.scroller}>
-        {points.map((item, i) => (
-          <motion.article
-            key={item.title}
-            className={styles.card}
-            whileTap={{ scale: 0.96 }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.08 }}
-          >
-            <span className={styles.index}>
-              {String(i + 1).padStart(2, "0")}
-            </span>
+        <div className={styles.timeline}>
+          {points.map((item, i) => (
+            <motion.div
+              key={item.title}
+              className={styles.item}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+            > 
 
-            <h3>{item.title}</h3>
-            <p>{item.desc}</p>
-          </motion.article>
-        ))}
+              {/* CARD */}
+              <div className={styles.card}>
+                <div className={styles.inner}>
+                  <div className={styles.imageWrapper}>
+                    <img src={item.image} alt={item.title} />
+                  </div>
+
+                  <div className={styles.content}> 
+
+                    <h3>{item.title}</h3>
+                    <p>{item.desc}</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

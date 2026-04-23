@@ -54,7 +54,7 @@ const Header = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div> 
     </motion.header>
   );
 };

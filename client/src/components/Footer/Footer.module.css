@@ -15,14 +15,25 @@
 
 .brand{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
 }
 .brand h4 {
   font-size: 1.45rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+}
+.brand h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0.5rem 0rem;
+}
+.brand h3 a{ 
+  text-decoration: none; 
+  padding-left: 0.5rem;
 }
 
 .brand p {

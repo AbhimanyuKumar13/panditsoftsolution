@@ -13,7 +13,7 @@ const CTA = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
       >
-        <h2>Have a project/Idea in mind?</h2>
+        <h2>Have a project/Idea in mind? or any problem in Existing project</h2>
         <p>
           Let’s talk about how Pandit Soft Solution can help you build it right.
         </p>
