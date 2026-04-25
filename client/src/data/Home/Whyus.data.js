@@ -3,7 +3,7 @@ import SDLCImg from "../../assets/images/whyusimg/SDLC.png";
 import CleanCode from "../../assets/images/whyusimg/CleanCode.png";
 import FastDelivery from "../../assets/images/whyusimg/FastDelivery.png";
 import PO from "../../assets/images/whyusimg/PO.png";
-import Honestcomm from "../../assets/images/whyusimg/Honestcomm.png";
+import Honestcomm from "../../assets/images/whyusimg/HonestComm.png";
 import LTS from "../../assets/images/whyusimg/LTS.jpeg";
 export const points = [
   {
