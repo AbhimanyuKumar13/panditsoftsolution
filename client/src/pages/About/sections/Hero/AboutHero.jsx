@@ -11,9 +11,12 @@ const AboutHero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45, ease: "easeOut" }}
       >
-        <h1>About Pandit Soft Solution</h1>
+        <span className={styles.eyebrow}>Who We Are</span>
+        <h1>Built by Engineers.<br />Driven by Real Problems.</h1>
         <p>
-          We build software with clarity, responsibility, and long-term thinking.
+          Pandit Soft Solution is a small, focused software team from Bihar, India. We
+          build web applications, AI tools, and digital platforms that work —
+          without the overhead of an agency.
         </p>
       </motion.div>
     </section>

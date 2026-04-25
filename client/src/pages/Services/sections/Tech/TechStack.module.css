@@ -4,9 +4,21 @@
   text-align: center;
 }
 
-.section h2 {
-  margin-bottom: 2rem;
+.header {
+  max-width: 620px;
+  margin: 0 auto 2rem;
+}
+
+.header h2 {
+  margin: 0 0 0.5rem;
   color: var(--text);
+}
+
+.header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .list {
@@ -14,6 +26,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.8rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .list span {

@@ -7,17 +7,17 @@ const Process = () => {
   return (
     <section className={styles.section}>
       <header className={styles.header}>
-        <h2>How We Work</h2>
+        <h2>How We Deliver</h2>
         <p>
-          A structured, repeatable process that keeps projects predictable and
-          transparent.
+          Straight steps from scope to launch so the project stays clear and
+          easy to track.
         </p>
       </header>
 
       <div className={styles.path}>
         {steps.map((step, i) => (
           <motion.div
-            key={i}
+            key={step.title}
             className={styles.node}
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +29,8 @@ const Process = () => {
             </div>
 
             <div className={styles.content}>
-              <p>{step}</p>
+              <h3>{step.title}</h3>
+              <p>{step.desc}</p>
             </div>
           </motion.div>
         ))}

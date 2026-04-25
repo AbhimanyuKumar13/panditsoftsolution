@@ -42,15 +42,16 @@ p {
 .primary {
   position: relative;
   background: transparent;
-  color: black;
-
-  padding: 0.75rem 1.6rem;
+  color: var(--text);
+  
+  background: var(--accent);
+  padding: 0.75rem 1.6rem; 
+  border: 1px solid var(--accent);
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
 
-  overflow: hidden;
-  border: none;
+  overflow: hidden; 
 
   transition: transform 0.25s ease;
 }
@@ -60,7 +61,6 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--accent);
   opacity: 0.85; /* initial */
   transition: opacity 0.35s ease;
   z-index: -1;
@@ -72,6 +72,10 @@ p {
 }
 
 .primary:hover {
+  background: transparent;
+  border: 1px solid var(--accent);
+  
+  transition: transform 0.25s ease;
   transform: translateY(-2px);
 }
 .primary:active::before {

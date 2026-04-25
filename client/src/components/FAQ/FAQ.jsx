@@ -66,9 +66,9 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-      <p className={styles.CTAWrapper}>
+      <div className={styles.CTAWrapper}>
         Still have questions? <Link className={styles.CTA} to="/contact">Talk to us →</Link>
-      </p>
+      </div>
     </section>
   );
 };

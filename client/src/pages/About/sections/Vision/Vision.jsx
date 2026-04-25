@@ -12,10 +12,16 @@ const Vision = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
       >
-        <h2>Our Vision</h2>
+        <span className={styles.eyebrow}>Our Vision</span>
+        <h2>
+          The go-to engineering partner for businesses that want software
+          built right — not just built fast.
+        </h2>
         <p>
-          To become a trusted technology partner for businesses by delivering
-          secure, scalable, and thoughtfully engineered digital products.
+          We're not chasing scale for its own sake. We want to be the team that
+          founders and business owners trust to turn their ideas into reliable,
+          maintainable products — the kind of team you call again for the next
+          version.
         </p>
       </motion.div>
     </section>

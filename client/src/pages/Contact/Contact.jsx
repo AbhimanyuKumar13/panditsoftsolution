@@ -8,9 +8,9 @@ const Contact = () => {
   return (
     <>
       <ContactHero />
-      <ContactInfo />
       <ContactForm />
       <ContactCTA />
+      <ContactInfo />
     </>
   );
 };

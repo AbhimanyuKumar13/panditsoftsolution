@@ -1,69 +1,65 @@
-/* ── Offer Banner ───────────────────────────────────────── */
+/* ── Container ───────────────────────── */
 .main {
   width: 100%;
   position: sticky;
-  top: 64px; /* sits flush under the 64px header */
-  z-index: 49; /* just below header's z-index: 50 */
+  top: 64px;
+  z-index: 49;
   overflow: hidden;
- 
+
   background: color-mix(in srgb, var(--header-bg) 72%, transparent);
-  backdrop-filter: blur(18px) saturate(1.6);
-  -webkit-backdrop-filter: blur(18px) saturate(1.6);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, #000 40%);
-  box-shadow: 0 2px 16px -4px color-mix(in srgb, var(--accent) 45%, transparent);
+  backdrop-filter: blur(18px);
 }
 
-/* ── Scrolling track ────────────────────────────────────── */
+/* ── Track ───────────────────────── */
 .track {
   display: flex;
   width: max-content;
-  padding: 0.55rem 0;
-  animation: marquee 28s linear infinite;
+  gap: 2.5rem;
+  padding: 0.6rem 0;
+
+  animation: scroll 20s linear infinite;
 }
 
 .track:hover {
   animation-play-state: paused;
 }
 
-/* ── Single offer item ──────────────────────────────────── */
-.offer {
+/* ── Each item (THIS FIXES OVERLAP) ───────────────── */
+.item {
   white-space: nowrap;
-  padding: 0 3rem;
+  flex-shrink: 0; /* 🔥 critical */
+
   font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text);
-
-  /* separate items with a stylized dot */
-  display: flex;
-  align-items: center;
-  gap: 3rem;
 }
 
-/* bullet between duplicated strings */
-.offer::after {
-  content: "✦";
-  font-size: 0.65rem;
+/* separator */
+.item::after {
+  content: " ✦ ";
   opacity: 0.5;
-  margin-left: -1.5rem;
 }
 
-/* ── Marquee keyframe ───────────────────────────────────── */
-@keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* ── Animation ───────────────────────── */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* ── Mobile ───────────────────────── */
 @media (max-width: 768px) {
-  .main {
-    top: 64px;
+  .track {
+    gap: 1.5rem;
+    animation-duration: 14s;
   }
 
-  .offer {
+  .item {
     font-size: 0.75rem;
-    padding: 0 2rem;
-    gap: 2rem;
   }
 }

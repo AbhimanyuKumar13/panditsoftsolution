@@ -13,10 +13,13 @@ const ServicesCTA = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
       >
-        <h2>Ready to start your project?</h2>
-        <p>Let’s discuss your requirements and timeline.</p>
-        <Link to="/contact" className={styles.button}>
-          Contact Us
+        <h2>Need a website or web app built?</h2>
+        <p>
+          Share the pages, features, or idea you have in mind, and we can plan
+          the right build with you.
+        </p>
+        <Link to="/Contact" className={styles.button}>
+          Start a Project
         </Link>
       </motion.div>
     </section>

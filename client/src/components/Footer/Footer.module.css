@@ -36,10 +36,11 @@
   padding-left: 0.5rem;
 }
 
-.brand p {
+.tagline {
   color: var(--muted);
   line-height: 1.6;
-  max-width: 340px;
+  max-width: 320px; 
+  margin: 0;
 }
 
 .social {
@@ -126,8 +127,8 @@
     gap: 2.2rem;
   }
 
-  .brand p {
-    max-width: 100%;
+  .tagline{
+    max-width: 60%;
   }
 
   .footer {

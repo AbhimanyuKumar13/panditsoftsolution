@@ -13,12 +13,13 @@ const AboutCTA = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
       >
-        <h2>Let’s build something meaningful</h2>
+        <h2>Have a project in mind?</h2>
         <p>
-          If our approach aligns with your goals, we’d love to talk.
+          Tell us what you're building. We'll tell you if we're the right fit —
+          no sales pitch, just an honest conversation.
         </p>
         <Link to="/contact" className={styles.button}>
-          Get in Touch
+          Start a Conversation
         </Link>
       </motion.div>
     </section>

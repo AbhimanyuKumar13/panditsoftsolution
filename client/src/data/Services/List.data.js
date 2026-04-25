@@ -1,27 +1,62 @@
 export const services = [
   {
-    title: "Web Application Development",
+    title: "Business Websites",
     desc:
-      "Design and development of scalable, secure, and performance-focused web applications tailored to business requirements.",
+      "Clear, responsive websites for companies, local businesses, portfolios, and service brands.",
+    points: [
+      "Company profile and service websites",
+      "Landing pages and marketing pages",
+      "Website redesigns and content refreshes",
+    ],
+  },
+  {
+    title: "Custom Web Applications",
+    desc:
+      "Browser-based systems built around real business workflows, user roles, and daily operations.",
+    points: [
+      "Admin panels and internal tools",
+      "Dashboards, portals, and booking systems",
+      "Forms, approvals, and workflow automation",
+    ],
+  },
+  {
+    title: "E-commerce Stores",
+    desc:
+      "Online stores built for product browsing, checkout, and easier order management.",
+    points: [
+      "Product catalog and category setup",
+      "Cart, checkout, and payment integration",
+      "Order tracking and admin-side management",
+    ],
+  },
+  {
+    title: "Frontend Development",
+    desc:
+      "Fast interfaces that work smoothly across mobile, tablet, and desktop screens.",
+    points: [
+      "React and Next.js frontends",
+      "Reusable UI sections and forms",
+      "Speed, layout, and usability improvements",
+    ],
   },
   {
     title: "Backend & API Development",
     desc:
-      "Robust backend systems, APIs, authentication, and database integrations built for reliability and long-term scalability.",
+      "Server-side systems that handle business logic, data, access control, and integrations.",
+    points: [
+      "REST APIs and database design",
+      "Authentication, roles, and permissions",
+      "Third-party API and payment integrations",
+    ],
   },
   {
-    title: "UI / UX Design",
+    title: "Maintenance & Feature Support",
     desc:
-      "User-centric interface and experience design focused on usability, accessibility, and clear business outcomes.",
-  },
-  {
-    title: "Maintenance & Support",
-    desc:
-      "Ongoing support, monitoring, performance optimization, and updates to ensure long-term stability after deployment.",
-  },
-  {
-    title: "Custom Website Solutions",
-    desc:
-      "Tailored websites designed to align with brand identity, business goals, and target audience needs.",
+      "Support after launch for bug fixes, speed issues, upgrades, and ongoing feature work.",
+    points: [
+      "Bug fixing and code cleanup",
+      "Feature additions and UI updates",
+      "Deployment help and ongoing support",
+    ],
   },
 ];

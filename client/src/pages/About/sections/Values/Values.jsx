@@ -7,10 +7,10 @@ const Values = () => {
   return (
     <section className={styles.section}>
       <header className={styles.header}>
-        <h2>Our Values</h2>
+        <h2>What We Stand For</h2>
         <p>
-          The principles that guide how we work, communicate, and deliver
-          software.
+          The principles that shape every decision we make — from architecture
+          choices to client conversations.
         </p>
       </header>
 

@@ -3,7 +3,6 @@
   background: var(--body-bg);
 }
 
-/* Header */
 .header {
   max-width: 620px;
   margin: 0 auto 3rem;
@@ -21,14 +20,12 @@
   line-height: 1.6;
 }
 
-/* Path container */
 .path {
   max-width: 900px;
   margin: auto;
   position: relative;
 }
 
-/* Vertical spine */
 .path::before {
   content: "";
   position: absolute;
@@ -39,7 +36,6 @@
   background: var(--hover-bg);
 }
 
-/* Node */
 .node {
   display: flex;
   gap: 1.4rem;
@@ -47,7 +43,6 @@
   position: relative;
 }
 
-/* Marker */
 .marker {
   width: 44px;
   height: 44px;
@@ -63,7 +58,6 @@
   z-index: 1;
 }
 
-/* Content */
 .content {
   background: var(--header-bg);
   border: 1px solid var(--hover-bg);
@@ -72,14 +66,19 @@
   width: 100%;
 }
 
+.content h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
 .content p {
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.65;
-  color: var(--text);
+  color: var(--muted);
 }
 
-/* Desktop zig-zag */
 @media (min-width: 768px) {
   .path::before {
     left: 50%;
@@ -105,7 +104,6 @@
   }
 }
 
-/* Mobile refinement */
 @media (max-width: 640px) {
   .section {
     padding: 3rem 1rem;
@@ -113,6 +111,10 @@
 
   .content {
     padding: 1.4rem;
+  }
+
+  .content h3 {
+    font-size: 0.95rem;
   }
 
   .content p {

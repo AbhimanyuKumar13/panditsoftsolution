@@ -1,11 +1,16 @@
 export const tech = [
+  "HTML",
+  "CSS",
+  "Tailwind",
   "JavaScript",
-  "React Js",
-  "Next Js",
-  "Node Js",
-  "Express Js",
+  "typeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Express.js",
   "MongoDB",
-  "mySQL",
+  "MySQL",
   "REST APIs",
   "Git & GitHub",
+  "others"
 ];

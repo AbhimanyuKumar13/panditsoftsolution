@@ -50,3 +50,6 @@ textarea:focus {
 .button:hover{
   background-color: rgb(209, 209, 52);
 }
+.warn{
+  color: skyblue;
+}

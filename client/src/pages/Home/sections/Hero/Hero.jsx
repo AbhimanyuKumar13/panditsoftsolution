@@ -14,7 +14,7 @@ const Hero = () => {
       > 
 
         <h1> 
-          Power your <span>business</span> with our <br/><span>high-performing</span> websites and apps.
+          Power your <span>business</span> with <br/><span>high-performing</span> websites and apps.
         </h1>
 
         <p>

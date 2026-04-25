@@ -22,7 +22,7 @@ const CourseCTA = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
     >
-      <h2>Let’s Start Your Journey with PanditSoftSolution.</h2>
+      <h2>Let’s Start Your Journey with <br/> Pandit Soft Solution.</h2>
       <p>Connect to Our HR Team.</p>
 
       <a

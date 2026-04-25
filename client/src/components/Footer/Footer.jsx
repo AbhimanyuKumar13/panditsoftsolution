@@ -46,7 +46,7 @@ const Footer = () => {
               {VITE_COMPANY_EMAIL}
             </a>
           </h3>
-          <p>{VITE_COMPANY_TAGLINE}</p>
+          <p className={styles.tagline}>{VITE_COMPANY_TAGLINE}</p>
 
           <div className={styles.social}>
             <a href={VITE_SOCIAL_LINKEDIN} target="_blank">

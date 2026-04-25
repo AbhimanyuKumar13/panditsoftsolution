@@ -98,6 +98,7 @@ const ContactForm = () => {
         <button className={styles.button} type="submit" disabled={loading}>
           {loading ? "Sending..." : "Send Message"}
         </button>
+        <p className={styles.warn}>In case if this form is not working kindly contact directly via Below whatsapp Business(sorry for the inconvenience) </p>
       </motion.form>
     </section>
   );
