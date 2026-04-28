@@ -1,7 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FiArrowRight, FiCheckCircle } from "react-icons/fi";
 import styles from "./CTA.module.css";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+
+const reasons = [
+  "Clear scope before build",
+  "Better UX on every screen",
+  "Help for new or existing projects",
+];
 
 const CTA = () => {
   return (
@@ -13,14 +20,32 @@ const CTA = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
       >
-        <h2>Have a project/Idea in mind? or any problem in Existing project</h2>
-        <p>
-          Let’s talk about how Pandit Soft Solution can help you build it right.
-        </p>
+        <div className={styles.copy}>
+          <span className={styles.kicker}>Ready To Talk</span>
+          <h2>Need help with a new build, redesign, or project issue?</h2>
+          <p>
+            We can turn it into a clear plan and a better user experience.
+          </p>
 
-        <Link to="/contact" className={styles.button}>
-          Contact Us
-        </Link>
+          <ul className={styles.reasons}>
+            {reasons.map((item) => (
+              <li key={item}>
+                <FiCheckCircle aria-hidden="true" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className={styles.actions}>
+          <Link to="/Contact" className={styles.button}>
+            Contact Us
+            <FiArrowRight aria-hidden="true" />
+          </Link>
+          <Link to="/Projects" className={styles.secondary}>
+            See Projects
+          </Link>
+        </div>
       </motion.div>
     </section>
   );

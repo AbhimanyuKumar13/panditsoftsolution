@@ -1,26 +1,44 @@
 export const projects = [
   {
-    title: "Business Website",
-    type: "Website",
+    title: "Business Websites",
+    type: "Brand Presence",
     desc:
-      "High-performance, SEO-friendly business website designed to convert visitors into leads.",
-    stack: "MERN or Your Prefered",
-    audience: "Startups & SMEs",
+      "Business websites that explain your offer and turn visits into leads.",
+    stack: "React, Next.js, or your preferred stack",
+    audience: "Startups, SMEs, and service brands",
+    deliverables: [
+      "Responsive business pages",
+      "Landing sections and enquiry flow",
+      "Redesigns and content updates",
+    ],
+    result: "A clean website that builds trust.",
   },
   {
     title: "Admin Dashboard Web App",
-    type: "Web Application",
+    type: "Operations",
     desc:
-      "Secure dashboard with role-based access, analytics, and scalable backend architecture.",
-    stack: "MERN or Your Prefered",
-    audience: "Internal Teams",
+      "Dashboards and internal tools built around real workflows.",
+    stack: "MERN, custom APIs, or your preferred stack",
+    audience: "Internal teams and growing businesses",
+    deliverables: [
+      "Role-based dashboards",
+      "Forms, approvals, and integrations",
+      "Scalable structure for new features",
+    ],
+    result: "A clearer system for daily work.",
   },
   {
     title: "Landing Page for Services",
-    type: "Marketing",
+    type: "Conversion",
     desc:
-      "Conversion-focused landing page built for speed, clarity, and mobile users.",
-    stack: "MERN or Your Prefered",
-    audience: "Service Businesses",
+      "Landing pages built for clarity, speed, and action.",
+    stack: "Fast frontend or CMS setup",
+    audience: "Service businesses",
+    deliverables: [
+      "Clear offer positioning",
+      "Mobile-first layout",
+      "Stronger CTA placement",
+    ],
+    result: "A sharper page that drives action.",
   },
 ];

@@ -5,40 +5,41 @@ import FastDelivery from "../../assets/images/whyusimg/FastDelivery.png";
 import PO from "../../assets/images/whyusimg/PO.png";
 import Honestcomm from "../../assets/images/whyusimg/HonestComm.png";
 import LTS from "../../assets/images/whyusimg/LTS.jpeg";
+
 export const points = [
   {
     title: "Security First",
-    desc: "We design systems with security in mind from day one, not as an afterthought.",
+    desc: "Security is built in from day one.",
     image: securityImg,
   },
   {
-    title: "Smart Planning(SDLC)",
-    desc: "We don’t jump into coding. Every project starts with clear strategy and structure.",
+    title: "Smart Planning (SDLC)",
+    desc: "Clear planning before coding starts.",
     image: SDLCImg,
   },
   {
     title: "Clean & Maintainable Code",
-    desc: "Readable, testable and future-proof engineering practices.",
+    desc: "Readable and maintainable code.",
     image: CleanCode,
   },
   {
     title: "Fast & Reliable Delivery",
-    desc: "We ship quickly without compromising performance or stability.",
+    desc: "Fast delivery without cutting quality.",
     image: FastDelivery,
   },
   {
     title: "Performance Optimized",
-    desc: "Speed matters. We build applications that are fast, responsive, and efficient.",
+    desc: "Fast, responsive, efficient builds.",
     image: PO,
   },
   {
-    title: "Honest Communication (pay for what you want)",
-    desc: "No fake promises. Clear timelines and realistic expectations.",
+    title: "Honest Communication (pay only for what you need)",
+    desc: "Clear timelines and realistic expectations.",
     image: Honestcomm,
   },
   {
     title: "Long-Term Support (maintenance)",
-    desc: "We stay with you even after launch — updates, fixes, and scaling included.",
+    desc: "Support after launch for fixes and growth.",
     image: LTS,
   },
 ];

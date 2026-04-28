@@ -1,27 +1,32 @@
 export const steps = [
   {
     title: "Requirement Mapping",
+    focus: "Understand the business need",
     desc:
-      "We define pages, features, user roles, integrations, and scope before development starts.",
+      "Define pages, features, roles, and scope before the build starts.",
   },
   {
     title: "Structure & UI Planning",
+    focus: "Shape the experience",
     desc:
-      "We plan the page flow, layout, and core user actions so the build stays focused.",
+      "Plan flow, layout, and key user actions.",
   },
   {
     title: "Build In Milestones",
+    focus: "Review progress regularly",
     desc:
-      "The project is developed in parts with regular reviews instead of one big handoff at the end.",
+      "Build in parts with regular reviews.",
   },
   {
     title: "Testing & Launch Prep",
+    focus: "Reduce launch risk",
     desc:
-      "We test important flows, fix edge cases, and prepare the project for release.",
+      "Test core flows and prepare for launch.",
   },
   {
     title: "Go Live & Support",
+    focus: "Stay available after release",
     desc:
-      "After launch, we handle fixes, updates, and follow-up work as the product grows.",
+      "Handle fixes, updates, and follow-up work after launch.",
   },
 ];

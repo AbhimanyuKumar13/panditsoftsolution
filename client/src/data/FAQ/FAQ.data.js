@@ -1,68 +1,80 @@
 export const faqs = [
   {
+    tag: "Business Fit",
     q: "What kind of businesses do you work with?",
     a:
-      "We work with a wide range of businesses including property dealers, builders, coaching institutes, schools, clinics, hospitals, transporters, logistics companies, event planners, photographers, traders, exporters, and startups."
+      "We work with service businesses, schools, clinics, logistics teams, traders, exporters, and startups.",
   },
   {
+    tag: "Timeline",
     q: "How long does a typical project take?",
     a:
-      "Most projects are completed within 7–21 days. Timeline depends on features, complexity, and how quickly feedback is provided during development."
+      "Most projects take 7-21 days, depending on scope and feedback speed.",
   },
   {
+    tag: "Pricing",
     q: "How much does a website or app cost?",
     a:
-      "Pricing depends on your requirements. Basic websites start at affordable rates, while advanced applications are priced based on features. Everything is clearly discussed before starting—no hidden charges."
+      "Pricing depends on scope. We confirm it before work starts. No hidden charges.",
   },
   {
+    tag: "Process",
     q: "Do I need technical knowledge to work with you?",
     a:
-      "Not at all. We handle everything from design to deployment. You just need to share your requirements—we take care of the rest."
+      "No. You share the goals. We handle design, development, and deployment.",
   },
   {
+    tag: "Responsive Design",
     q: "Will my website work on mobile devices?",
     a:
-      "Yes, all websites and applications we build are fully responsive and optimized for mobile, tablet, and desktop devices."
+      "Yes. Every build is optimized for mobile, tablet, and desktop.",
   },
   {
-    q: "Can I update my website after it's built?",
+    tag: "Ownership",
+    q: "Can I update my website after it is built?",
     a:
-      "Yes. We can build your site with an easy-to-manage system or guide you on how to make updates. We also offer maintenance support if you prefer us to handle it."
+      "Yes. We can set up easy updates or handle them for you.",
   },
   {
+    tag: "Support",
     q: "Do you provide support after project delivery?",
     a: [
-      "Yes, we offer ongoing maintenance and support",
-      "Bug fixes, updates, and performance monitoring",
-      "Optional long-term partnership for scaling your business"
-    ]
+      "Yes, we offer ongoing support.",
+      "Fixes, updates, and monitoring can be included.",
+      "We can also support long-term growth.",
+    ],
   },
   {
+    tag: "Payments",
     q: "How do payments work?",
     a:
-      "We follow a milestone-based payment system. Typically, a small upfront payment is required, with the remaining paid in stages as the project progresses."
+      "Usually a small upfront payment, then milestone-based payments as work moves forward.",
   },
   {
+    tag: "Results",
     q: "Will my website help me get customers?",
     a:
-      "Yes, we build websites focused on performance, SEO, and conversion. The goal is not just design, but helping your business attract and convert visitors."
+      "Yes. We focus on speed, SEO, clarity, and conversion.",
   },
   {
+    tag: "Hosting",
     q: "Do you provide domain and hosting?",
     a:
-      "Yes, we can help you with domain registration, hosting setup, and deployment so your website is fully live and accessible."
+      "Yes. We can help with domain, hosting, and deployment.",
   },
   {
+    tag: "Changes",
     q: "What if I need changes during or after the project?",
     a:
-      "We include revision rounds during development. After delivery, additional changes can be handled through support or upgrade plans."
+      "Revisions are included during development. Later changes can be handled through support.",
   },
   {
+    tag: "Security",
     q: "Is my business data secure?",
     a: [
-      "We follow secure development practices",
-      "HTTPS, authentication, and secure hosting are standard",
-      "All client data is kept confidential"
-    ]
-  }
+      "We follow secure development practices.",
+      "HTTPS, auth, and secure hosting are standard.",
+      "Client and project data stay confidential.",
+    ],
+  },
 ];

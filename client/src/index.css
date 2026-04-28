@@ -20,6 +20,56 @@ html {
   --hover-bg: #ffedd5;
 
   --border: #fed7aa;
+
+  --services-hero-glow-primary: rgba(249, 115, 22, 0.18);
+  --services-hero-glow-secondary: rgba(251, 146, 60, 0.2);
+  --services-hero-overlay: rgba(255, 255, 255, 0.12);
+
+  --services-border-strong: rgba(249, 115, 22, 0.18);
+  --services-border-medium: rgba(249, 115, 22, 0.16);
+  --services-border-base: rgba(249, 115, 22, 0.14);
+  --services-border-soft: rgba(249, 115, 22, 0.12);
+  --services-border-light: rgba(249, 115, 22, 0.1);
+  --services-border-hover: rgba(249, 115, 22, 0.24);
+  --services-outline-soft: rgba(28, 25, 23, 0.08);
+
+  --services-surface-glass: rgba(255, 255, 255, 0.72);
+  --services-surface-secondary: rgba(255, 255, 255, 0.76);
+  --services-surface-stat: rgba(255, 255, 255, 0.78);
+  --services-surface-card: rgba(255, 255, 255, 0.88);
+  --services-surface-soft: rgba(255, 255, 255, 0.7);
+  --services-surface-detail: rgba(255, 255, 255, 0.66);
+  --services-surface-hover: rgba(255, 255, 255, 0.92);
+  --services-surface-panel-start: rgba(255, 255, 255, 0.92);
+  --services-surface-panel-end: rgba(255, 247, 237, 0.92);
+  --services-surface-process-start: rgba(255, 255, 255, 0.95);
+  --services-surface-process-end: rgba(255, 247, 237, 0.72);
+  --services-surface-section-fade: rgba(255, 247, 237, 0.7);
+  --services-surface-tech-start: rgba(255, 247, 237, 0.88);
+  --services-surface-tech-end: rgba(255, 255, 255, 0.96);
+  --services-accent-surface: rgba(249, 115, 22, 0.12);
+
+  --services-text-contrast: #fff7ed;
+  --services-text-contrast-muted: rgba(255, 247, 237, 0.82);
+  --services-text-contrast-soft: rgba(255, 247, 237, 0.8);
+  --services-text-contrast-accent: #fdba74;
+  --services-text-contrast-accent-strong: #fb923c;
+
+  --services-panel-dark: #1c1917;
+  --services-cta-start: #1c1917;
+  --services-cta-mid: #292524;
+  --services-button-bg: #fff7ed;
+  --services-button-hover: #ffedd5;
+  --services-button-text: #1c1917;
+  --services-ghost-border: rgba(255, 247, 237, 0.26);
+  --services-ghost-bg: rgba(255, 247, 237, 0.08);
+
+  --services-shadow-soft: rgba(15, 23, 42, 0.05);
+  --services-shadow-medium: rgba(15, 23, 42, 0.06);
+  --services-shadow-strong: rgba(15, 23, 42, 0.09);
+  --services-shadow-cta: rgba(15, 23, 42, 0.12);
+  --services-shadow-accent: rgba(234, 88, 12, 0.22);
+  --services-shadow-accent-strong: rgba(234, 88, 12, 0.28);
 }
 
 .dark {
@@ -35,6 +85,56 @@ html {
   --hover-bg: #292524;
 
   --border: #44403c;
+
+  --services-hero-glow-primary: rgba(249, 115, 22, 0.22);
+  --services-hero-glow-secondary: rgba(251, 146, 60, 0.24);
+  --services-hero-overlay: rgba(255, 255, 255, 0.04);
+
+  --services-border-strong: rgba(249, 115, 22, 0.24);
+  --services-border-medium: rgba(249, 115, 22, 0.22);
+  --services-border-base: rgba(249, 115, 22, 0.18);
+  --services-border-soft: rgba(249, 115, 22, 0.16);
+  --services-border-light: rgba(249, 115, 22, 0.14);
+  --services-border-hover: rgba(249, 115, 22, 0.32);
+  --services-outline-soft: rgba(250, 250, 249, 0.12);
+
+  --services-surface-glass: rgba(28, 25, 23, 0.78);
+  --services-surface-secondary: rgba(28, 25, 23, 0.82);
+  --services-surface-stat: rgba(28, 25, 23, 0.84);
+  --services-surface-card: rgba(28, 25, 23, 0.88);
+  --services-surface-soft: rgba(41, 37, 36, 0.78);
+  --services-surface-detail: rgba(41, 37, 36, 0.72);
+  --services-surface-hover: rgba(41, 37, 36, 0.94);
+  --services-surface-panel-start: rgba(28, 25, 23, 0.92);
+  --services-surface-panel-end: rgba(41, 37, 36, 0.9);
+  --services-surface-process-start: rgba(28, 25, 23, 0.9);
+  --services-surface-process-end: rgba(41, 37, 36, 0.8);
+  --services-surface-section-fade: rgba(41, 37, 36, 0.72);
+  --services-surface-tech-start: rgba(41, 37, 36, 0.88);
+  --services-surface-tech-end: rgba(28, 25, 23, 0.94);
+  --services-accent-surface: rgba(249, 115, 22, 0.16);
+
+  --services-text-contrast: #fafaf9;
+  --services-text-contrast-muted: rgba(250, 250, 249, 0.82);
+  --services-text-contrast-soft: rgba(250, 250, 249, 0.8);
+  --services-text-contrast-accent: #fdba74;
+  --services-text-contrast-accent-strong: #fb923c;
+
+  --services-panel-dark: #020617;
+  --services-cta-start: #020617;
+  --services-cta-mid: #1c1917;
+  --services-button-bg: #fafaf9;
+  --services-button-hover: #e7e5e4;
+  --services-button-text: #020617;
+  --services-ghost-border: rgba(250, 250, 249, 0.18);
+  --services-ghost-bg: rgba(250, 250, 249, 0.08);
+
+  --services-shadow-soft: rgba(2, 6, 23, 0.24);
+  --services-shadow-medium: rgba(2, 6, 23, 0.28);
+  --services-shadow-strong: rgba(2, 6, 23, 0.36);
+  --services-shadow-cta: rgba(2, 6, 23, 0.42);
+  --services-shadow-accent: rgba(234, 88, 12, 0.28);
+  --services-shadow-accent-strong: rgba(234, 88, 12, 0.34);
 }
 * {
   transition:
