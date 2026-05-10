@@ -2,15 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
+
 import {
   FiArrowRight,
   FiExternalLink,
   FiFileText,
   FiMail,
   FiMapPin,
-  FiShield,
 } from "react-icons/fi";
-import { FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+
+import { FaFacebook, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
   const {
@@ -22,19 +23,11 @@ const Footer = () => {
     VITE_SOCIAL_INSTAGRAM,
     VITE_SOCIAL_YOUTUBE,
     VITE_SOCIAL_LINKEDIN,
+    VITE_SOCIAL_FACEBOOK,
     VITE_COMPANY_GSTIN,
     VITE_COMPANY_MSME,
     VITE_COMPANY_ISO,
   } = import.meta.env;
-
-  const companyLinks = [
-    { to: "/", label: "Home" },
-    { to: "/ourServices", label: "Services" },
-    { to: "/Projects", label: "Projects" },
-    { to: "/About", label: "About" },
-    { to: "/Contact", label: "Contact" },
-    { to: "/skill-lab", label: "Skill Lab" },
-  ];
 
   const legalLinks = [
     { to: "/privacy-policy", label: "Privacy Policy" },
@@ -56,62 +49,63 @@ const Footer = () => {
   ].filter((item) => item.value);
 
   const socialLinks = [
-    { label: "LinkedIn", href: VITE_SOCIAL_LINKEDIN, icon: FaLinkedinIn },
-    { label: "Instagram", href: VITE_SOCIAL_INSTAGRAM, icon: FaInstagram },
-    { label: "YouTube", href: VITE_SOCIAL_YOUTUBE, icon: FaYoutube },
+    {
+      label: "LinkedIn",
+      href: VITE_SOCIAL_LINKEDIN,
+      icon: FaLinkedinIn,
+    },
+    {
+      label: "Instagram",
+      href: VITE_SOCIAL_INSTAGRAM,
+      icon: FaInstagram,
+    },
+    {
+      label: "Facebook",
+      href: VITE_SOCIAL_FACEBOOK,
+      icon: FaFacebook,
+    },
+    {
+      label: "YouTube",
+      href: VITE_SOCIAL_YOUTUBE,
+      icon: FaYoutube,
+    },
+    {
+      label: "Google map",
+      href: VITE_COMPANY_MAP_URL,
+      icon: FiMapPin,
+    },
   ].filter((item) => item.href);
-
-  const workStyle = [
-    "Clear scope and communication",
-    "Responsive, fast builds",
-    "Support after launch",
-  ];
 
   return (
     <motion.footer
       className={styles.footer}
-      initial={{ opacity: 0, y: 18 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.45, ease: "easeOut" }}
+      transition={{ duration: 0.4 }}
     >
-      <div className={styles.shell}>
-        <div className={styles.brandCard}>
-          <span className={styles.kicker}>Build Better</span>
-          <h4>{VITE_COMPANY_NAME}</h4>
+      <div className={styles.container}>
+        {/* LEFT */}
+        <div className={styles.brandSection}> 
+
+          <h2>{VITE_COMPANY_NAME}</h2>
+
           <p className={styles.tagline}>{VITE_COMPANY_TAGLINE}</p>
 
-          <div className={styles.infoStack}>
+          <div className={styles.contactInfo}>
             <div className={styles.infoItem}>
-              <FiMapPin aria-hidden="true" />
+              <FiMapPin />
               <span>{VITE_COMPANY_ADDRESS}</span>
             </div>
 
-            <a href={`mailto:${VITE_COMPANY_EMAIL}`} className={styles.infoItem}>
-              <FiMail aria-hidden="true" />
+            <a
+              href={`mailto:${VITE_COMPANY_EMAIL}`}
+              className={styles.infoItem}
+            >
+              <FiMail />
               <span>{VITE_COMPANY_EMAIL}</span>
             </a>
           </div>
-
-          <div className={styles.actionRow}>
-            <Link to="/Contact" className={styles.primaryAction}>
-              Start Project
-              <FiArrowRight aria-hidden="true" />
-            </Link>
-
-            {VITE_COMPANY_MAP_URL ? (
-              <a
-                href={VITE_COMPANY_MAP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.secondaryAction}
-              >
-                View Map
-                <FiExternalLink aria-hidden="true" />
-              </a>
-            ) : null}
-          </div>
-
           <div className={styles.socialRow}>
             {socialLinks.map(({ label, href, icon: Icon }) => (
               <a
@@ -122,39 +116,43 @@ const Footer = () => {
                 className={styles.socialLink}
                 aria-label={label}
               >
-                <Icon aria-hidden="true" />
+                <Icon />
               </a>
             ))}
           </div>
+          {VITE_COMPANY_MAP_URL && (
+            <div className={styles.mapWrapper}>
+              <iframe
+                src={VITE_COMPANY_MAP_URL}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Map"
+              />
+            </div>
+          )}
         </div>
 
-        <div className={styles.linksCard}>
-          <div className={styles.linkSection}>
-            <span className={styles.sectionLabel}>Menu</span>
-            <nav className={styles.linkList}>
-              {companyLinks.map((item) => (
-                <Link key={item.to} to={item.to}>
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </div>
+        {/* CENTER */}
+        <div className={styles.linksSection}>
+          <div>
+            <span className={styles.sectionTitle}>Legals</span>
 
-          <div className={styles.linkSection}>
-            <span className={styles.sectionLabel}>Legal</span>
-            <nav className={`${styles.linkList} ${styles.policyGrid}`}>
+            <div className={styles.linksGrid}>
               {legalLinks.map((item) => (
                 <Link key={item.to} to={item.to}>
                   {item.label}
                 </Link>
               ))}
-            </nav>
-          </div>
+            </div>
+          </div> 
         </div>
 
-        <div className={styles.metaCard}>
-          <div className={styles.metaBlock}>
-            <span className={styles.sectionLabel}>Credentials</span>
+        {/* RIGHT */}
+        <div className={styles.metaSection}>
+          <div>
+            <span className={styles.sectionTitle}>Credentials</span>
+
             <div className={styles.badges}>
               {certifications.map((item) => (
                 <div key={item.label} className={styles.badge}>
@@ -164,32 +162,6 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
-          <div className={styles.metaBlock}>
-            <span className={styles.sectionLabel}>How We Work</span>
-            <ul className={styles.metaList}>
-              {workStyle.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div className={styles.metaNote}>
-            <span className={styles.noteIcon}>
-              <FiShield aria-hidden="true" />
-            </span>
-            <div>
-              <h5>Need docs fast?</h5>
-              <p>
-                Policies and compliance links stay easy to find.
-              </p>
-            </div>
-          </div>
-
-          <Link to="/privacy-policy" className={styles.inlineLink}>
-            Open Legal Docs
-            <FiFileText aria-hidden="true" />
-          </Link>
         </div>
       </div>
 
@@ -197,8 +169,7 @@ const Footer = () => {
         <p>
           Copyright {new Date().getFullYear()} {VITE_COMPANY_NAME}. All rights
           reserved.
-        </p>
-        <span>{VITE_COMPANY_TAGLINE}</span>
+        </p> 
       </div>
     </motion.footer>
   );

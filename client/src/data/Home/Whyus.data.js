@@ -1,45 +1,45 @@
-import securityImg from "../../assets/images/whyusimg/security.jpeg";
+import securityImg from "../../assets/images/whyusimg/security.jpg";
 import SDLCImg from "../../assets/images/whyusimg/SDLC.png";
 import CleanCode from "../../assets/images/whyusimg/CleanCode.png";
 import FastDelivery from "../../assets/images/whyusimg/FastDelivery.png";
 import PO from "../../assets/images/whyusimg/PO.png";
 import Honestcomm from "../../assets/images/whyusimg/HonestComm.png";
-import LTS from "../../assets/images/whyusimg/LTS.jpeg";
+import LTS from "../../assets/images/whyusimg/LTS.jpg";
 
 export const points = [
   {
     title: "Security First",
-    desc: "Security is built in from day one.",
+    desc: "Security is planned from the start.",
     image: securityImg,
   },
   {
-    title: "Smart Planning (SDLC)",
-    desc: "Clear planning before coding starts.",
+    title: "Clear Planning",
+    desc: "Work starts with a defined scope and process.",
     image: SDLCImg,
   },
   {
-    title: "Clean & Maintainable Code",
-    desc: "Readable and maintainable code.",
+    title: "Clean Code",
+    desc: "Code stays readable and easy to maintain.",
     image: CleanCode,
   },
   {
-    title: "Fast & Reliable Delivery",
-    desc: "Fast delivery without cutting quality.",
+    title: "Reliable Delivery",
+    desc: "Projects move forward without cutting quality.",
     image: FastDelivery,
   },
   {
-    title: "Performance Optimized",
-    desc: "Fast, responsive, efficient builds.",
+    title: "Performance Focus",
+    desc: "Builds stay fast, responsive, and efficient.",
     image: PO,
   },
   {
-    title: "Honest Communication (pay only for what you need)",
+    title: "Honest Communication",
     desc: "Clear timelines and realistic expectations.",
     image: Honestcomm,
   },
   {
-    title: "Long-Term Support (maintenance)",
-    desc: "Support after launch for fixes and growth.",
+    title: "Long-Term Support",
+    desc: "Support stays available after launch.",
     image: LTS,
   },
 ];

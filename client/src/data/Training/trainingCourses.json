@@ -1,233 +1,444 @@
 [
   {
-    "id": "mern-stack",
-    "slug": "mern-stack",
-    "title": "MERN Stack Developer Program",
-    "duration": "4 Months",
+    "id": "frontend-development-45-days",
+    "slug": "frontend-development-45-days",
+    "title": "Frontend Development Summer Training",
+    "trackGroup": "45 Days",
+    "trackLabel": "Summer Training 2026",
+    "summary": "Learn to build responsive interfaces with HTML, CSS, JavaScript, Bootstrap, and React through practical assignments.",
+    "skillsPreview": ["HTML/CSS", "JavaScript", "React"],
+    "duration": "45 Days",
     "level": "Beginner to Intermediate",
-    "mode": "Live",
-    "commitment": "8–10 hrs/week",
-    "price": "₹4,999",
+    "mode": "Live + Practical",
+    "commitment": "5-7 hrs/week",
+    "price": "INR 1,999",
     "audience": [
-      "College students (2nd year and above)",
-      "Fresh graduates",
-      "Self-taught developers",
-      "Career switchers"
+      "College students looking for summer industrial training",
+      "Beginners who want frontend project experience",
+      "Students preparing for internships and placements",
+      "Learners interested in UI development"
     ],
     "notFor": [
-      "Absolute beginners with no coding experience",
-      "Certificate-only seekers"
+      "Developers already comfortable building production React apps",
+      "Learners looking only for theory without practice"
     ],
     "modules": [
       {
-        "title": "Developer Foundations",
+        "title": "Web Foundations",
         "topics": [
-          "Git & GitHub workflow",
-          "JavaScript fundamentals",
-          "Development environment setup"
+          "HTML structure and semantic layout",
+          "CSS styling and responsive design",
+          "Bootstrap-based fast UI building"
         ]
       },
       {
-        "title": "Frontend Engineering",
+        "title": "JavaScript for Frontend",
         "topics": [
-          "React fundamentals",
-          "Component-driven UI",
-          "State management & data flow"
+          "DOM manipulation",
+          "ES6 basics",
+          "Events, forms, and validation"
         ]
       },
       {
-        "title": "Backend Engineering",
+        "title": "React Basics",
         "topics": [
-          "Node.js & Express",
-          "REST API design",
-          "Authentication & authorization",
-          "Error handling & security basics"
+          "Components and props",
+          "State and hooks",
+          "Routing and reusable UI"
         ]
       },
       {
-        "title": "Database & Data Modeling",
-        "topics": ["MongoDB", "Schema design", "CRUD operations"]
-      },
-      {
-        "title": "Production Practices",
+        "title": "Project Delivery",
         "topics": [
-          "Environment variables",
-          "Deployment basics",
-          "Debugging & performance"
-        ]
-      },
-      {
-        "title": "Capstone Project",
-        "topics": [
-          "End-to-end MERN application",
-          "Code review",
-          "Live deployment"
+          "Landing page project",
+          "Portfolio-style app",
+          "Deployment and review"
         ]
       }
     ],
     "projects": [
-      "Authentication-based full-stack app",
-      "Admin dashboard",
-      "API-driven system",
-      "Live deployed project"
+      "Responsive service landing page",
+      "Portfolio or company website UI",
+      "React-based mini frontend project"
     ],
     "teachingMethod": [
-      "Live sessions by working developers",
-      "Code-along teaching",
-      "Mentor support & doubt clearing",
-      "Code reviews with feedback"
+      "Live guided classes",
+      "Hands-on coding tasks",
+      "Mentor feedback on submitted work",
+      "Practical review before completion"
     ],
     "schedule": {
-      "sessionsPerWeek": 3,
+      "sessionsPerWeek": 4,
       "sessionDuration": "1.5 hours",
       "recordings": true
     }
   },
   {
-    "id": "frontend-engineer",
-    "slug": "frontend-engineer",
-    "title": "Frontend Engineer (React & UI Engineering)",
-    "duration": "2.5 Months",
+    "id": "backend-development-45-days",
+    "slug": "backend-development-45-days",
+    "title": "Backend Development Summer Training",
+    "trackGroup": "45 Days",
+    "trackLabel": "Summer Training 2026",
+    "summary": "Build REST APIs with Node.js, Express, and databases while understanding real backend workflow and deployment basics.",
+    "skillsPreview": ["Node.js", "Express", "Database"],
+    "duration": "45 Days",
     "level": "Beginner to Intermediate",
-    "mode": "Live",
-    "commitment": "6–8 hrs/week",
-    "price": "₹2,999",
+    "mode": "Live + Practical",
+    "commitment": "5-7 hrs/week",
+    "price": "INR 1,999",
     "audience": [
-      "Students interested in frontend development",
-      "Design-oriented developers",
-      "Beginners with basic JavaScript knowledge",
-      "Junior developers wanting stronger UI skills"
+      "Students interested in server-side development",
+      "Frontend learners wanting backend exposure",
+      "College students building project skills"
     ],
     "notFor": [
-      "Learners with zero JavaScript knowledge",
-      "Backend-only focused developers"
+      "Absolute beginners with no JavaScript basics",
+      "Learners focused only on design tools"
     ],
     "modules": [
       {
-        "title": "Frontend Foundations",
+        "title": "Backend Foundations",
         "topics": [
-          "HTML, CSS & modern layout systems",
-          "JavaScript essentials for UI",
-          "Browser rendering basics"
+          "Node.js basics",
+          "NPM and project setup",
+          "Understanding server flow"
         ]
       },
       {
-        "title": "React Core",
+        "title": "Express & Routing",
         "topics": [
-          "Component-based architecture",
-          "Props, state & hooks",
-          "Conditional rendering & lists"
-        ]
-      },
-      {
-        "title": "UI Engineering",
-        "topics": [
-          "Reusable component design",
-          "Form handling & validation",
-          "UI state & user interactions"
-        ]
-      },
-      {
-        "title": "Styling & Performance",
-        "topics": [
-          "CSS Modules & scalable styles",
-          "Responsive design",
-          "Basic performance optimization"
-        ]
-      },
-      {
-        "title": "Frontend Project",
-        "topics": [
-          "Production-ready frontend app",
-          "API integration",
-          "Deployment"
-        ]
-      }
-    ],
-    "projects": [
-      "Responsive multi-page frontend application",
-      "Dashboard-style UI",
-      "API-integrated frontend project"
-    ],
-    "teachingMethod": [
-      "Live code-along sessions",
-      "UI-focused exercises",
-      "Mentor feedback on components",
-      "Best practices discussion"
-    ],
-    "schedule": {
-      "sessionsPerWeek": 3,
-      "sessionDuration": "1.5 hours",
-      "recordings": true
-    }
-  },
-  {
-    "id": "backend-developer",
-    "slug": "backend-developer",
-    "title": "Backend Developer (Node.js & API Engineering)",
-    "duration": "2.5 Months",
-    "level": "Intermediate",
-    "mode": "Live",
-    "commitment": "7–9 hrs/week",
-    "price": "₹2,999",
-    "audience": [
-      "Developers interested in backend systems",
-      "Students with basic JavaScript knowledge",
-      "Frontend developers wanting backend skills"
-    ],
-    "notFor": ["Absolute beginners", "UI-only focused learners"],
-    "modules": [
-      {
-        "title": "Backend Fundamentals",
-        "topics": [
-          "Node.js runtime concepts",
-          "Express.js framework",
-          "REST API principles"
-        ]
-      },
-      {
-        "title": "API Development",
-        "topics": [
-          "CRUD operations",
-          "Request validation",
-          "Error handling strategies"
-        ]
-      },
-      {
-        "title": "Authentication & Security",
-        "topics": [
-          "JWT-based authentication",
-          "Authorization roles",
-          "Security best practices"
+          "API routing",
+          "Request-response handling",
+          "Middleware usage"
         ]
       },
       {
         "title": "Database Integration",
         "topics": [
-          "MongoDB integration",
-          "Schema & data modeling",
-          "Optimizing database queries"
+          "MongoDB or relational basics",
+          "CRUD operations",
+          "Schema and data flow"
         ]
       },
       {
-        "title": "Backend Project",
+        "title": "Mini Backend Project",
         "topics": [
-          "Scalable REST API",
-          "Authentication-enabled backend",
-          "Deployment"
+          "REST API project",
+          "Testing endpoints",
+          "Deployment basics"
         ]
       }
     ],
     "projects": [
-      "RESTful API with authentication",
-      "Role-based backend system",
-      "Deployed backend service"
+      "CRUD API project",
+      "Authentication-ready backend starter",
+      "Database-connected service"
     ],
     "teachingMethod": [
-      "Live backend coding sessions",
-      "System design discussions",
-      "Debugging walkthroughs",
-      "Code review & optimization"
+      "Live backend coding",
+      "Problem-solving sessions",
+      "Mentor-guided assignments",
+      "Project review discussions"
+    ],
+    "schedule": {
+      "sessionsPerWeek": 4,
+      "sessionDuration": "1.5 hours",
+      "recordings": true
+    }
+  },
+  {
+    "id": "python-development-45-days",
+    "slug": "python-development-45-days",
+    "title": "Python Development Summer Training",
+    "trackGroup": "45 Days",
+    "trackLabel": "Summer Training 2026",
+    "summary": "Start with Python fundamentals, OOP, and problem solving, then apply them in mini projects and practical tasks.",
+    "skillsPreview": ["Core Python", "OOP", "Mini Projects"],
+    "duration": "45 Days",
+    "level": "Beginner",
+    "mode": "Live + Practical",
+    "commitment": "5-6 hrs/week",
+    "price": "INR 1,999",
+    "audience": [
+      "Students starting with programming",
+      "Learners preparing for Python-based roles",
+      "College students needing a strong coding base"
+    ],
+    "notFor": [
+      "Advanced Python developers",
+      "Learners looking only for web design skills"
+    ],
+    "modules": [
+      {
+        "title": "Python Foundations",
+        "topics": [
+          "Variables, conditions, loops",
+          "Functions and modular code",
+          "Basic problem solving"
+        ]
+      },
+      {
+        "title": "Data Structures & OOP",
+        "topics": [
+          "Lists, tuples, dictionaries",
+          "Classes and objects",
+          "Real code structuring"
+        ]
+      },
+      {
+        "title": "Files & Practical Tasks",
+        "topics": [
+          "File handling",
+          "Error handling",
+          "Simple automation logic"
+        ]
+      },
+      {
+        "title": "Mini Project Sprint",
+        "topics": [
+          "Console-based projects",
+          "Python utilities",
+          "Final mentor review"
+        ]
+      }
+    ],
+    "projects": [
+      "Student management mini project",
+      "Utility or calculator app",
+      "Basic automation-style assignment"
+    ],
+    "teachingMethod": [
+      "Live coding sessions",
+      "Practice-based explanations",
+      "Weekly doubt support",
+      "Mini project reviews"
+    ],
+    "schedule": {
+      "sessionsPerWeek": 4,
+      "sessionDuration": "1.5 hours",
+      "recordings": true
+    }
+  },
+  {
+    "id": "data-analytics-45-days",
+    "slug": "data-analytics-45-days",
+    "title": "Data Analytics Summer Training",
+    "trackGroup": "45 Days",
+    "trackLabel": "Summer Training 2026",
+    "summary": "Understand data cleaning, reporting, and dashboard creation using Excel, SQL, Power BI, and visualization basics.",
+    "skillsPreview": ["Excel", "SQL", "Power BI"],
+    "duration": "45 Days",
+    "level": "Beginner to Intermediate",
+    "mode": "Live + Practical",
+    "commitment": "5-6 hrs/week",
+    "price": "INR 1,999",
+    "audience": [
+      "Students interested in analytics roles",
+      "Learners from technical and non-technical branches",
+      "Freshers wanting dashboard and reporting skills"
+    ],
+    "notFor": [
+      "Advanced analysts already working with large production BI systems",
+      "Learners only looking for programming-heavy backend content"
+    ],
+    "modules": [
+      {
+        "title": "Excel for Analysis",
+        "topics": [
+          "Data cleaning",
+          "Functions and formulas",
+          "Charts and practical reports"
+        ]
+      },
+      {
+        "title": "SQL Foundations",
+        "topics": [
+          "Queries and filters",
+          "Joins and grouping",
+          "Working with business data"
+        ]
+      },
+      {
+        "title": "Power BI Basics",
+        "topics": [
+          "Dashboard design",
+          "KPI cards and charts",
+          "Report storytelling"
+        ]
+      },
+      {
+        "title": "Analytics Project",
+        "topics": [
+          "Dataset analysis",
+          "Dashboard project",
+          "Final presentation"
+        ]
+      }
+    ],
+    "projects": [
+      "Sales performance dashboard",
+      "SQL-based reporting exercise",
+      "Power BI visualization project"
+    ],
+    "teachingMethod": [
+      "Hands-on dataset work",
+      "Mentor-led walkthroughs",
+      "Dashboard review sessions",
+      "Practical exercises with feedback"
+    ],
+    "schedule": {
+      "sessionsPerWeek": 4,
+      "sessionDuration": "1.5 hours",
+      "recordings": true
+    }
+  },
+  {
+    "id": "ui-ux-design-45-days",
+    "slug": "ui-ux-design-45-days",
+    "title": "UI/UX Design Summer Training",
+    "trackGroup": "45 Days",
+    "trackLabel": "Summer Training 2026",
+    "summary": "Design modern app and web interfaces with Figma, wireframes, components, prototyping, and user-focused thinking.",
+    "skillsPreview": ["Figma", "Wireframes", "Prototyping"],
+    "duration": "45 Days",
+    "level": "Beginner to Intermediate",
+    "mode": "Live + Practical",
+    "commitment": "5-6 hrs/week",
+    "price": "INR 1,999",
+    "audience": [
+      "Students interested in product design",
+      "Creative learners wanting UI/UX fundamentals",
+      "Developers wanting stronger interface design sense"
+    ],
+    "notFor": [
+      "Learners expecting coding-only classes",
+      "Advanced product designers looking for senior-level systems training"
+    ],
+    "modules": [
+      {
+        "title": "UX Basics",
+        "topics": [
+          "User journeys",
+          "Wireframing",
+          "Layout planning"
+        ]
+      },
+      {
+        "title": "UI Design in Figma",
+        "topics": [
+          "Design tools and components",
+          "Color and typography basics",
+          "Modern interface building"
+        ]
+      },
+      {
+        "title": "Prototype & Feedback",
+        "topics": [
+          "Interactive prototypes",
+          "Design critique",
+          "Improving usability"
+        ]
+      },
+      {
+        "title": "Portfolio Project",
+        "topics": [
+          "Mobile or web UI case study",
+          "Presentation-ready screens",
+          "Mentor review"
+        ]
+      }
+    ],
+    "projects": [
+      "App interface design",
+      "Website landing page design",
+      "Prototype with presentation screens"
+    ],
+    "teachingMethod": [
+      "Live design sessions",
+      "Figma practice tasks",
+      "Mentor feedback on screens",
+      "Portfolio-focused project reviews"
+    ],
+    "schedule": {
+      "sessionsPerWeek": 4,
+      "sessionDuration": "1.5 hours",
+      "recordings": true
+    }
+  },
+  {
+    "id": "full-stack-web-development-6-months",
+    "slug": "full-stack-web-development-6-months",
+    "title": "Full Stack Web Development Career Track",
+    "trackGroup": "6 Months",
+    "trackLabel": "Career Track",
+    "summary": "Go beyond basics with a guided full stack journey covering React, Node.js, Express, MongoDB, deployment, and project reviews.",
+    "skillsPreview": ["React", "Node.js", "MongoDB"],
+    "duration": "6 Months",
+    "level": "Beginner to Intermediate",
+    "mode": "Live + Mentorship",
+    "commitment": "8-10 hrs/week",
+    "price": "INR 4,999",
+    "audience": [
+      "Students serious about becoming full stack developers",
+      "Fresh graduates building employable project experience",
+      "Learners wanting frontend and backend together"
+    ],
+    "notFor": [
+      "Certificate-only seekers",
+      "Learners unwilling to work on regular assignments and projects"
+    ],
+    "modules": [
+      {
+        "title": "Developer Foundations",
+        "topics": [
+          "Git and GitHub workflow",
+          "JavaScript fundamentals",
+          "Project setup and dev tooling"
+        ]
+      },
+      {
+        "title": "Frontend Engineering",
+        "topics": [
+          "Responsive UI with React",
+          "State management and routing",
+          "Forms and API integration"
+        ]
+      },
+      {
+        "title": "Backend Engineering",
+        "topics": [
+          "Node.js and Express",
+          "REST API architecture",
+          "Authentication and security basics"
+        ]
+      },
+      {
+        "title": "Database & Deployment",
+        "topics": [
+          "MongoDB data modeling",
+          "Production configuration",
+          "Deployment and debugging"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "End-to-end client-style build",
+          "Code review and improvements",
+          "Portfolio deployment"
+        ]
+      }
+    ],
+    "projects": [
+      "Full stack dashboard project",
+      "Authentication-based web app",
+      "Deployment-ready capstone project"
+    ],
+    "teachingMethod": [
+      "Live code-along classes",
+      "Weekly project reviews",
+      "Mentor support and doubt solving",
+      "Portfolio-oriented capstone work"
     ],
     "schedule": {
       "sessionsPerWeek": 3,
@@ -236,60 +447,165 @@
     }
   },
   {
-    "id": "project-internship",
-    "slug": "project-internship",
-    "title": "Project-Based Internship Program",
-    "duration": "6–8 Weeks",
-    "level": "Beginner to Intermediate",
-    "mode": "Live Mentorship",
-    "commitment": "6–10 hrs/week",
-    "price": "₹1,999",
+    "id": "backend-api-engineering-6-months",
+    "slug": "backend-api-engineering-6-months",
+    "title": "Backend & API Engineering Career Track",
+    "trackGroup": "6 Months",
+    "trackLabel": "Career Track",
+    "summary": "Master backend logic, database integration, authentication, and scalable API building with a deeper long-term learning path.",
+    "skillsPreview": ["Node.js", "REST API", "MongoDB"],
+    "duration": "6 Months",
+    "level": "Intermediate",
+    "mode": "Live + Mentorship",
+    "commitment": "8-9 hrs/week",
+    "price": "INR 4,999",
     "audience": [
-      "College students needing real project experience",
-      "Freshers building portfolios",
-      "Learners who completed basic training"
+      "Students interested in backend-focused roles",
+      "Frontend developers expanding into APIs and systems",
+      "Learners building stronger server-side portfolios"
     ],
     "notFor": [
-      "Learners expecting classroom-style teaching",
-      "Zero coding experience candidates"
+      "Absolute beginners without JavaScript basics",
+      "Design-only focused learners"
     ],
     "modules": [
       {
-        "title": "Project Onboarding",
+        "title": "Backend Foundations",
         "topics": [
-          "Understanding requirements",
-          "Project planning & task breakdown",
-          "Development workflow"
+          "Node runtime concepts",
+          "Express architecture",
+          "API-first thinking"
         ]
       },
       {
-        "title": "Project Development",
-        "topics": ["Feature implementation", "Bug fixing", "Code collaboration"]
+        "title": "Production API Building",
+        "topics": [
+          "CRUD and validation",
+          "Error handling",
+          "Routing structure and middleware"
+        ]
       },
       {
-        "title": "Review & Improvement",
-        "topics": ["Code review", "Refactoring", "Performance improvements"]
+        "title": "Auth, Security & Roles",
+        "topics": [
+          "JWT authentication",
+          "Role-based access",
+          "Security best practices"
+        ]
       },
       {
-        "title": "Final Delivery",
-        "topics": ["Deployment", "Documentation", "Presentation & walkthrough"]
+        "title": "Database & Deployment",
+        "topics": [
+          "MongoDB integration",
+          "Query optimization basics",
+          "Deployment and monitoring basics"
+        ]
+      },
+      {
+        "title": "Capstone Backend Project",
+        "topics": [
+          "Scalable REST API",
+          "Documentation and testing",
+          "Final review and deployment"
+        ]
       }
     ],
     "projects": [
-      "Real-world client-style project",
-      "Team or solo project experience",
-      "Deployed application with documentation"
+      "Authentication-enabled REST API",
+      "Role-based backend system",
+      "Deployed backend capstone"
     ],
     "teachingMethod": [
-      "Mentor-guided development",
-      "Weekly reviews",
-      "Industry-style workflow",
-      "Practical feedback"
+      "Live backend implementation sessions",
+      "Debugging and review walkthroughs",
+      "Mentor support on architecture decisions",
+      "Project-based practice"
     ],
     "schedule": {
-      "sessionsPerWeek": 2,
-      "sessionDuration": "2 hours",
-      "recordings": false
+      "sessionsPerWeek": 3,
+      "sessionDuration": "1.5 hours",
+      "recordings": true
+    }
+  },
+  {
+    "id": "python-data-analytics-6-months",
+    "slug": "python-data-analytics-6-months",
+    "title": "Python & Data Analytics Career Track",
+    "trackGroup": "6 Months",
+    "trackLabel": "Career Track",
+    "summary": "Build a stronger analytics foundation with Python, SQL, Excel, Power BI, and project-based reporting practice.",
+    "skillsPreview": ["Python", "SQL", "Power BI"],
+    "duration": "6 Months",
+    "level": "Beginner to Intermediate",
+    "mode": "Live + Mentorship",
+    "commitment": "7-9 hrs/week",
+    "price": "INR 4,999",
+    "audience": [
+      "Students preparing for analytics and Python roles",
+      "Freshers building reporting and dashboard skills",
+      "Learners wanting both coding and analytics exposure"
+    ],
+    "notFor": [
+      "Experts already working with advanced data engineering pipelines",
+      "Learners interested only in frontend UI work"
+    ],
+    "modules": [
+      {
+        "title": "Python Foundations",
+        "topics": [
+          "Core Python programming",
+          "Functions and OOP basics",
+          "Practical scripting tasks"
+        ]
+      },
+      {
+        "title": "Data Handling",
+        "topics": [
+          "Working with datasets",
+          "Cleaning and structuring data",
+          "Using Python for analysis tasks"
+        ]
+      },
+      {
+        "title": "SQL & Excel Reporting",
+        "topics": [
+          "SQL querying",
+          "Excel formulas and reports",
+          "Business data practice"
+        ]
+      },
+      {
+        "title": "Visualization & Dashboards",
+        "topics": [
+          "Power BI dashboard design",
+          "KPI storytelling",
+          "Presentation-ready reporting"
+        ]
+      },
+      {
+        "title": "Capstone Analytics Project",
+        "topics": [
+          "Real dataset analysis",
+          "Dashboard and report delivery",
+          "Final review and feedback"
+        ]
+      }
+    ],
+    "projects": [
+      "Python-based analysis exercise",
+      "SQL reporting project",
+      "Power BI capstone dashboard"
+    ],
+    "teachingMethod": [
+      "Live guided analytics sessions",
+      "Hands-on dataset practice",
+      "Mentor review on dashboards and reports",
+      "Capstone presentation support"
+    ],
+    "schedule": {
+      "sessionsPerWeek": 3,
+      "sessionDuration": "1.5 hours",
+      "recordings": true
     }
   }
 ]

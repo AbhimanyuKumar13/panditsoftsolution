@@ -1,11 +1,31 @@
-/* ── Section ────────────────────────────────────────────────── */
-.section {
+.projectsHero {
+  padding: 4rem 1.2rem 3rem;
+  background: var(--body-bg);
+}
+
+.projectsHeroContent {
+  max-width: 720px;
+  margin: auto;
+  text-align: center;
+}
+
+.projectsHeroContent h1 {
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  color: var(--text);
+}
+
+.projectsHeroContent p {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.projectsListSection {
   padding: 4rem 1.2rem;
   background: var(--header-bg);
 }
 
-/* ── Filters ────────────────────────────────────────────────── */
-.filters {
+.projectsListFilters {
   display: flex;
   gap: 0.6rem;
   justify-content: center;
@@ -13,7 +33,7 @@
   margin-bottom: 2.8rem;
 }
 
-.filterBtn {
+.projectsListFilterBtn {
   padding: 0.45rem 1.1rem;
   border-radius: 20px;
   border: 1px solid var(--hover-bg);
@@ -25,27 +45,25 @@
   transition: all 0.2s;
 }
 
-.filterBtn:hover {
+.projectsListFilterBtn:hover {
   border-color: var(--accent);
   color: var(--text);
 }
 
-.filterActive {
+.projectsListFilterActive {
   background: var(--accent);
   border-color: var(--accent);
   color: #000 !important;
 }
 
-/* ── List Grid ──────────────────────────────────────────────── */
-.list {
+.projectsListList {
   max-width: 900px;
   margin: auto;
   display: grid;
   gap: 2rem;
 }
 
-/* ── Card ───────────────────────────────────────────────────── */
-.card {
+.projectsListCard {
   background: var(--body-bg);
   border: 1px solid var(--hover-bg);
   border-radius: 14px;
@@ -56,12 +74,11 @@
   transition: border-color 0.2s;
 }
 
-.card:hover {
+.projectsListCard:hover {
   border-color: var(--accent);
 }
 
-/* ── Card Header ────────────────────────────────────────────── */
-.cardHeader {
+.projectsListCardHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,13 +87,13 @@
   margin-bottom: 0.8rem;
 }
 
-.meta {
+.projectsListMeta {
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
 }
 
-.categoryBadge {
+.projectsListCategoryBadge {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -87,7 +104,7 @@
   color: var(--muted);
 }
 
-.tagBadge {
+.projectsListTagBadge {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -98,8 +115,7 @@
   color: var(--accent);
 }
 
-/* ── Status Badge ───────────────────────────────────────────── */
-.status {
+.projectsListStatus {
   display: flex;
   align-items: center;
   gap: 0.35rem;
@@ -108,40 +124,38 @@
   letter-spacing: 0.02em;
 }
 
-.statusDot {
+.projectsListStatusDot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
 }
 
-.statusLive .statusDot {
+.projectsListStatusLive .projectsListStatusDot {
   background: #22c55e;
   box-shadow: 0 0 0 2px color-mix(in srgb, #22c55e 25%, transparent);
 }
 
-.statusLive {
+.projectsListStatusLive {
   color: #22c55e;
 }
 
-.statusRunning .statusDot {
+.projectsListStatusRunning .projectsListStatusDot {
   background: #f59e0b;
   box-shadow: 0 0 0 2px color-mix(in srgb, #f59e0b 25%, transparent);
 }
 
-.statusRunning {
+.projectsListStatusRunning {
   color: #f59e0b;
 }
 
-/* ── Title ──────────────────────────────────────────────────── */
-.title {
+.projectsListTitle {
   margin: 0 0 1.2rem;
   color: var(--text);
   font-size: 1.1rem;
   line-height: 1.4;
 }
 
-/* ── Screenshots Carousel ───────────────────────────────────── */
-.carousel {
+.projectsListCarousel {
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--hover-bg);
@@ -149,14 +163,14 @@
   background: var(--header-bg);
 }
 
-.carouselTrack {
+.projectsListCarouselTrack {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 8;
   overflow: hidden;
 }
 
-.screenshot {
+.projectsListScreenshot {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -164,7 +178,7 @@
   object-fit: cover;
 }
 
-.screenshotPlaceholder {
+.projectsListScreenshotPlaceholder {
   aspect-ratio: 16 / 8;
   display: flex;
   align-items: center;
@@ -175,14 +189,13 @@
   background: var(--header-bg);
 }
 
-.screenshotPlaceholder span {
+.projectsListScreenshotPlaceholder span {
   font-size: 0.82rem;
   color: var(--muted);
   opacity: 0.6;
 }
 
-/* Carousel Controls */
-.carouselControls {
+.projectsListCarouselControls {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,7 +204,7 @@
   border-top: 1px solid var(--hover-bg);
 }
 
-.navBtn {
+.projectsListNavBtn {
   width: 28px;
   height: 28px;
   border-radius: 6px;
@@ -205,28 +218,27 @@
   transition: all 0.15s;
 }
 
-.navBtn:hover {
+.projectsListNavBtn:hover {
   background: var(--accent);
   color: #000;
   border-color: var(--accent);
 }
 
-.counter {
+.projectsListCounter {
   font-size: 0.78rem;
   color: var(--muted);
   min-width: 36px;
   text-align: center;
 }
 
-/* Dots */
-.dots {
+.projectsListDots {
   display: flex;
   justify-content: center;
   gap: 5px;
   padding: 0.5rem;
 }
 
-.dot {
+.projectsListDot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -237,44 +249,42 @@
   transition: background 0.2s, transform 0.2s;
 }
 
-.dotActive {
+.projectsListDotActive {
   background: var(--accent);
   transform: scale(1.3);
 }
 
-/* ── Details ────────────────────────────────────────────────── */
-.details {
+.projectsListDetails {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-.block {
+.projectsListBlock {
   margin-top: 1rem;
 }
 
-.block strong {
+.projectsListBlock strong {
   font-size: 0.78rem;
   color: var(--accent);
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.block p {
+.projectsListBlock p {
   margin-top: 0.35rem;
   font-size: 0.9rem;
   color: var(--muted);
   line-height: 1.6;
 }
 
-/* ── Card Footer ────────────────────────────────────────────── */
-.cardFooter {
+.projectsListCardFooter {
   margin-top: 1.4rem;
   padding-top: 1.2rem;
   border-top: 1px solid var(--hover-bg);
 }
 
-.visitLink {
+.projectsListVisitLink {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -285,7 +295,154 @@
   transition: opacity 0.2s, gap 0.2s;
 }
 
-.visitLink:hover {
+.projectsListVisitLink:hover {
   opacity: 0.75;
   gap: 0.55rem;
+}
+
+.projectsApproachSection {
+  padding: 4rem 1.2rem;
+  background: var(--body-bg);
+}
+
+.projectsApproachHeader {
+  max-width: 620px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.projectsApproachHeader h2 {
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.projectsApproachHeader p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.projectsApproachFlow {
+  max-width: 820px;
+  margin: auto;
+  position: relative;
+}
+
+.projectsApproachFlow::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--hover-bg);
+}
+
+.projectsApproachStep {
+  display: flex;
+  gap: 1.4rem;
+  margin-bottom: 2.6rem;
+  position: relative;
+}
+
+.projectsApproachMarker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.projectsApproachContent {
+  background: var(--header-bg);
+  border: 1px solid var(--hover-bg);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  width: 100%;
+}
+
+.projectsApproachContent p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.projectsCtaSection {
+  padding: 4.5rem 1.2rem;
+  background: var(--header-bg);
+  border-top: 1px solid var(--hover-bg);
+}
+
+.projectsCtaInner {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.projectsCtaInner h2 {
+  margin: 0;
+  color: var(--text);
+}
+
+.projectsCtaInner p {
+  margin-top: 0.8rem;
+  color: var(--muted);
+}
+
+.projectsCtaButton {
+  display: inline-block;
+  margin-top: 1.6rem;
+  padding: 0.7rem 1.6rem;
+  background: var(--accent);
+  color: #111;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .projectsApproachFlow::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .projectsApproachStep {
+    align-items: center;
+  }
+
+  .projectsApproachStep:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .projectsApproachMarker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .projectsApproachContent {
+    width: 45%;
+  }
+}
+
+@media (max-width: 640px) {
+  .projectsApproachSection {
+    padding: 3rem 1rem;
+  }
+
+  .projectsApproachContent {
+    padding: 1.3rem;
+  }
+
+  .projectsApproachContent p {
+    font-size: 0.88rem;
+  }
 }

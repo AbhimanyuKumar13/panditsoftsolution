@@ -103,6 +103,13 @@
 .nav a:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
+.active {
+  color: var(--text) !important; 
+}
+
+.active::after {
+  transform: translateX(-50%) scaleX(1) !important;
+}
 
 /* ── Right ──────────────────────────────────────────────── */
 .right {
@@ -184,22 +191,27 @@
     display: none;
   }
 
+  /* Mobile par sirf brand + ThemeToggle — centered brand */
+  .inner {
+    justify-content: space-between;
+  }
+
   .brand img {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
   }
 
   .name {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 450px) {
-  .name {
-    font-size: 1rem;
-  }
-
   .inner {
     padding: 0 1rem;
+  }
+
+  .name {
+    font-size: 1.1rem;
   }
 }

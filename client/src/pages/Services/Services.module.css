@@ -1,0 +1,649 @@
+.servicesHero {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 1.2rem 3.5rem;
+  background:
+    radial-gradient(circle at top left, var(--services-hero-glow-primary), transparent 32%),
+    radial-gradient(circle at bottom right, var(--services-hero-glow-secondary), transparent 30%),
+    linear-gradient(180deg, var(--body-bg) 0%, var(--header-bg) 100%);
+}
+
+.servicesHeroBackdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, transparent 0%, var(--services-hero-overlay) 48%, transparent 100%);
+  pointer-events: none;
+}
+
+.servicesHeroShell {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+}
+
+.servicesHeroContent {
+  padding: 1rem 0;
+}
+
+.servicesHeroEyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--services-border-strong);
+  background: var(--services-surface-glass);
+  color: var(--accent-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 24px var(--services-shadow-medium);
+}
+
+.servicesHeroContent h1 {
+  margin: 1.1rem 0 0;
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  color: var(--text);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  max-width: 12ch;
+}
+
+.servicesHeroContent h1 span {
+  color: var(--accent-dark);
+}
+
+.servicesHeroContent p {
+  margin: 1.15rem 0 0;
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.78;
+  max-width: 60ch;
+}
+
+.servicesHeroActions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.servicesHeroPrimaryAction,
+.servicesHeroSecondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 3.25rem;
+  padding: 0.9rem 1.35rem;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.servicesHeroPrimaryAction {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: var(--services-text-contrast);
+  box-shadow: 0 18px 40px var(--services-shadow-accent);
+}
+
+.servicesHeroPrimaryAction:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px var(--services-shadow-accent-strong);
+}
+
+.servicesHeroSecondaryAction {
+  border: 1px solid var(--services-outline-soft);
+  background: var(--services-surface-secondary);
+  color: var(--text);
+}
+
+.servicesHeroSecondaryAction:hover {
+  transform: translateY(-2px);
+  background: var(--services-surface-hover);
+}
+
+.servicesListSection {
+  padding: 4.6rem 1.2rem;
+  background:
+    linear-gradient(180deg, var(--header-bg) 0%, var(--services-surface-section-fade) 100%);
+}
+
+.servicesListWrapper {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.servicesListHeader {
+  max-width: 760px;
+  margin: 0 auto 2.8rem;
+  text-align: center;
+}
+
+.servicesListKicker {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.servicesListHeader h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.12;
+  color: var(--text);
+}
+
+.servicesListHeader p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.72;
+  color: var(--muted);
+}
+
+.servicesListGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.servicesListCardShell {
+  height: 100%;
+}
+
+.servicesListBlock {
+  height: 100%;
+  background: var(--body-bg);
+  border: 1px solid var(--services-border-base);
+  border-radius: 24px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: 0 18px 40px var(--services-shadow-soft);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.servicesListBlock:hover {
+  transform: translateY(-6px);
+  border-color: var(--services-border-hover);
+  box-shadow: 0 28px 52px var(--services-shadow-strong);
+}
+
+.servicesListTop {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.servicesListIconWrap {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--services-accent-surface);
+  color: var(--accent-dark);
+  font-size: 1.2rem;
+}
+
+.servicesListCopy {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.servicesListBlock h3 {
+  margin: 0;
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.servicesListBlock p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.72;
+  color: var(--muted);
+}
+
+.servicesListPoints {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+  color: var(--text);
+}
+
+.servicesListPoints li {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.servicesListPoints li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  box-shadow: 0 0 0 4px var(--services-accent-surface);
+}
+
+.servicesProcessSection {
+  padding: 4.6rem 1.2rem;
+  background: var(--body-bg);
+}
+
+.servicesProcessWrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.servicesProcessHeader {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.servicesProcessKicker {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.servicesProcessHeader h2 {
+  color: var(--text);
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.12;
+}
+
+.servicesProcessHeader p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.servicesProcessPath {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.servicesProcessNode {
+  min-height: 100%;
+  position: relative;
+  padding: 1.2rem;
+  border-radius: 24px;
+  border: 1px solid var(--services-border-base);
+  background:
+    linear-gradient(180deg, var(--services-surface-process-start) 0%, var(--services-surface-process-end) 100%);
+  box-shadow: 0 18px 38px var(--services-shadow-soft);
+}
+
+.servicesProcessMarker {
+  width: fit-content;
+  min-width: 3rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: var(--services-text-contrast);
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 30px var(--services-shadow-accent);
+}
+
+.servicesProcessContent {
+  margin-top: 1.15rem;
+}
+
+.servicesProcessFocus {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.servicesProcessContent h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.08rem;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.servicesProcessContent p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.68;
+  color: var(--muted);
+}
+
+.servicesTechSection {
+  padding: 4.6rem 1.2rem;
+  background: var(--header-bg);
+}
+
+.servicesTechWrapper {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.servicesTechHeader {
+  max-width: 480px;
+}
+
+.servicesTechKicker {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  color: var(--accent-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.servicesTechHeader h2 {
+  margin: 0 0 0.8rem;
+  color: var(--text);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.12;
+}
+
+.servicesTechHeader p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.servicesTechList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.servicesTechGroup {
+  padding: 1.25rem;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, var(--services-surface-tech-start) 0%, var(--services-surface-tech-end) 100%);
+  border: 1px solid var(--services-border-soft);
+  box-shadow: 0 16px 34px var(--services-shadow-soft);
+}
+
+.servicesTechGroupHeader h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.12rem;
+}
+
+.servicesTechGroupHeader p {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.servicesTechItems {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.servicesTechItems li {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.servicesTechItems svg {
+  flex-shrink: 0;
+  margin-top: 0.16rem;
+  color: var(--accent-dark);
+}
+
+.servicesCtaSection {
+  padding: 4.8rem 1.2rem 5rem;
+  background: var(--body-bg);
+}
+
+.servicesCtaInner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, var(--services-cta-start) 0%, var(--services-cta-mid) 45%, var(--accent-dark) 100%);
+  color: var(--services-text-contrast);
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) auto;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 28px 60px var(--services-shadow-cta);
+}
+
+.servicesCtaCopy {
+  max-width: 720px;
+}
+
+.servicesCtaKicker {
+  display: inline-block;
+  margin-bottom: 0.9rem;
+  color: var(--services-text-contrast-accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.servicesCtaInner h2 {
+  margin: 0;
+  color: var(--services-text-contrast);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.12;
+}
+
+.servicesCtaInner p {
+  margin-top: 0.95rem;
+  color: var(--services-text-contrast-muted);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.servicesCtaActions {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.servicesCtaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-width: 12.5rem;
+  min-height: 3.2rem;
+  padding: 0.8rem 1.3rem;
+  background: var(--services-button-bg);
+  color: var(--services-button-text);
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.servicesCtaButton:hover {
+  transform: translateY(-2px);
+  background: var(--services-button-hover);
+}
+
+@media (max-width: 1100px) {
+  .servicesProcessPath {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .servicesHeroContent h1 {
+    max-width: 14ch;
+  }
+}
+
+@media (max-width: 980px) {
+  .servicesListGrid,
+  .servicesTechWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesTechHeader {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 860px) {
+  .servicesListGrid,
+  .servicesProcessPath,
+  .servicesCtaInner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesHero {
+    padding: 3.4rem 1rem 2.8rem;
+  }
+
+  .servicesHeroContent h1 {
+    font-size: clamp(2.1rem, 9vw, 3rem);
+    max-width: none;
+  }
+
+  .servicesHeroContent p {
+    font-size: 1rem;
+  }
+
+  .servicesHeroActions {
+    flex-direction: column;
+  }
+
+  .servicesHeroPrimaryAction,
+  .servicesHeroSecondaryAction {
+    width: 100%;
+  }
+
+  .servicesProcessNode {
+    padding: 0.95rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .servicesTechList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .servicesListSection,
+  .servicesProcessSection,
+  .servicesTechSection {
+    padding: 3.2rem 1rem;
+  }
+
+  .servicesCtaSection {
+    padding: 3.4rem 1rem 4rem;
+  }
+
+  .servicesListBlock,
+  .servicesProcessNode,
+  .servicesTechGroup,
+  .servicesCtaInner {
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+
+  .servicesListHeader h2,
+  .servicesTechHeader h2,
+  .servicesCtaInner h2 {
+    font-size: 1.8rem;
+  }
+
+  .servicesListBlock h3 {
+    font-size: 1.12rem;
+  }
+
+  .servicesListBlock p,
+  .servicesListPoints li,
+  .servicesProcessContent p,
+  .servicesTechGroupHeader p,
+  .servicesTechItems li {
+    font-size: 0.9rem;
+  }
+
+  .servicesProcessPath {
+    gap: 0.9rem;
+  }
+
+  .servicesProcessNode {
+    padding: 1rem;
+  }
+
+  .servicesProcessContent h3 {
+    font-size: 0.95rem;
+  }
+
+  .servicesCtaActions,
+  .servicesCtaButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .servicesHeroContent p {
+    font-size: 0.98rem;
+  }
+}

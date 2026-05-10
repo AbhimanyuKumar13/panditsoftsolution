@@ -1,80 +1,41 @@
 export const faqs = [
   {
-    tag: "Business Fit",
-    q: "What kind of businesses do you work with?",
-    a:
-      "We work with service businesses, schools, clinics, logistics teams, traders, exporters, and startups.",
-  },
-  {
-    tag: "Timeline",
-    q: "How long does a typical project take?",
-    a:
-      "Most projects take 7-21 days, depending on scope and feedback speed.",
-  },
-  {
-    tag: "Pricing",
-    q: "How much does a website or app cost?",
-    a:
-      "Pricing depends on scope. We confirm it before work starts. No hidden charges.",
-  },
-  {
-    tag: "Process",
-    q: "Do I need technical knowledge to work with you?",
-    a:
-      "No. You share the goals. We handle design, development, and deployment.",
-  },
-  {
-    tag: "Responsive Design",
-    q: "Will my website work on mobile devices?",
-    a:
-      "Yes. Every build is optimized for mobile, tablet, and desktop.",
-  },
-  {
-    tag: "Ownership",
-    q: "Can I update my website after it is built?",
-    a:
-      "Yes. We can set up easy updates or handle them for you.",
-  },
-  {
-    tag: "Support",
-    q: "Do you provide support after project delivery?",
+    q: "What exactly does PSS build?",
     a: [
-      "Yes, we offer ongoing support.",
-      "Fixes, updates, and monitoring can be included.",
-      "We can also support long-term growth.",
+      "Business websites, portfolios, and landing pages",
+      "Custom web apps, portals, and internal dashboards",
+      "REST APIs, backend systems, and database design",
+      "SaaS products and scalable cloud-based solutions",
+      "Ongoing maintenance, performance fixes, and feature updates",
     ],
   },
   {
-    tag: "Payments",
-    q: "How do payments work?",
-    a:
-      "Usually a small upfront payment, then milestone-based payments as work moves forward.",
+    q: "How long will my project take?",
+    a: "Simple websites go live in 5–7 days. Full web applications typically take 2–5 weeks depending on complexity, integrations, and how quickly feedback is shared. We give a clear timeline before work begins — no surprises.",
   },
   {
-    tag: "Results",
-    q: "Will my website help me get customers?",
-    a:
-      "Yes. We focus on speed, SEO, clarity, and conversion.",
+    q: "How much does it cost?",
+    a: "Every project is scoped individually. You get a fixed quote upfront so there are no hidden charges mid-project. We work across budgets — from lean startups to established businesses.",
   },
   {
-    tag: "Hosting",
-    q: "Do you provide domain and hosting?",
-    a:
-      "Yes. We can help with domain, hosting, and deployment.",
+    q: "I'm not technical. Can I still work with you?",
+    a: "Absolutely. Most of our clients are non-technical founders and business owners. You explain what you need in plain language — we handle the rest, and keep you updated at every step without unnecessary jargon.",
   },
   {
-    tag: "Changes",
-    q: "What if I need changes during or after the project?",
-    a:
-      "Revisions are included during development. Later changes can be handled through support.",
-  },
-  {
-    tag: "Security",
-    q: "Is my business data secure?",
+    q: "What happens after my project is delivered?",
     a: [
-      "We follow secure development practices.",
-      "HTTPS, auth, and secure hosting are standard.",
-      "Client and project data stay confidential.",
+      "30-day free support window for any bugs or minor issues",
+      "Ongoing maintenance and update packages available",
+      "Priority access for existing clients on new features",
+      "We don't disappear after delivery — we're a long-term partner",
     ],
+  },
+  {
+    q: "How do you handle our data and confidentiality?",
+    a: "All client data, business logic, and project details are kept strictly confidential. We sign NDAs on request, follow secure development practices, and never share or reuse your codebase.",
+  },
+  {
+    q: "How do we get started?",
+    a: "Reach out via the contact form or email us directly. We'll schedule a short discovery call, understand your requirements, and send you a proposal within 24 hours.",
   },
 ];

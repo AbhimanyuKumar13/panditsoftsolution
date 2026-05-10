@@ -1,0 +1,406 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 56px 1.5rem 80px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Cards */
+.card,
+.waCard,
+.formCard {
+  background: var(--header-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+/* Form */
+.formCard {
+  padding: 28px;
+}
+
+.formCard h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.formSub {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+  line-height: 1.55;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--body-bg);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* Messages */
+.successMsg {
+  font-size: 0.85rem;
+  color: #0f6e56;
+  background: #e1f5ee;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+.errorMsg {
+  font-size: 0.85rem;
+  color: #993c1d;
+  background: #faece7;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.submitBtn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 4px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.fallback {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* WhatsApp Card */
+.waCard {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.waInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.waDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #25d366;
+  flex-shrink: 0;
+}
+
+.waInfo h3 {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.waInfo p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.waBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #25d366;
+  color: #063d1a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.waBtn:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+}
+
+/* Generic Card */
+.card {
+  padding: 24px;
+}
+
+.cardLabel {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+/* Contact List */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contactIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.contactLabel {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.contactValue {
+  color: var(--text);
+  font-size: 0.9rem;
+  text-decoration: none;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.contactValue:hover {
+  color: var(--accent);
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.stepNum {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.stepText {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.58;
+  padding-top: 5px;
+  word-break: break-word;
+}
+
+.note {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard {
+    order: 1;
+  }
+
+  .right {
+    order: 2;
+  }
+
+  .waCard {
+    order: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    order: 2;
+  }
+
+  .waBtn {
+    width: 100%;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 36px 1rem 90px;
+  }
+
+  .hero {
+    margin-bottom: 36px;
+  }
+
+  .hero h1 {
+    line-height: 1.2;
+  }
+
+  .formCard,
+  .card {
+    padding: 20px;
+  }
+
+  .waCard {
+    padding: 18px 20px;
+  }
+
+  .field textarea {
+    min-height: 110px;
+  }
+
+  .submitBtn,
+  .waBtn {
+    min-height: 44px;
+  }
+}

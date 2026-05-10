@@ -1,31 +1,31 @@
 export const steps = [
   {
-    title: "Requirement Mapping",
+    title: "Requirement Review",
     focus: "Understand the business need",
     desc:
-      "Define pages, features, roles, and scope before the build starts.",
+      "Define pages, features, roles, and scope before development starts.",
   },
   {
-    title: "Structure & UI Planning",
-    focus: "Shape the experience",
+    title: "Planning",
+    focus: "Shape the solution",
     desc:
-      "Plan flow, layout, and key user actions.",
+      "Plan structure, layout, and key user actions.",
   },
   {
-    title: "Build In Milestones",
-    focus: "Review progress regularly",
+    title: "Development",
+    focus: "Build in clear milestones",
     desc:
-      "Build in parts with regular reviews.",
+      "Build the project in parts with regular reviews.",
   },
   {
-    title: "Testing & Launch Prep",
-    focus: "Reduce launch risk",
+    title: "Testing",
+    focus: "Prepare for launch",
     desc:
-      "Test core flows and prepare for launch.",
+      "Check the main flows and prepare the release.",
   },
   {
-    title: "Go Live & Support",
-    focus: "Stay available after release",
+    title: "Launch & Support",
+    focus: "Support after release",
     desc:
       "Handle fixes, updates, and follow-up work after launch.",
   },

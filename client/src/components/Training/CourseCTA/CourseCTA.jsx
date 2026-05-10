@@ -3,11 +3,9 @@ import styles from "./CourseCTA.module.css";
 import { motion } from "framer-motion";
 
 const {
-    VITE_WHATSAPP_NUMBER,
-    VITE_WHATSAPP_DEFAULT_MESSAGE_SKILL_LAB,
-  } = import.meta.env;
-
-  
+  VITE_WHATSAPP_NUMBER,
+  VITE_WHATSAPP_DEFAULT_MESSAGE_SKILL_LAB,
+} = import.meta.env;
 
 const CourseCTA = () => {
   const whatsappLink = `https://wa.me/${VITE_WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -15,15 +13,15 @@ const CourseCTA = () => {
   )}`;
 
   return (
-    <motion.section 
-      className={styles.cta} 
+    <motion.section
+      className={styles.cta}
       initial={{ opacity: 0, y: 18 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
     >
-      <h2>Let’s Start Your Journey with <br/> Pandit Soft Solution.</h2>
-      <p>Connect to Our HR Team.</p>
+      <h2>Start your training with Pandit Soft Solution.</h2>
+      <p>Contact our team on WhatsApp for details and enrollment.</p>
 
       <a
         href={whatsappLink}
