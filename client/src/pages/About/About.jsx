@@ -181,7 +181,7 @@ const About = () => {
       </motion.section>
 
       {/* FOUNDERS */}
-      <motion.section
+      {/* <motion.section
         className={styles.founderSection}
         {...fadeUp(0.15)}
       >
@@ -219,7 +219,7 @@ const About = () => {
             </motion.article>
           ))}
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* FOUNDER NOTE */}
       <motion.section

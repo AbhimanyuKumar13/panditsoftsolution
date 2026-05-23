@@ -1,3 +1,4 @@
+import CertificateVerification from "./sections/CertificateVerification/CertificateVerification";
 import Hero from "./sections/Hero/Hero"; 
 import Training from "./sections/Training/Training";
 
@@ -6,6 +7,7 @@ export default function SkillLab() {
     <>
       <Hero />
       <Training />
+      <CertificateVerification />
     </>
   );
 }

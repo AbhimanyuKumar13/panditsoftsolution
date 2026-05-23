@@ -14,6 +14,13 @@ import pss3 from "../../assets/images/ProjectSS/Portfolio/PSS3.png";
 import pss4 from "../../assets/images/ProjectSS/Portfolio/PSS4.png";
 import pss5 from "../../assets/images/ProjectSS/Portfolio/PSS5.png";
 
+import csss1 from "../../assets/images/ProjectSS/CSSS/csss1.png";
+import csss2 from "../../assets/images/ProjectSS/CSSS/csss2.png";
+import csss3 from "../../assets/images/ProjectSS/CSSS/csss3.png";
+import csss4 from "../../assets/images/ProjectSS/CSSS/csss4.png";
+import csss5 from "../../assets/images/ProjectSS/CSSS/csss5.png";
+import csss6 from "../../assets/images/ProjectSS/CSSS/csss6.png";
+
 import i1 from "../../assets/images/ProjectSS/Imagifai/I1.png";
 import i2 from "../../assets/images/ProjectSS/Imagifai/I2.png";
 import i3 from "../../assets/images/ProjectSS/Imagifai/I3.png";
@@ -53,7 +60,7 @@ export const projects = [
     location: "Bihar, India",
     link: "https://bittutelecom.com",
     screenshots: [bt1, bt2, bt3, bt4, bt5, bt5, bt7, bt8, bt9, bt10, bt11, bt12, bt13],
-    status: "Live",
+    status: "Live 1.0",
   },
   {
     id: "preetdoors",
@@ -69,7 +76,7 @@ export const projects = [
     location: "Lucknow, Uttar Pradesh",
     link: "https://preetdoors.in",
     screenshots: [ss1, ss2, ss3, ss4],
-    status: "Live",
+    status: "Live 1.0",
   },
   {
     id: "panditconstruction",
@@ -116,7 +123,7 @@ export const projects = [
     location: "Company Product",
     link: "https://abhiapndit.online",
     screenshots: [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10],
-    status: "Live",
+    status: "Live 2.0",
   },
   {
     id: "csss",
@@ -130,8 +137,8 @@ export const projects = [
     result:
       "The system helps students review college options more efficiently during admissions.",
     location: "Company Product",
-    link: null,
-    screenshots: [],
-    status: "Running",
+    link: "null",
+    screenshots: [csss1, csss2, csss3, csss4, csss5, csss6],
+    status: "1.0 Completed (2.0 Running)",
   },
 ];
