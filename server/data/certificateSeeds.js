@@ -44,6 +44,15 @@ const certificateSeeds = [
     courseEndDate: "2026-05-15",
     issuedOn: "2026-05-15",
   },
+  {
+    studentName: "Abhishek kumar",
+    studentId: "2026 / 01016",
+    certificateNo: "AK7766013922",
+    courseName: "Website Development(MERN)",
+    courseStartDate: "2026-01-02",
+    courseEndDate: "2026-05-15",
+    issuedOn: "2026-05-15",
+  },
 ];
 
 export default certificateSeeds;
