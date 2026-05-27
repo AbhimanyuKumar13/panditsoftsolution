@@ -3,7 +3,11 @@
   overflow: hidden;
   padding: 4.8rem 1.2rem 4.2rem;
   background:
-    radial-gradient(circle at top left, rgba(255, 201, 40, 0.14), transparent 26%),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 201, 40, 0.14),
+      transparent 26%
+    ),
     radial-gradient(circle at right, rgba(72, 61, 255, 0.18), transparent 24%),
     linear-gradient(135deg, #050a37 0%, #07114f 48%, #0d1c6b 100%);
 }
@@ -31,7 +35,85 @@
 .copy {
   color: #f8fafc;
 }
+.verifyWrapper {
+  width: 100%;
+  margin-bottom: 1.4rem;
+}
 
+.verifyLink {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+
+  text-decoration: none;
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 210, 48, 0.16),
+      rgba(255, 255, 255, 0.06)
+    );
+
+  border: 1px solid rgba(255, 210, 48, 0.28);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.verifyLink span {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.verifyLink svg {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+  color: #ffd230;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.verifyLink:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 210, 48, 0.22),
+      rgba(255, 255, 255, 0.08)
+    );
+
+  border-color: rgba(255, 210, 48, 0.45);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.28),
+    0 0 18px rgba(255, 210, 48, 0.12);
+}
+
+.verifyLink:hover svg {
+  transform: translateX(5px);
+}
 .topBadges {
   display: flex;
   flex-wrap: wrap;
@@ -190,7 +272,7 @@
 }
 
 .posterWrap {
-  display: grid; 
+  display: grid;
   gap: 0.8rem;
 }
 
@@ -244,6 +326,20 @@
 
   .copy h1 {
     font-size: clamp(2rem, 10vw, 3rem);
+  }
+    .verifyWrapper {
+    margin-bottom: 1.1rem;
+  }
+
+  .verifyLink {
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+
+    font-size: 0.95rem;
+  }
+
+  .verifyLink svg {
+    font-size: 1rem;
   }
 
   .actions {

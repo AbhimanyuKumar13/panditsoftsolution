@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {
-  FiArrowRight,
-  FiAward,
-  FiClock,
-  FiTrendingUp,
-} from "react-icons/fi";
+import { FiArrowRight, FiAward, FiClock, FiTrendingUp } from "react-icons/fi";
 import styles from "./Hero.module.css";
 import summerTrainingPoster from "../../../../assets/images/training/summerTraining.png";
 
@@ -44,6 +39,16 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
+          <div className={styles.verifyWrapper}>
+            <Link
+              to="/skill-lab/certificateVerification"
+              className={styles.verifyLink}
+            >
+              <span>Verify Certificate</span>
+              <FiArrowRight />
+            </Link>
+          </div>
+
           <div className={styles.topBadges}>
             <span>Summer Training 2026</span>
             <span>Industrial Training</span>

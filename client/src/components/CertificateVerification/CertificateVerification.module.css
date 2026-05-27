@@ -1,5 +1,5 @@
 .section {
-  padding: 2rem 1.2rem 0;
+  padding: 2rem 1.2rem 1.5rem;
   background: var(--body-bg);
 }
 
@@ -10,7 +10,50 @@
 
 .header {
   max-width: 760px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.panelHeader {
+  max-width: 760px;
+}
+
+.panelTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.panelIcon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--services-accent-surface);
+  color: var(--accent-dark);
+}
+
+.panelHeader h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.panelHeader p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .kicker {
@@ -191,7 +234,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 1.5rem 1rem 0;
+    padding: 1.5rem 1rem 1.25rem;
   }
 
   .fieldGrid,
@@ -202,5 +245,9 @@
   .formCard,
   .resultCard {
     border-radius: 20px;
+  }
+
+  .panelTitleRow {
+    align-items: flex-start;
   }
 }
