@@ -49,6 +49,16 @@ const confirmationLetterSeeds = [
     supervisorName: "Mr. Dhiraj Kumar",
     issuedOn: "2026-06-06",
   },
+  {
+    candidateName: "Abhishek Kumar ",
+    referenceNo: "PSS/SL02/T02/2617",
+    programName: "45 Days Summer Industrial Training Program",
+    technology: "Frontend Development",
+    durationLabel: "45 Days",
+    sessionYear: 2026,
+    supervisorName: "Mr. Abhimanyu Pandit",
+    issuedOn: "2026-06-07",
+  },
 ];
 
 export default confirmationLetterSeeds;
