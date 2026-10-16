@@ -1,118 +1,148 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FiArrowRight, FiAward, FiClock, FiTrendingUp } from "react-icons/fi";
+import {
+  FiArrowDown,
+  FiArrowRight,
+  FiAward,
+  FiBookOpen,
+  FiCheck,
+  FiClock,
+  FiCode,
+  FiLayers,
+} from "react-icons/fi";
 import styles from "./Hero.module.css";
-import summerTrainingPoster from "../../../../assets/images/training/summerTraining.png";
 
-const quickPoints = [
-  {
-    icon: FiClock,
-    label: "45 Days Summer Training",
-  },
-  {
-    icon: FiTrendingUp,
-    label: "6 Months Career Tracks",
-  },
-  {
-    icon: FiAward,
-    label: "Certificate + Live Projects",
-  },
+const highlights = [
+  { icon: <FiClock aria-hidden="true" />, value: "45 days", label: "Focused training" },
+  { icon: <FiCode aria-hidden="true" />, value: "Real projects", label: "Learn by building" },
+  { icon: <FiAward aria-hidden="true" />, value: "Certificate", label: "Show what you learned" },
 ];
 
-const programs = [
-  "Frontend Development",
-  "Backend Development",
-  "Python Development",
-  "Data Analytics",
-  "UI/UX Design",
+const roadmapSteps = [
+  {
+    icon: <FiBookOpen aria-hidden="true" />,
+    number: "01",
+    title: "Learn the foundations",
+    detail: "Build a strong base with guided practice.",
+  },
+  {
+    icon: <FiCode aria-hidden="true" />,
+    number: "02",
+    title: "Build with guidance",
+    detail: "Apply your skills to real project work.",
+  },
+  {
+    icon: <FiLayers aria-hidden="true" />,
+    number: "03",
+    title: "Show what you can do",
+    detail: "Leave with work you can share.",
+  },
 ];
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
-      <div className={styles.overlay} />
-
+      <div className={styles.heroGlow} aria-hidden="true" />
       <div className={styles.shell}>
-        <motion.div
+        <Motion.div
           className={styles.copy}
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <div className={styles.verifyWrapper}>
-            <Link
-              to="/skill-lab/certificateVerification"
-              className={styles.verifyLink}
-            >
-              <span>Verify Certificate</span>
-              <FiArrowRight />
-            </Link>
-          </div>
-
-          <div className={styles.topBadges}>
-            <span>Summer Training 2026</span>
-            <span>Industrial Training</span>
+          <div className={styles.eyebrow}>
+            <span className={styles.eyebrowDot} />
+            Pandit Skill Lab
+            <span className={styles.eyebrowDivider} />
+            Practical tech training
           </div>
 
           <h1>
-            Industrial training for college students with{" "}
-            <span>45-day summer batches</span> and{" "}
-            <span>6-month career tracks</span>.
+            Build skills you can <span>prove.</span>
           </h1>
-
-          <p>
-            Hands-on, practical, and job-focused training designed to help
-            students build real skills, real projects, and stronger placement
-            confidence.
+          <p className={styles.intro}>
+            Learn by building real projects with mentor guidance. Choose a
+            focused 45-day program or a deeper 6-month career track.
           </p>
-
-          <div className={styles.heroBanner}>
-            <strong>45 Days</strong>
-            <span>Hands-on | Practical | Job-Focused</span>
-          </div>
-
-          <div className={styles.programPills}>
-            {programs.map((program) => (
-              <span key={program}>{program}</span>
-            ))}
-          </div>
 
           <div className={styles.actions}>
             <a href="#training-programs" className={styles.primary}>
-              Explore Programs
-              <FiArrowRight aria-hidden="true" />
+              Explore programs
+              <FiArrowDown aria-hidden="true" />
             </a>
             <Link to="/contact" className={styles.secondary}>
-              Enroll Now
+              Talk to a mentor
+              <FiArrowRight aria-hidden="true" />
             </Link>
           </div>
 
-          <div className={styles.quickGrid}>
-            {quickPoints.map(({ icon: Icon, label }) => (
-              <div key={label} className={styles.quickCard}>
-                <Icon size={18} aria-hidden="true" />
-                <span>{label}</span>
+          <div className={styles.highlights} aria-label="Training highlights">
+            {highlights.map(({ icon, value, label }) => (
+              <div key={value} className={styles.highlight}>
+                <span className={styles.highlightIcon}>{icon}</span>
+                <span>
+                  <strong>{value}</strong>
+                  <small>{label}</small>
+                </span>
               </div>
             ))}
           </div>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
-          className={styles.posterWrap}
-          initial={{ opacity: 0, scale: 0.96, y: 18 }}
+        <Motion.aside
+          className={styles.visual}
+          initial={{ opacity: 0, scale: 0.97, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.08 }}
+          transition={{ duration: 0.55, ease: "easeOut", delay: 0.08 }}
+          aria-label="Your training roadmap"
         >
-          <div className={styles.posterCard}>
-            <img
-              src={summerTrainingPoster}
-              alt="Pandit Soft Solution Summer Training 2026 poster"
-            />
+          <div className={styles.roadmapCard}>
+            <div className={styles.roadmapTop}>
+              <div>
+                <span className={styles.roadmapEyebrow}>Your learning roadmap</span>
+                <h2>From curious to capable.</h2>
+              </div>
+              <span className={styles.roadmapMark}>
+                <FiLayers aria-hidden="true" />
+              </span>
+            </div>
+            <div className={styles.roadmapSteps}>
+              {roadmapSteps.map(({ icon, number, title, detail }) => (
+                <div className={styles.roadmapStep} key={number}>
+                  <span className={styles.stepIcon}>{icon}</span>
+                  <span className={styles.stepText}>
+                    <span className={styles.stepKicker}>STEP {number}</span>
+                    <strong>{title}</strong>
+                    <small>{detail}</small>
+                  </span>
+                  {number === "03" && (
+                    <span className={styles.stepCheck}>
+                      <FiCheck aria-hidden="true" />
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className={styles.roadmapFooter}>
+              <span className={styles.footerAward}>
+                <FiAward aria-hidden="true" />
+              </span>
+              <span>
+                <strong>Progress you can show</strong>
+                <small>Projects, practical skills & a certificate</small>
+              </span>
+            </div>
           </div>
-          <div className={styles.posterNote}>
-            <span>Built around the current summer training campaign</span>
-          </div>
-        </motion.div>
+          <Link
+            to="/skill-lab/certificateVerification"
+            className={styles.verifyLink}
+          >
+            <FiAward aria-hidden="true" />
+            <span>Already trained with us?</span>
+            <strong>Verify your certificate</strong>
+            <FiArrowRight className={styles.verifyArrow} aria-hidden="true" />
+          </Link>
+        </Motion.aside>
       </div>
     </section>
   );

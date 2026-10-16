@@ -1,4 +1,4 @@
-.modules {
+﻿.modules {
   margin-top: 3.5rem;
 }
 
@@ -6,7 +6,7 @@
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.8rem;
-  color: var(--text);
+  color: #ffffff;
 }
 
 .module {
@@ -17,7 +17,7 @@
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.6rem;
-  color: var(--accent);
+  color: #F97316;
 }
 
 .module ul {
@@ -27,6 +27,7 @@
 .module li {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--muted);
+  color: #cbd5e1;
   margin-bottom: 0.4rem;
 }
+

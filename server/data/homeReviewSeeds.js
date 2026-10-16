@@ -1,0 +1,35 @@
+export const initialHomeReviews = {
+  id: "main",
+  reviews: [
+    {
+      id: "vs-enterprises",
+      name: "V S Enterprises",
+      badge: "ENTERPRISES",
+      meta: "1 review • 1 photo",
+      rating: 5,
+      timeAgo: "7 months ago",
+      avatar: "V.S",
+      text: "We had a great experience working with the Pandit soft solutions for the PREET DOORS website by VS Enterprises. The design is clean, professional, and perfectly represents our brand. The developer understood our requirements well and delivered the project on time. Highly recommended for business websites.",
+    },
+    {
+      id: "veer-abhishek",
+      name: "Veer Abhishek",
+      badge: "Local Guide",
+      meta: "9 reviews • 71 photos",
+      rating: 5,
+      timeAgo: "8 months ago",
+      avatar: "V",
+      text: "Congratulations to Pandit SoftSolution on the launch of your new startup! The creativity, professionalism, and dedication you bring to your work truly stand out. Wishing you great success and growth in the journey ahead.",
+    },
+    {
+      id: "adiyogi-construction",
+      name: "Adiyogi Construction",
+      badge: "Owner",
+      meta: "Labour & Painter Management",
+      rating: 5,
+      timeAgo: "Recently",
+      avatar: "A",
+      text: "Pandit Soft Solution built a highly practical system for our labour and painter management work. It made it much easier to assign tasks, track teams, and keep daily operations organized without confusion. The team was responsive, thoughtful, and understood our business needs from day one.",
+    },
+  ],
+};

@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*
@@ -95,4 +98,3 @@ coverage/
 # package-lock.json
 # yarn.lock
 # pnpm-lock.yaml
-

@@ -1,11 +1,11 @@
-.snapshot {
+﻿.snapshot {
   background:
     linear-gradient(
       180deg,
-      color-mix(in srgb, var(--header-bg) 88%, transparent) 0%,
-      color-mix(in srgb, var(--body-bg) 76%, transparent) 100%
+      color-mix(in srgb, #111827 88%, transparent) 0%,
+      color-mix(in srgb, #020617 76%, transparent) 100%
     );
-  border: 1px solid color-mix(in srgb, var(--border) 76%, var(--accent) 24%);
+  border: 1px solid color-mix(in srgb, #334155 76%, #F97316 24%);
   border-radius: 24px;
   padding: 2rem;
   box-shadow: 0 18px 36px rgba(15, 23, 42, 0.05);
@@ -37,27 +37,27 @@
 }
 
 .badge {
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  color: var(--accent-dark);
+  background: color-mix(in srgb, #F97316 14%, transparent);
+  color: #EA580C;
 }
 
 .softBadge {
-  background: color-mix(in srgb, var(--hover-bg) 84%, var(--header-bg) 16%);
-  color: var(--muted);
+  background: color-mix(in srgb, #1e293b 84%, #111827 16%);
+  color: #cbd5e1;
 }
 
 .snapshot h1 {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 700;
   margin: 0;
-  color: var(--text);
+  color: #ffffff;
   line-height: 1.12;
 }
 
 .summary {
   margin: 1rem 0 0;
   max-width: 60ch;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.75;
 }
 
@@ -72,15 +72,15 @@
 .snapshot li {
   padding: 0.9rem 1rem;
   border-radius: 16px;
-  background: var(--header-bg);
-  border: 1px solid color-mix(in srgb, var(--border) 76%, transparent);
+  background: #111827;
+  border: 1px solid color-mix(in srgb, #334155 76%, transparent);
   font-size: 0.95rem;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.55;
 }
 
 .snapshot li strong {
-  color: var(--text);
+  color: #ffffff;
 }
 
 @media (max-width: 640px) {
@@ -89,3 +89,4 @@
     border-radius: 20px;
   }
 }
+

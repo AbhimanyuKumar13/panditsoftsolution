@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Projects.module.css";
 import { points } from "../../data/Projects/Approach.data";
-import { projects } from "../../data/Projects/List.data";
+import { useLiveContentRefresh } from "../../utils/liveContent.js";
 
 const ExternalIcon = () => (
   <svg
@@ -71,7 +71,7 @@ const ScreenshotsCarousel = ({ screenshots, title }) => {
     <div className={styles.projectsListCarousel}>
       <div className={styles.projectsListCarouselTrack}>
         <AnimatePresence mode="wait">
-          <motion.img
+          <MotionImg
             key={active}
             src={screenshots[active]}
             alt={`${title} screenshot ${active + 1}`}
@@ -125,17 +125,49 @@ const ScreenshotsCarousel = ({ screenshots, title }) => {
 };
 
 const FILTERS = ["All", "Client Project", "Company Product"];
+const apiBase = import.meta.env.VITE_API_BASE_URL?.trim().replace(/\/$/, "");
+const MotionDiv = motion.div;
+const MotionImg = motion.img;
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
+  const [projects, setProjects] = useState([]);
+  const [projectsError, setProjectsError] = useState("");
+  const [loadingProjects, setLoadingProjects] = useState(true);
+  const projectsLoaded = useRef(false);
+
+  const refreshProjects = useCallback(async () => {
+    try {
+      const response = await fetch(`${apiBase || ""}/api/projects`, {
+        cache: "no-store",
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Unable to load published projects.");
+      }
+      if (!Array.isArray(data.projects)) {
+        throw new Error("The projects response was invalid.");
+      }
+      setProjects(data.projects);
+      setProjectsError("");
+      projectsLoaded.current = true;
+    } catch (error) {
+      if (!projectsLoaded.current) setProjectsError(error.message);
+      throw error;
+    } finally {
+      setLoadingProjects(false);
+    }
+  }, []);
+
+  useLiveContentRefresh("projects", refreshProjects);
 
   const filtered =
-    filter === "All" ? projects : projects.filter((p) => p.category === filter);
+    filter === "All" ? projects : projects.filter((project) => project.category === filter);
 
   return (
     <>
       <section className={styles.projectsHero}>
-        <motion.div
+        <MotionDiv
           className={styles.projectsHeroContent}
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
@@ -146,10 +178,15 @@ const Projects = () => {
             A selection of work that reflects our focus on quality,
             performance, and real business needs.
           </p>
-        </motion.div>
+        </MotionDiv>
       </section>
 
       <section className={styles.projectsListSection}>
+        {projectsError && (
+          <p className={styles.projectsApiError} role="status">
+            Newly added projects are temporarily unavailable. {projectsError}
+          </p>
+        )}
         <div className={styles.projectsListFilters}>
           {FILTERS.map((f) => (
             <button
@@ -166,7 +203,7 @@ const Projects = () => {
 
         <div className={styles.projectsListList}>
           {filtered.map((project, i) => (
-            <motion.div
+            <MotionDiv
               key={project.id}
               className={styles.projectsListCard}
               initial={{ opacity: 0, y: 18 }}
@@ -176,50 +213,68 @@ const Projects = () => {
             >
               <div className={styles.projectsListCardHeader}>
                 <div className={styles.projectsListMeta}>
-                  <span className={styles.projectsListCategoryBadge}>
-                    {project.category}
-                  </span>
-                  <span className={styles.projectsListTagBadge}>
-                    {project.tag}
-                  </span>
+                  {project.category && (
+                    <span className={styles.projectsListCategoryBadge}>
+                      {project.category}
+                    </span>
+                  )}
+                  {project.tag && (
+                    <span className={styles.projectsListTagBadge}>
+                      {project.tag}
+                    </span>
+                  )}
                 </div>
-                <span
-                  className={`${styles.projectsListStatus} ${
-                    project.status === "Live"
-                      ? styles.projectsListStatusLive
-                      : styles.projectsListStatusRunning
-                  }`}
-                >
-                  <span className={styles.projectsListStatusDot} />
-                  {project.status}
-                </span>
+                {project.status && (
+                  <span
+                    className={`${styles.projectsListStatus} ${
+                      project.status === "Live"
+                        ? styles.projectsListStatusLive
+                        : styles.projectsListStatusRunning
+                    }`}
+                  >
+                    <span className={styles.projectsListStatusDot} />
+                    {project.status}
+                  </span>
+                )}
               </div>
 
-              <h3 className={styles.projectsListTitle}>{project.title}</h3>
+              {project.title && (
+                <h3 className={styles.projectsListTitle}>{project.title}</h3>
+              )}
 
               <ScreenshotsCarousel
                 screenshots={project.screenshots}
-                title={project.title}
+                title={project.title || "Project"}
               />
 
-              <div className={styles.projectsListDetails}>
-                <div className={styles.projectsListBlock}>
-                  <strong>Problem</strong>
-                  <p>{project.problem}</p>
+              {(project.problem || project.solution || project.result || project.location) && (
+                <div className={styles.projectsListDetails}>
+                  {project.problem && (
+                    <div className={styles.projectsListBlock}>
+                      <strong>Problem</strong>
+                      <p>{project.problem}</p>
+                    </div>
+                  )}
+                  {project.solution && (
+                    <div className={styles.projectsListBlock}>
+                      <strong>Solution</strong>
+                      <p>{project.solution}</p>
+                    </div>
+                  )}
+                  {project.result && (
+                    <div className={styles.projectsListBlock}>
+                      <strong>Outcome</strong>
+                      <p>{project.result}</p>
+                    </div>
+                  )}
+                  {project.location && (
+                    <div className={styles.projectsListBlock}>
+                      <strong>Client / Origin</strong>
+                      <p>{project.location}</p>
+                    </div>
+                  )}
                 </div>
-                <div className={styles.projectsListBlock}>
-                  <strong>Solution</strong>
-                  <p>{project.solution}</p>
-                </div>
-                <div className={styles.projectsListBlock}>
-                  <strong>Outcome</strong>
-                  <p>{project.result}</p>
-                </div>
-                <div className={styles.projectsListBlock}>
-                  <strong>Client / Origin</strong>
-                  <p>{project.location}</p>
-                </div>
-              </div>
+              )}
 
               {project.link && (
                 <div className={styles.projectsListCardFooter}>
@@ -233,8 +288,13 @@ const Projects = () => {
                   </a>
                 </div>
               )}
-            </motion.div>
+            </MotionDiv>
           ))}
+          {!loadingProjects && !projectsError && filtered.length === 0 && (
+            <p className={styles.projectsApiError}>
+              No published projects in this category yet.
+            </p>
+          )}
         </div>
       </section>
 
@@ -248,7 +308,7 @@ const Projects = () => {
 
         <div className={styles.projectsApproachFlow}>
           {points.map((text, i) => (
-            <motion.div
+            <MotionDiv
               key={i}
               className={styles.projectsApproachStep}
               initial={{ opacity: 0, y: 20 }}
@@ -263,13 +323,13 @@ const Projects = () => {
               <div className={styles.projectsApproachContent}>
                 <p>{text}</p>
               </div>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
       </section>
 
       <section className={styles.projectsCtaSection}>
-        <motion.div
+        <MotionDiv
           className={styles.projectsCtaInner}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -284,7 +344,7 @@ const Projects = () => {
           <Link to="/contact" className={styles.projectsCtaButton}>
             Start a Project
           </Link>
-        </motion.div>
+        </MotionDiv>
       </section>
     </>
   );

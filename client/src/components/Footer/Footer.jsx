@@ -1,17 +1,15 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { createElement } from "react";
 import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 
-import {
-  FiArrowRight,
-  FiExternalLink,
-  FiFileText,
-  FiMail,
-  FiMapPin,
-} from "react-icons/fi";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 
-import { FaFacebook, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa6";
 
 const Footer = () => {
   const {
@@ -19,7 +17,7 @@ const Footer = () => {
     VITE_COMPANY_TAGLINE,
     VITE_COMPANY_ADDRESS,
     VITE_COMPANY_EMAIL,
-    VITE_COMPANY_MAP_URL,
+    VITE_COMPANY_PHONE,
     VITE_SOCIAL_INSTAGRAM,
     VITE_SOCIAL_YOUTUBE,
     VITE_SOCIAL_LINKEDIN,
@@ -34,19 +32,12 @@ const Footer = () => {
     { to: "/terms-condition-policy", label: "Terms & Conditions" },
     { to: "/refund-policy", label: "Refund Policy" },
     { to: "/data-protection-policy", label: "Data Protection" },
-    { to: "/incident-response-policy", label: "Incident Response" },
-    { to: "/code-of-conduct-policy", label: "Code of Conduct" },
-    { to: "/internship-policy", label: "Internship Policy" },
-    { to: "/esop-policy", label: "ESOP Policy" },
-    { to: "/Msa-policy", label: "MSA" },
-    { to: "/Nda-policy", label: "NDA" },
   ];
 
   const certifications = [
     { label: "GSTIN", value: VITE_COMPANY_GSTIN },
     { label: "MSME", value: VITE_COMPANY_MSME },
-    { label: "ISO", value: VITE_COMPANY_ISO },
-  ].filter((item) => item.value);
+  ].filter((item) => item.value && item.value !== "COMING SOON");
 
   const socialLinks = [
     {
@@ -69,74 +60,64 @@ const Footer = () => {
       href: VITE_SOCIAL_YOUTUBE,
       icon: FaYoutube,
     },
-    {
-      label: "Google map",
-      href: VITE_COMPANY_MAP_URL,
-      icon: FiMapPin,
-    },
   ].filter((item) => item.href);
 
   return (
-    <motion.footer
-      className={styles.footer}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4 }}
-    >
+    <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* LEFT */}
-        <div className={styles.brandSection}> 
+        <div className={styles.brandSection}>
+          <div className={styles.brandCard}>
+            <span className={styles.eyebrow}>Business solutions</span>
+            <h2>{VITE_COMPANY_NAME}</h2>
+            <p className={styles.tagline}>{VITE_COMPANY_TAGLINE}</p>
 
-          <h2>{VITE_COMPANY_NAME}</h2>
+            <div className={styles.contactInfo}>
+              {VITE_COMPANY_PHONE && (
+                <a
+                  href={`tel:${VITE_COMPANY_PHONE}`}
+                  className={styles.infoItem}
+                >
+                  <FiPhone />
+                  <span>{VITE_COMPANY_PHONE}</span>
+                </a>
+              )}
 
-          <p className={styles.tagline}>{VITE_COMPANY_TAGLINE}</p>
-
-          <div className={styles.contactInfo}>
-            <div className={styles.infoItem}>
-              <FiMapPin />
-              <span>{VITE_COMPANY_ADDRESS}</span>
-            </div>
-
-            <a
-              href={`mailto:${VITE_COMPANY_EMAIL}`}
-              className={styles.infoItem}
-            >
-              <FiMail />
-              <span>{VITE_COMPANY_EMAIL}</span>
-            </a>
-          </div>
-          <div className={styles.socialRow}>
-            {socialLinks.map(({ label, href, icon: Icon }) => (
               <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.socialLink}
-                aria-label={label}
+                href={`mailto:${VITE_COMPANY_EMAIL}`}
+                className={styles.infoItem}
               >
-                <Icon />
+                <FiMail />
+                <span>{VITE_COMPANY_EMAIL}</span>
               </a>
-            ))}
-          </div>
-          {VITE_COMPANY_MAP_URL && (
-            <div className={styles.mapWrapper}>
-              <iframe
-                src={VITE_COMPANY_MAP_URL}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Map"
-              />
+
+              <div className={styles.infoItem}>
+                <FiMapPin />
+                <span>{VITE_COMPANY_ADDRESS}</span>
+              </div>
             </div>
-          )}
+
+            {socialLinks.length > 0 && (
+              <div className={styles.socialRow}>
+                {socialLinks.map(({ label, href, icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.socialLink}
+                    aria-label={label}
+                  >
+                    {createElement(icon)}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* CENTER */}
         <div className={styles.linksSection}>
-          <div>
-            <span className={styles.sectionTitle}>Legals</span>
+          <div className={styles.panelCard}>
+            <span className={styles.sectionTitle}>Explore</span>
 
             <div className={styles.linksGrid}>
               {legalLinks.map((item) => (
@@ -145,22 +126,25 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-          </div> 
+          </div>
         </div>
 
-        {/* RIGHT */}
         <div className={styles.metaSection}>
-          <div>
+          <div className={styles.panelCard}>
             <span className={styles.sectionTitle}>Credentials</span>
 
-            <div className={styles.badges}>
-              {certifications.map((item) => (
-                <div key={item.label} className={styles.badge}>
-                  <span>{item.label}</span>
-                  <strong>{item.value}</strong>
-                </div>
-              ))}
-            </div>
+            {certifications.length > 0 ? (
+              <div className={styles.badges}>
+                {certifications.map((item) => (
+                  <div key={item.label} className={styles.badge}>
+                    <span>{item.label}</span>
+                    <strong>{item.value}</strong>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p className={styles.emptyState}>Trusted business partner</p>
+            )}
           </div>
         </div>
       </div>
@@ -169,9 +153,9 @@ const Footer = () => {
         <p>
           Copyright {new Date().getFullYear()} {VITE_COMPANY_NAME}. All rights
           reserved.
-        </p> 
+        </p>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 

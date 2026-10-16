@@ -20,7 +20,7 @@ const syncConfirmationLetterSeeds = async () => {
           referenceNoNormalized: normalizeReferenceCode(referenceNo),
         },
         update: {
-          $set: {
+          $setOnInsert: {
             ...confirmationLetter,
             referenceNo,
             referenceNoNormalized: normalizeReferenceCode(referenceNo),

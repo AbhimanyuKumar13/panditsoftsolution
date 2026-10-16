@@ -1,6 +1,6 @@
-.section {
+﻿.section {
   padding: 4.8rem 1.2rem;
-  background: var(--body-bg);
+  background: #020617;
 }
 
 .shell {
@@ -22,7 +22,7 @@
 
 .subtext {
   margin: 0;
-  color: var(--muted);
+  color: #cbd5e1;
   font-size: 0.95rem;
   line-height: 1.7;
 }
@@ -38,15 +38,15 @@
 /* ITEM */
 
 .item {
-  background: var(--header-bg);
-  border: 1px solid var(--border-color);
+  background: #111827;
+  border: 1px solid #334155;
   border-radius: 10px;
   overflow: hidden;
   transition: border-color 0.2s ease;
 }
 
 .itemOpen {
-  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  border-color: color-mix(in srgb, #F97316 35%, transparent);
 }
 
 /* QUESTION BUTTON */
@@ -61,18 +61,18 @@
   gap: 0.9rem;
   cursor: pointer;
   text-align: left;
-  color: var(--text);
+  color: #ffffff;
 }
 
 .question:hover .qText {
-  color: var(--accent);
+  color: #F97316;
 }
 
 .index {
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  color: var(--muted);
+  color: #cbd5e1;
   min-width: 28px;
   flex-shrink: 0;
   padding-top: 1px;
@@ -88,7 +88,7 @@
 
 .iconWrap {
   flex-shrink: 0;
-  color: var(--muted);
+  color: #cbd5e1;
   display: flex;
   align-items: center;
   transition: color 0.2s ease;
@@ -100,10 +100,10 @@
 
 .open {
   transform: rotate(180deg);
-  color: var(--accent);
+  color: #F97316;
 }
 
-/* ANSWER — grid trick for smooth height animation */
+/* ANSWER â€” grid trick for smooth height animation */
 
 .answer {
   display: grid;
@@ -120,7 +120,7 @@
 }
 
 .answerContent {
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid #334155;
   padding: 1rem 1.25rem 1.15rem 3.1rem;
 }
 
@@ -128,7 +128,7 @@
 .answerList li {
   margin: 0;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.72;
 }
 
@@ -153,7 +153,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--accent);
+  background: #F97316;
   opacity: 0.6;
 }
 

@@ -1,11 +1,11 @@
-.bottomNav {
+﻿.bottomNav {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   height: 64px;
-  background: var(--header-bg);
-  border-top: 1px solid var(--hover-bg);
+  background: #111827;
+  border-top: 1px solid #1e293b;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -19,20 +19,20 @@
   gap: 4px;
   font-size: 0.7rem;
   text-decoration: none;
-  color: var(--muted);
+  color: #cbd5e1;
 }
 
 .bottomNav a svg {
   font-size: 1.25rem;
-  color: var(--icon);
+  color: #38BDF8;
 }
 
 .bottomNav a.active {
-  color: var(--accent); 
+  color: #F97316; 
 }
 
 .bottomNav a.active svg {
-  color: var(--accent);
+  color: #F97316;
 } 
 
 /* Desktop: remove completely */
@@ -41,3 +41,4 @@
     display: none;
   }
 }
+

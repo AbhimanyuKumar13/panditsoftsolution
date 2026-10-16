@@ -1,8 +1,9 @@
 export const services = [
   {
+    packageCategory: "website",
     title: "Business Websites",
     desc:
-      "Responsive websites that present your business clearly and professionally.",
+      "Design and development for business sites that explain your offer clearly, work across devices, and make it easy for customers to enquire.",
     points: [
       "Company profile and service pages",
       "Landing pages and enquiry flows",
@@ -10,9 +11,10 @@ export const services = [
     ],
   },
   {
+    packageCategory: "webapp",
     title: "Custom Web Applications",
     desc:
-      "Custom systems built around real workflows, roles, and operations.",
+      "Purpose-built portals and internal tools that simplify business processes, manage roles, and bring key workflows into one place.",
     points: [
       "Admin panels and internal tools",
       "Dashboards, portals, and booking systems",
@@ -20,9 +22,10 @@ export const services = [
     ],
   },
   {
+    packageCategory: "ecommerce",
     title: "E-commerce Stores",
     desc:
-      "Online stores built for product browsing, checkout, and order management.",
+      "Complete online shopping experiences, from product discovery and checkout to payments and day-to-day order management.",
     points: [
       "Product catalog and category setup",
       "Cart, checkout, and payment integration",
@@ -30,9 +33,10 @@ export const services = [
     ],
   },
   {
+    packageCategory: "website",
     title: "Frontend Development",
     desc:
-      "Fast interfaces with clean structure and responsive layouts.",
+      "Responsive, accessible interfaces built with reusable components and careful attention to page speed and usability.",
     points: [
       "React and Next.js frontends",
       "Reusable UI sections and forms",
@@ -40,9 +44,10 @@ export const services = [
     ],
   },
   {
+    packageCategory: "webapp",
     title: "Backend & API Development",
     desc:
-      "Backend systems for data, business logic, security, and integrations.",
+      "Secure APIs and data systems that power applications, connect external services, and support your business logic.",
     points: [
       "REST APIs and database design",
       "Authentication, roles, and permissions",
@@ -50,9 +55,10 @@ export const services = [
     ],
   },
   {
+    packageCategory: "support",
     title: "Maintenance & Feature Support",
     desc:
-      "Post-launch support for fixes, updates, and steady improvement.",
+      "Reliable post-launch care for fixes, updates, performance improvements, and planned feature work.",
     points: [
       "Bug fixing and code cleanup",
       "Feature additions and UI updates",

@@ -1,9 +1,9 @@
-.course {
+﻿.course {
   padding: 4rem 6%;
   max-width: 900px;
   margin: 0 auto;
-  background: var(--body-bg);
-  color: var(--text);
+  background: #020617;
+  color: #ffffff;
 }
 
 .section {
@@ -14,7 +14,7 @@
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 1.2rem;
-  color: var(--text);
+  color: #ffffff;
 }
 
 .section ul {
@@ -25,12 +25,12 @@
   margin-bottom: 0.6rem;
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--muted);
+  color: #cbd5e1;
 }
 
 /* Visual separation */
 .section:not(:last-child) {
-  border-bottom: 1px solid var(--hover-bg);
+  border-bottom: 1px solid #1e293b;
   padding-bottom: 2.5rem;
 }
 
@@ -44,3 +44,4 @@
     font-size: 1.4rem;
   }
 }
+

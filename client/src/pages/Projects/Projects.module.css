@@ -1,6 +1,6 @@
-.projectsHero {
+﻿.projectsHero {
   padding: 4rem 1.2rem 3rem;
-  background: var(--body-bg);
+  background: #020617;
 }
 
 .projectsHeroContent {
@@ -11,18 +11,30 @@
 
 .projectsHeroContent h1 {
   font-size: clamp(2rem, 5vw, 2.6rem);
-  color: var(--text);
+  color: #ffffff;
 }
 
 .projectsHeroContent p {
   margin-top: 1rem;
-  color: var(--muted);
+  color: #cbd5e1;
   font-size: 1.05rem;
 }
 
 .projectsListSection {
   padding: 4rem 1.2rem;
-  background: var(--header-bg);
+  background: #111827;
+}
+
+.projectsApiError {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(251, 146, 60, 0.35);
+  border-radius: 8px;
+  background: rgba(124, 45, 18, 0.18);
+  color: #fed7aa;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .projectsListFilters {
@@ -36,9 +48,9 @@
 .projectsListFilterBtn {
   padding: 0.45rem 1.1rem;
   border-radius: 20px;
-  border: 1px solid var(--hover-bg);
+  border: 1px solid #1e293b;
   background: transparent;
-  color: var(--muted);
+  color: #cbd5e1;
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
@@ -46,13 +58,13 @@
 }
 
 .projectsListFilterBtn:hover {
-  border-color: var(--accent);
-  color: var(--text);
+  border-color: #F97316;
+  color: #ffffff;
 }
 
 .projectsListFilterActive {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: #F97316;
+  border-color: #F97316;
   color: #000 !important;
 }
 
@@ -64,8 +76,8 @@
 }
 
 .projectsListCard {
-  background: var(--body-bg);
-  border: 1px solid var(--hover-bg);
+  background: #020617;
+  border: 1px solid #1e293b;
   border-radius: 14px;
   padding: 1.8rem;
   display: flex;
@@ -75,7 +87,7 @@
 }
 
 .projectsListCard:hover {
-  border-color: var(--accent);
+  border-color: #F97316;
 }
 
 .projectsListCardHeader {
@@ -100,8 +112,8 @@
   text-transform: uppercase;
   padding: 0.25rem 0.65rem;
   border-radius: 4px;
-  background: var(--hover-bg);
-  color: var(--muted);
+  background: #1e293b;
+  color: #cbd5e1;
 }
 
 .projectsListTagBadge {
@@ -111,8 +123,8 @@
   text-transform: uppercase;
   padding: 0.25rem 0.65rem;
   border-radius: 4px;
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
-  color: var(--accent);
+  background: color-mix(in srgb, #F97316 12%, transparent);
+  color: #F97316;
 }
 
 .projectsListStatus {
@@ -150,7 +162,7 @@
 
 .projectsListTitle {
   margin: 0 0 1.2rem;
-  color: var(--text);
+  color: #ffffff;
   font-size: 1.1rem;
   line-height: 1.4;
 }
@@ -158,9 +170,9 @@
 .projectsListCarousel {
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid var(--hover-bg);
+  border: 1px solid #1e293b;
   margin-bottom: 1.4rem;
-  background: var(--header-bg);
+  background: #111827;
 }
 
 .projectsListCarouselTrack {
@@ -175,7 +187,8 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #020617;
 }
 
 .projectsListScreenshotPlaceholder {
@@ -184,14 +197,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  border: 1px dashed var(--hover-bg);
+  border: 1px dashed #1e293b;
   margin-bottom: 1.4rem;
-  background: var(--header-bg);
+  background: #111827;
 }
 
 .projectsListScreenshotPlaceholder span {
   font-size: 0.82rem;
-  color: var(--muted);
+  color: #cbd5e1;
   opacity: 0.6;
 }
 
@@ -201,16 +214,16 @@
   justify-content: center;
   gap: 0.8rem;
   padding: 0.7rem;
-  border-top: 1px solid var(--hover-bg);
+  border-top: 1px solid #1e293b;
 }
 
 .projectsListNavBtn {
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  border: 1px solid var(--hover-bg);
-  background: var(--body-bg);
-  color: var(--text);
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,14 +232,14 @@
 }
 
 .projectsListNavBtn:hover {
-  background: var(--accent);
+  background: #F97316;
   color: #000;
-  border-color: var(--accent);
+  border-color: #F97316;
 }
 
 .projectsListCounter {
   font-size: 0.78rem;
-  color: var(--muted);
+  color: #cbd5e1;
   min-width: 36px;
   text-align: center;
 }
@@ -243,14 +256,14 @@
   height: 6px;
   border-radius: 50%;
   border: none;
-  background: var(--hover-bg);
+  background: #1e293b;
   cursor: pointer;
   padding: 0;
   transition: background 0.2s, transform 0.2s;
 }
 
 .projectsListDotActive {
-  background: var(--accent);
+  background: #F97316;
   transform: scale(1.3);
 }
 
@@ -266,7 +279,7 @@
 
 .projectsListBlock strong {
   font-size: 0.78rem;
-  color: var(--accent);
+  color: #F97316;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -274,14 +287,14 @@
 .projectsListBlock p {
   margin-top: 0.35rem;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.6;
 }
 
 .projectsListCardFooter {
   margin-top: 1.4rem;
   padding-top: 1.2rem;
-  border-top: 1px solid var(--hover-bg);
+  border-top: 1px solid #1e293b;
 }
 
 .projectsListVisitLink {
@@ -290,7 +303,7 @@
   gap: 0.4rem;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--accent);
+  color: #F97316;
   text-decoration: none;
   transition: opacity 0.2s, gap 0.2s;
 }
@@ -302,7 +315,7 @@
 
 .projectsApproachSection {
   padding: 4rem 1.2rem;
-  background: var(--body-bg);
+  background: #020617;
 }
 
 .projectsApproachHeader {
@@ -312,12 +325,12 @@
 }
 
 .projectsApproachHeader h2 {
-  color: var(--text);
+  color: #ffffff;
   margin-bottom: 0.4rem;
 }
 
 .projectsApproachHeader p {
-  color: var(--muted);
+  color: #cbd5e1;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -335,7 +348,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--hover-bg);
+  background: #1e293b;
 }
 
 .projectsApproachStep {
@@ -349,7 +362,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--accent);
+  background: #F97316;
   color: #000;
   font-size: 0.75rem;
   font-weight: 600;
@@ -361,8 +374,8 @@
 }
 
 .projectsApproachContent {
-  background: var(--header-bg);
-  border: 1px solid var(--hover-bg);
+  background: #111827;
+  border: 1px solid #1e293b;
   border-radius: 14px;
   padding: 1.4rem 1.6rem;
   width: 100%;
@@ -372,13 +385,13 @@
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.65;
-  color: var(--text);
+  color: #ffffff;
 }
 
 .projectsCtaSection {
   padding: 4.5rem 1.2rem;
-  background: var(--header-bg);
-  border-top: 1px solid var(--hover-bg);
+  background: #111827;
+  border-top: 1px solid #1e293b;
 }
 
 .projectsCtaInner {
@@ -389,19 +402,19 @@
 
 .projectsCtaInner h2 {
   margin: 0;
-  color: var(--text);
+  color: #ffffff;
 }
 
 .projectsCtaInner p {
   margin-top: 0.8rem;
-  color: var(--muted);
+  color: #cbd5e1;
 }
 
 .projectsCtaButton {
   display: inline-block;
   margin-top: 1.6rem;
   padding: 0.7rem 1.6rem;
-  background: var(--accent);
+  background: #F97316;
   color: #111;
   border-radius: 6px;
   text-decoration: none;

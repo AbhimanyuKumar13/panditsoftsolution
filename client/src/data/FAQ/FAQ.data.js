@@ -1,41 +1,44 @@
 export const faqs = [
   {
-    q: "What exactly does PSS build?",
+    q: "What services do you provide?",
     a: [
-      "Business websites, portfolios, and landing pages",
-      "Custom web apps, portals, and internal dashboards",
-      "REST APIs, backend systems, and database design",
-      "SaaS products and scalable cloud-based solutions",
-      "Ongoing maintenance, performance fixes, and feature updates",
+      "Business websites and company portals",
+      "Landing pages, portfolios, and e-commerce storefronts",
+      "Custom web applications and dashboards",
+      "API development, backend systems, and database work",
+      "Website redesign, maintenance, and performance optimization",
     ],
   },
   {
-    q: "How long will my project take?",
-    a: "Simple websites go live in 5–7 days. Full web applications typically take 2–5 weeks depending on complexity, integrations, and how quickly feedback is shared. We give a clear timeline before work begins — no surprises.",
+    q: "Do you build custom websites and web apps?",
+    a: "Yes. We build tailored solutions based on your business goals, whether you need a simple brochure website, a lead-generation platform, or a fully customized web application with login, workflows, and data management.",
   },
   {
-    q: "How much does it cost?",
-    a: "Every project is scoped individually. You get a fixed quote upfront so there are no hidden charges mid-project. We work across budgets — from lean startups to established businesses.",
+    q: "How long does a project usually take?",
+    a: "The timeline depends on scope and complexity. A standard business website can take around 1 to 3 weeks, while a custom web app or multi-page platform may take several weeks. We share a clear timeline before starting and keep updates throughout the project.",
   },
   {
-    q: "I'm not technical. Can I still work with you?",
-    a: "Absolutely. Most of our clients are non-technical founders and business owners. You explain what you need in plain language — we handle the rest, and keep you updated at every step without unnecessary jargon.",
+    q: "How much does a website or app cost?",
+    a: "The cost depends on the features, pages, integrations, and project timeline. We provide a custom quote after understanding your requirements, with transparent pricing and no hidden charges.",
   },
   {
-    q: "What happens after my project is delivered?",
-    a: [
-      "30-day free support window for any bugs or minor issues",
-      "Ongoing maintenance and update packages available",
-      "Priority access for existing clients on new features",
-      "We don't disappear after delivery — we're a long-term partner",
-    ],
+    q: "Can you redesign my existing website?",
+    a: "Absolutely. We can refresh your current website, improve user experience, update the design, fix outdated sections, improve speed, and add features that support your business growth.",
   },
   {
-    q: "How do you handle our data and confidentiality?",
-    a: "All client data, business logic, and project details are kept strictly confidential. We sign NDAs on request, follow secure development practices, and never share or reuse your codebase.",
+    q: "Do you offer support and maintenance after launch?",
+    a: "Yes. We provide post-launch support, bug fixes, performance improvements, content updates, and ongoing maintenance packages so your website continues to perform smoothly after delivery.",
   },
   {
-    q: "How do we get started?",
-    a: "Reach out via the contact form or email us directly. We'll schedule a short discovery call, understand your requirements, and send you a proposal within 24 hours.",
+    q: "Do you work with startups and growing businesses?",
+    a: "Yes. We work with startups, founders, small businesses, and established companies that need reliable digital solutions. We also help clients who are not technical and guide them through the process in simple language.",
+  },
+  {
+    q: "What is your process for starting a project?",
+    a: "We begin with a discovery conversation, review your goals and requirements, suggest the right approach, prepare a proposal, and then move into design and development. You will be kept informed at every stage with clear milestones and feedback cycles.",
+  },
+  {
+    q: "How do I get a quote for my project?",
+    a: "Simply contact us through the form, email, or phone. Share your project goals, timeline, and any references you like, and we will get back to you with a suitable recommendation and quote.",
   },
 ];

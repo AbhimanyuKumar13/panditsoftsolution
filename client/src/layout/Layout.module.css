@@ -1,7 +1,58 @@
-.appShell {
+﻿.appShell {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.offerTicker {
+  position: sticky;
+  top: 64px;
+  z-index: 49;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(249, 115, 22, 0.4);
+  background: #111827;
+  color: #fed7aa;
+}
+
+.offerTickerTrack {
+  display: flex;
+  width: max-content;
+  animation: offerTickerScroll 28s linear infinite;
+  will-change: transform;
+}
+
+.offerTicker:hover .offerTickerTrack,
+.offerTicker:focus-within .offerTickerTrack {
+  animation-play-state: paused;
+}
+
+.offerTickerItem {
+  display: flex;
+  flex: 0 0 max(100vw, max-content);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-height: 2.6rem;
+  padding: 0 3rem;
+  color: inherit;
+  font-size: 0.85rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.offerTickerItem strong {
+  color: #fb923c;
+}
+
+@keyframes offerTickerScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333333%);
+  }
 }
 
 /* Main content area */
@@ -9,6 +60,26 @@
   flex: 1;
   padding-top: 0px; /* header height */
   padding-bottom: 80px; /* space for mobile bottom nav */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offerTickerTrack {
+    width: 100%;
+    animation: none;
+  }
+
+  .offerTickerItem {
+    flex: 0 0 100%;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .offerTickerItem[aria-hidden="true"] {
+    display: none;
+  }
 }
 
 /* Desktop adjustments */

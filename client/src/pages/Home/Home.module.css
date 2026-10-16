@@ -1,9 +1,9 @@
-.homeHero {
+﻿.homeHero {
   min-height: calc(70vh - 72px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--body-bg);
+  background: #020617;
   padding: 2rem 1.2rem;
 }
 
@@ -14,19 +14,19 @@
 
 .homeHeroContent h1 {
   font-size: clamp(2.2rem, 5vw, 3.2rem);
-  color: var(--text);
+  color: #ffffff;
   line-height: 1.2;
   letter-spacing: -0.5px;
 }
 
 .homeHeroContent h1 span {
-  color: var(--accent);
+  color: #f97316;
   text-shadow: 0px 1px 1px red;
 }
 
 .homeHeroContent p {
   margin-top: 1.2rem;
-  color: var(--muted);
+  color: #cbd5e1;
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -42,10 +42,10 @@
 .homeHeroPrimary {
   position: relative;
   background: transparent;
-  color: var(--text);
-  background: var(--accent);
+  color: #ffffff;
+  background: #f97316;
   padding: 0.75rem 1.6rem;
-  border: 1px solid var(--accent);
+  border: 1px solid #f97316;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -68,7 +68,7 @@
 
 .homeHeroPrimary:hover {
   background: transparent;
-  border: 1px solid var(--accent);
+  border: 1px solid #f97316;
   transition: transform 0.25s ease;
   transform: translateY(-2px);
 }
@@ -78,24 +78,24 @@
 }
 
 .homeHeroSecondary {
-  border: 1px solid var(--border);
+  border: 1px solid #334155;
   padding: 0.75rem 1.6rem;
   border-radius: 8px;
   text-decoration: none;
-  color: var(--text);
+  color: #ffffff;
   background: transparent;
   transition: all 0.25s ease;
 }
 
 .homeHeroSecondary:hover {
-  background: var(--hover-bg);
-  border-color: var(--accent);
-  color: var(--accent);
+  background: #1e293b;
+  border-color: #f97316;
+  color: #f97316;
 }
 
 .homeWhySection {
   padding: 1rem 1.2rem;
-  background: var(--body-bg);
+  background: #020617;
   width: 100%;
 }
 
@@ -134,13 +134,13 @@
   width: 100%;
   border-radius: 10px;
   padding: 1rem 1.5rem;
-  background: var(--body-bg);
+  background: #020617;
   backdrop-filter: blur(12px);
-  border: 2px solid var(--text);
+  border: 2px solid #ffffff;
 }
 
 .homeWhyCard:hover {
-  border-color: var(--accent);
+  border-color: #f97316;
 }
 
 .homeWhyInner {
@@ -178,12 +178,151 @@
 
 .homeOfferSection {
   padding: 4.8rem 1.2rem;
-  background:
-    linear-gradient(
-      180deg,
-      var(--body-bg) 0%,
-      color-mix(in srgb, var(--hover-bg) 42%, var(--header-bg) 58%) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #020617 0%,
+    color-mix(in srgb, #1e293b 42%, #111827 58%) 100%
+  );
+}
+
+.homeReviewsSection {
+  padding: 0 1.2rem 4.5rem;
+  border-top: 1px solid color-mix(in srgb, #f97316 14%, transparent);
+  background: linear-gradient(
+    180deg,
+    #020617 0%,
+    color-mix(in srgb, #1e293b 42%, #111827 58%) 100%
+  );
+}
+
+.homeReviewsWrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.homeReviewsToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.2rem;
+}
+
+.homeReviewsToolbar h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.1rem, 4vw, 2.9rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.homeReviewsList {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.homeReviewCard {
+  background: #ffffff;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 22px;
+  padding: 1.2rem 1.1rem 1.25rem;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
+}
+
+.homeReviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.homeReviewProfile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.homeReviewAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d97706, #facc15);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.homeReviewIdentity {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.homeReviewNameRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.homeReviewIdentity strong {
+  color: #111827;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.homeReviewIdentity span {
+  color: #6b7280;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.homeReviewMenu {
+  border: none;
+  background: transparent;
+  color: #374151;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.homeReviewStars {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 0.1rem;
+  color: #f5b301;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  margin: 1rem 0 0.75rem;
+}
+
+.homeReviewTime {
+  margin-left: 0.8rem;
+  color: #6b7280;
+  font-size: 0.82rem;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+.homeReviewText {
+  margin: 0;
+  color: #1f2937;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .homeReviewsToolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .homeOfferShell {
@@ -198,7 +337,7 @@
 .homeOfferKicker {
   display: inline-block;
   margin-bottom: 0.8rem;
-  color: var(--accent-dark);
+  color: #ea580c;
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -207,14 +346,14 @@
 
 .homeOfferHeader h2 {
   margin: 0;
-  color: var(--text);
+  color: #ffffff;
   font-size: clamp(1.9rem, 4vw, 3rem);
   line-height: 1.1;
 }
 
 .homeOfferHeader p {
   margin: 1rem 0 0;
-  color: var(--muted);
+  color: #cbd5e1;
   font-size: 1rem;
   line-height: 1.72;
 }
@@ -228,11 +367,11 @@
 
 .homeOfferCard {
   min-height: 100%;
-  background: var(--header-bg);
+  background: #111827;
   border-radius: 24px;
   padding: 1.35rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 14%, transparent);
-  box-shadow: 0 16px 34px color-mix(in srgb, var(--text) 6%, transparent);
+  border: 1px solid color-mix(in srgb, #f97316 14%, transparent);
+  box-shadow: 0 16px 34px color-mix(in srgb, #ffffff 6%, transparent);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -244,8 +383,8 @@
 
 .homeOfferCard:hover {
   transform: translateY(-6px);
-  border-color: color-mix(in srgb, var(--accent) 28%, transparent);
-  box-shadow: 0 22px 46px color-mix(in srgb, var(--text) 10%, transparent);
+  border-color: color-mix(in srgb, #f97316 28%, transparent);
+  box-shadow: 0 22px 46px color-mix(in srgb, #ffffff 10%, transparent);
 }
 
 .homeOfferTop {
@@ -267,8 +406,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  color: var(--accent-dark);
+  background: color-mix(in srgb, #f97316 14%, transparent);
+  color: #ea580c;
   font-size: 1.15rem;
 }
 
@@ -278,8 +417,8 @@
   justify-content: center;
   padding: 0.45rem 0.75rem;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--hover-bg) 86%, var(--header-bg) 14%);
-  color: var(--accent-dark);
+  background: color-mix(in srgb, #1e293b 86%, #111827 14%);
+  color: #ea580c;
   font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -289,14 +428,14 @@
 .homeOfferCard h3 {
   margin: 0;
   font-size: 1.24rem;
-  color: var(--text);
+  color: #ffffff;
   line-height: 1.22;
 }
 
 .homeOfferCard p {
   margin: 0;
   font-size: 0.94rem;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.66;
 }
 
@@ -311,7 +450,7 @@
 .homeOfferPoints li {
   position: relative;
   padding-left: 1.3rem;
-  color: var(--text);
+  color: #ffffff;
   font-size: 0.92rem;
   line-height: 1.55;
 }
@@ -324,8 +463,8 @@
   width: 0.52rem;
   height: 0.52rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 14%, transparent);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  box-shadow: 0 0 0 4px color-mix(in srgb, #f97316 14%, transparent);
 }
 
 .homeOfferCtaWrap {
@@ -340,11 +479,11 @@
   min-height: 3.1rem;
   padding: 0.85rem 1.35rem;
   border-radius: 14px;
-  background: var(--accent);
-  color: var(--text);
+  background: #f97316;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
-  box-shadow: 0 16px 32px color-mix(in srgb, var(--accent-dark) 18%, transparent);
+  box-shadow: 0 16px 32px color-mix(in srgb, #ea580c 18%, transparent);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -352,17 +491,16 @@
 
 .homeOfferCta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 36px color-mix(in srgb, var(--accent-dark) 24%, transparent);
+  box-shadow: 0 20px 36px color-mix(in srgb, #ea580c 24%, transparent);
 }
 
 .homeStatsSection {
   padding: 4.8rem 1.2rem;
-  background:
-    linear-gradient(
-      180deg,
-      var(--header-bg) 0%,
-      color-mix(in srgb, var(--body-bg) 82%, var(--header-bg) 18%) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #111827 0%,
+    color-mix(in srgb, #020617 82%, #111827 18%) 100%
+  );
 }
 
 .homeStatsWrapper {
@@ -381,14 +519,9 @@
 .homeStatsMetricCard {
   padding: 1.35rem;
   border-radius: 24px;
-  background:
-    linear-gradient(
-      180deg,
-      var(--services-surface-panel-start) 0%,
-      var(--services-surface-panel-end) 100%
-    );
-  border: 1px solid var(--services-border-medium);
-  box-shadow: 0 16px 34px var(--services-shadow-soft);
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #475569;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
 }
 
 .homeStatsItem {
@@ -400,7 +533,7 @@
 .homeStatsNumber {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: var(--text);
+  color: #ffffff;
   line-height: 0.95;
 }
 
@@ -409,69 +542,81 @@
   font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--accent-dark);
+  color: #ea580c;
 }
 
 .homeCtaSection {
   padding: 4.8rem 1.2rem 5rem;
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--header-bg) 88%, var(--body-bg) 12%) 0%,
-      color-mix(in srgb, var(--body-bg) 82%, var(--header-bg) 18%) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #020617 0%,
+    color-mix(in srgb, #1e293b 42%, #111827 58%) 100%
+  );
 }
 
 .homeCtaInner {
+  position: relative;
   max-width: 1180px;
   margin: auto;
-  padding: 2rem;
-  border-radius: 30px;
-  background:
-    linear-gradient(
-      135deg,
-      var(--services-cta-start) 0%,
-      var(--services-cta-mid) 52%,
-      var(--accent-dark) 100%
-    );
-  color: var(--services-text-contrast);
+  padding: 2.2rem 2rem;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #ffffff 0%, #fff7ed 40%, #fff1dc 100%);
+  color: #0f172a;
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) auto;
   gap: 2rem;
   align-items: center;
-  border: 1px solid var(--services-border-medium);
-  box-shadow: 0 28px 60px var(--services-shadow-cta);
+  border: 1px solid rgba(234, 88, 12, 0.15);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.homeCtaInner::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 220px;
+  background: linear-gradient(
+    180deg,
+    rgba(249, 115, 22, 0.18),
+    rgba(249, 115, 22, 0)
+  );
+  pointer-events: none;
 }
 
 .homeCtaCopy {
+  position: relative;
+  z-index: 1;
   max-width: 760px;
 }
 
 .homeCtaKicker {
   display: inline-block;
   margin-bottom: 0.9rem;
-  color: var(--services-text-contrast-accent);
-  font-size: 0.82rem;
-  font-weight: 700;
+  color: #c2410c;
+  font-size: 0.78rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
 }
 
 .homeCtaInner h2 {
   margin: 0;
-  color: var(--services-text-contrast);
+  color: #0f172a;
   font-size: clamp(1.9rem, 4vw, 3rem);
   line-height: 1.08;
 }
 
 .homeCtaInner p {
   margin-top: 0.95rem;
-  color: var(--services-text-contrast-muted);
+  color: #475569;
   font-size: 1rem;
   line-height: 1.72;
 }
 
 .homeCtaActions {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 0.85rem;
 }
@@ -484,19 +629,22 @@
   min-width: 12.5rem;
   min-height: 3.2rem;
   padding: 0.85rem 1.35rem;
-  background: var(--services-button-bg);
-  color: var(--services-button-text);
+  background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  color: #ffffff;
   border-radius: 14px;
   text-decoration: none;
   font-weight: 700;
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.16);
   transition:
     transform 0.25s ease,
-    background-color 0.25s ease;
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
 .homeCtaButton:hover {
   transform: translateY(-2px);
-  background: var(--services-button-hover);
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  box-shadow: 0 16px 28px rgba(17, 24, 39, 0.2);
 }
 
 @media (max-width: 980px) {

@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import founderImg from "../../assets/images/abhi.png";
+import cofounderImg from "../../assets/images/anand.png";
+import cofounderImg2 from "../../assets/images/shailesh.png";
 import {
   FiArrowRight,
   FiCheckCircle,
@@ -11,7 +14,6 @@ import {
 } from "react-icons/fi";
 
 import styles from "./About.module.css";
-import { owners } from "../../data/OWNER/Owners.data";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -74,14 +76,11 @@ const About = () => {
           Development • Training • Consultancy
         </span>
 
-        <h1>
-          Building software that businesses can actually rely on.
-        </h1>
+        <h1>Building software that businesses can actually rely on.</h1>
 
         <p>
-          From websites and platforms to scalable digital solutions —
-          we focus on clean execution, modern development, and
-          long-term usability.
+          From websites and platforms to scalable digital solutions — we focus
+          on clean execution, modern development, and long-term usability.
         </p>
 
         <div className={styles.heroActions}>
@@ -90,21 +89,66 @@ const About = () => {
             <FiArrowRight size={16} />
           </Link>
 
-          <Link to="/Services" className={styles.secondaryBtn}>
+          <Link to="/ourServices" className={styles.secondaryBtn}>
             Explore services
           </Link>
         </div>
       </motion.section>
 
-      {/* STATS */}
-      <motion.section className={styles.statsGrid} {...fadeUp(0.05)}>
-        {stats.map((item) => (
-          <div key={item.label} className={styles.statCard}>
-            <h3>{item.number}</h3>
-            <p>{item.label}</p>
-          </div>
-        ))}
-      </motion.section>
+      <div className={styles.founder}>
+        <motion.div className={styles.founderImage} {...fadeUp(0.05)}>
+          <img src={founderImg} alt="Abhimanyu Pandit" loading="lazy" />
+        </motion.div>
+
+        <motion.div className={styles.founderText} {...fadeUp(0.07)}>
+          <h2>Er. Abhimanyu Pandit</h2>
+
+          <span>Founder & Lead Engineer</span>
+
+          <p>
+            Abhimanyu is a software engineer with over 4 years of experience in
+            building web and mobile applications. He founded PSS to provide
+            practical solutions that are modern, reliable, and easy to maintain
+            over time.
+          </p>
+        </motion.div>
+      </div>
+      <div className={styles.cofounder}>
+        <motion.div className={styles.cofounderImage} {...fadeUp(0.05)}>
+          <img src={cofounderImg} alt="Anand Kumar" loading="lazy" />
+        </motion.div>
+
+        <motion.div className={styles.founderText} {...fadeUp(0.07)}>
+          <h2>Er. Anand Kumar</h2>
+
+          <span>Co-Founder & Head of Management</span>
+
+          <p>
+            Anand is a business strategist with over 5 years of experience in
+            managing projects and teams. He co-founded PSS to ensure that
+            clients receive clear communication, timely delivery, and
+            high-quality solutions.
+          </p>
+        </motion.div>
+      </div>
+      <div className={styles.cofounder2}>
+        <motion.div className={styles.cofounderImage2} {...fadeUp(0.05)}>
+          <img src={cofounderImg2} alt="Shailesh Kumar" loading="lazy" />
+        </motion.div>
+
+        <motion.div className={styles.founderText} {...fadeUp(0.07)}>
+          <h2>Er. Shailesh Pandit</h2>
+
+          <span>Co-Founder & AI & ML Engineer</span>
+
+          <p>
+            Shailesh is an AI and ML engineer with over 3 years of experience in
+            developing intelligent systems. He co-founded PSS to bring
+            innovative AI and ML solutions to businesses, ensuring they stay
+            ahead in the digital landscape.
+          </p>
+        </motion.div>
+      </div>
 
       {/* STORY + PROCESS */}
       <div className={styles.grid}>
@@ -115,9 +159,9 @@ const About = () => {
 
           <div className={styles.textStack}>
             <p>
-              Pandit Soft Solution (PSS) was founded with a simple idea —
-              build software properly and maintain honest communication
-              throughout the process.
+              Pandit Soft Solution (PSS) was founded with a simple idea — build
+              software properly and maintain honest communication throughout the
+              process.
             </p>
 
             <p>
@@ -126,9 +170,8 @@ const About = () => {
             </p>
 
             <p>
-              Instead of overcomplicating things, we work closely with
-              clients to understand real requirements and deliver
-              meaningful results.
+              Instead of overcomplicating things, we work closely with clients
+              to understand real requirements and deliver meaningful results.
             </p>
           </div>
         </motion.section>
@@ -180,55 +223,11 @@ const About = () => {
         </div>
       </motion.section>
 
-      {/* FOUNDERS */}
-      {/* <motion.section
-        className={styles.founderSection}
-        {...fadeUp(0.15)}
-      >
-        <div className={styles.sectionHead}>
-          <span className={styles.cardLabel}>Leadership</span>
-
-          <h2>Founder-led team with technical focus.</h2>
-
-          <p>
-            Every project is handled with direct involvement,
-            technical understanding, and attention to detail.
-          </p>
-        </div>
-
-        <div className={styles.teamGrid}>
-          {owners.map((owner, index) => (
-            <motion.article
-              key={owner.id}
-              className={styles.teamCard}
-              {...fadeUp(index * 0.06)}
-            >
-              <div className={styles.avatarWrap}>
-                <img
-                  src={owner.image}
-                  alt={owner.name}
-                  loading="lazy"
-                />
-              </div>
-
-              <div className={styles.teamInfo}>
-                <h3>{owner.name}</h3>
-
-                <span>{owner.role}</span>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-      </motion.section> */}
-
       {/* FOUNDER NOTE */}
-      <motion.section
-        className={styles.founderNote}
-        {...fadeUp(0.18)}
-      >
+      <motion.section className={styles.founderNote} {...fadeUp(0.18)}>
         <p className={styles.quote}>
-          “We started PSS with a simple goal —
-          build software properly and treat clients honestly.”
+          “We started PSS with a simple goal — build software properly and treat
+          clients honestly.”
         </p>
 
         <span>— Abhimanyu Pandit, Founder</span>
@@ -242,8 +241,8 @@ const About = () => {
           <h2>Have an idea or project in mind?</h2>
 
           <p>
-            We’d love to discuss your requirements and help
-            you build something meaningful.
+            We’d love to discuss your requirements and help you build something
+            meaningful.
           </p>
         </div>
 

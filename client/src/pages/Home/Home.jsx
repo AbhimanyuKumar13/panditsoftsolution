@@ -1,29 +1,50 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, useInView } from "framer-motion";
-import {
-  FiArrowRight,
-  FiGlobe,
-  FiLayout,
-  FiTrendingUp,
-} from "react-icons/fi";
+import { FiArrowRight, FiGlobe, FiLayout, FiTrendingUp } from "react-icons/fi";
 import styles from "./Home.module.css";
 import { points } from "../../data/Home/Whyus.data";
 import { projects } from "../../data/Home/Work.data";
+import { useLiveContentRefresh } from "../../utils/liveContent.js";
 
-const metrics = [
+const apiBase = import.meta.env.VITE_API_BASE_URL?.trim().replace(/\/$/, "");
+
+const manualReviews = [
   {
-    value: 2,
-    label: "Years of Experience",
+    id: "vs-enterprises",
+    name: "V S Enterprises",
+    badge: "ENTERPRISES",
+    meta: "1 review • 1 photo",
+    rating: 5,
+    timeAgo: "7 months ago",
+    avatar: "V.S",
+    text: "We had a great experience working with the Pandit soft solutions for the PREET DOORS website by VS Enterprises. The design is clean, professional, and perfectly represents our brand. The developer understood our requirements well and delivered the project on time. Highly recommended for business websites.",
   },
   {
-    value: 5,
-    label: "Clients Served",
+    id: "veer-abhishek",
+    name: "Veer Abhishek",
+    badge: "Local Guide",
+    meta: "9 reviews • 71 photos",
+    rating: 5,
+    timeAgo: "8 months ago",
+    avatar: "V",
+    text: "Congratulations to Pandit SoftSolution on the launch of your new startup! The creativity, professionalism, and dedication you bring to your work truly stand out. Wishing you great success and growth in the journey ahead.",
   },
   {
-    value: 10,
-    label: "Projects Delivered",
+    id: "adiyogi-construction",
+    name: "Adiyogi Construction",
+    badge: "Owner",
+    meta: "Labour & Painter Management",
+    rating: 5,
+    timeAgo: "Recently",
+    avatar: "A",
+    text: "Pandit Soft Solution built a highly practical system for our labour and painter management work. It made it much easier to assign tasks, track teams, and keep daily operations organized without confusion. The team was responsive, thoughtful, and understood our business needs from day one.",
   },
+];
+
+const initialMetrics = [
+  { id: "experience", value: 4, label: "Years of Experience", suffix: "+" },
+  { id: "clients", value: 20, label: "Clients Served", suffix: "+" },
+  { id: "projects", value: 30, label: "Projects Delivered", suffix: "+" },
 ];
 
 const iconMap = {
@@ -33,36 +54,10 @@ const iconMap = {
 };
 
 const StatItem = ({ value, label, suffix = "+" }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (!isInView) return undefined;
-
-    let frameId;
-    const duration = 1200;
-    const startTime = performance.now();
-
-    const animate = (now) => {
-      const progress = Math.min((now - startTime) / duration, 1);
-      const current = Math.floor(progress * value);
-      setCount(current);
-
-      if (progress < 1) {
-        frameId = requestAnimationFrame(animate);
-      }
-    };
-
-    frameId = requestAnimationFrame(animate);
-
-    return () => cancelAnimationFrame(frameId);
-  }, [isInView, value]);
-
   return (
-    <div ref={ref} className={styles.homeStatsItem}>
+    <div className={styles.homeStatsItem}>
       <span className={styles.homeStatsNumber}>
-        {count}
+        {value}
         {suffix}
       </span>
       <span className={styles.homeStatsLabel}>{label}</span>
@@ -71,15 +66,42 @@ const StatItem = ({ value, label, suffix = "+" }) => {
 };
 
 const Home = () => {
+  const [reviews, setReviews] = useState(manualReviews);
+  const [metrics, setMetrics] = useState(initialMetrics);
+
+  const refreshReviews = useCallback(async () => {
+    const response = await fetch(`${apiBase || ""}/api/home-reviews`, {
+      cache: "no-store",
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.error || "Unable to load homepage reviews.");
+    }
+    setReviews(data.reviews);
+  }, []);
+
+  useLiveContentRefresh("home-reviews", refreshReviews);
+
+  const refreshMetrics = useCallback(async () => {
+    const response = await fetch(`${apiBase || ""}/api/home-stats`, {
+      cache: "no-store",
+    });
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.error || "Unable to load homepage statistics.");
+    }
+    if (!Array.isArray(data.stats)) {
+      throw new Error("The homepage statistics response was invalid.");
+    }
+    setMetrics(data.stats);
+  }, []);
+
+  useLiveContentRefresh("home-stats", refreshMetrics);
+
   return (
     <>
       <section className={styles.homeHero}>
-        <motion.div
-          className={styles.homeHeroContent}
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
+        <div className={styles.homeHeroContent}>
           <h1>
             Professional <span>websites</span> and <br />
             <span>web apps</span> for growing businesses.
@@ -98,7 +120,7 @@ const Home = () => {
               View Projects
             </Link>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       <section className={styles.homeWhySection}>
@@ -108,28 +130,27 @@ const Home = () => {
           </header>
 
           <div className={styles.homeWhyTimeline}>
-            {points.map((item, i) => (
-              <motion.div
-                key={item.title}
-                className={styles.homeWhyItem}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-              >
+            {points.map((item) => (
+              <div key={item.title} className={styles.homeWhyItem}>
                 <div className={styles.homeWhyCard}>
                   <div className={styles.homeWhyInner}>
                     <div className={styles.homeWhyImageWrapper}>
-                      <img src={item.image} alt={item.title} />
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        width="150"
+                        height="150"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
-
                     <div className={styles.homeWhyContent}>
                       <h3>{item.title}</h3>
                       <p>{item.desc}</p>
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -147,17 +168,13 @@ const Home = () => {
           </header>
 
           <div className={styles.homeOfferList}>
-            {projects.map((project, i) => {
+            {projects.map((project) => {
               const Icon = iconMap[project.title] || FiLayout;
 
               return (
-                <motion.article
+                <article
                   key={project.title}
                   className={styles.homeOfferCard}
-                  initial={{ opacity: 0, y: 25 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.4, delay: i * 0.08 }}
                 >
                   <div className={styles.homeOfferTop}>
                     <div className={styles.homeOfferTopMeta}>
@@ -178,7 +195,7 @@ const Home = () => {
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                </motion.article>
+                </article>
               );
             })}
           </div>
@@ -195,33 +212,82 @@ const Home = () => {
       <section className={styles.homeStatsSection}>
         <div className={styles.homeStatsWrapper}>
           <div className={styles.homeStatsMetricGrid}>
-            {metrics.map((metric, i) => (
-              <motion.article
+            {metrics.map((metric) => (
+              <article
                 key={metric.label}
                 className={styles.homeStatsMetricCard}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
               >
                 <StatItem
                   value={metric.value}
                   label={metric.label}
-                  suffix="+"
+                  suffix={metric.suffix}
                 />
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
+      {reviews.length > 0 && (
+      <section className={styles.homeReviewsSection}>
+        <div className={styles.homeReviewsWrapper}>
+          <div className={styles.homeReviewsToolbar}>
+            <h2>Client Feedback</h2>
+          </div>
+
+          <div className={styles.homeReviewsList}>
+            {reviews.map((review, index) => (
+              <article
+                key={`${review.name}-${index}`}
+                className={styles.homeReviewCard}
+              >
+                <div className={styles.homeReviewHeader}>
+                  <div className={styles.homeReviewProfile}>
+                    <div className={styles.homeReviewAvatar}>
+                      {review.avatar}
+                    </div>
+                    <div className={styles.homeReviewIdentity}>
+                      <div className={styles.homeReviewNameRow}>
+                        <strong>{review.name}</strong>
+                      </div>
+                      <span>
+                        {review.badge} • {review.meta}
+                      </span>
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    className={styles.homeReviewMenu}
+                    aria-label="More review actions"
+                  >
+                    ⋮
+                  </button>
+                </div>
+
+                <div
+                  className={styles.homeReviewStars}
+                  aria-label={`${review.rating} out of 5 stars`}
+                >
+                  {Array.from({ length: review.rating }).map((_, starIndex) => (
+                    <span key={`${review.name}-star-${starIndex}`}>★</span>
+                  ))}
+                  <span className={styles.homeReviewTime}>
+                    {review.timeAgo}
+                  </span>
+                </div>
+
+                <p className={styles.homeReviewText}>{review.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      )}
+
       <section className={styles.homeCtaSection}>
-        <motion.div
+        <div
           className={styles.homeCtaInner}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
         >
           <div className={styles.homeCtaCopy}>
             <span className={styles.homeCtaKicker}>Ready To Talk</span>
@@ -237,7 +303,7 @@ const Home = () => {
               <FiArrowRight aria-hidden="true" />
             </Link>
           </div>
-        </motion.div>
+        </div>
       </section>
     </>
   );

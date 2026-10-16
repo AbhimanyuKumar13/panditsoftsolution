@@ -1,6 +1,6 @@
-.section {
+﻿.section {
   padding: 2rem 1.2rem 1.5rem;
-  background: var(--body-bg);
+  background: #020617;
 }
 
 .shell {
@@ -40,19 +40,19 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--services-accent-surface);
-  color: var(--accent-dark);
+  background: rgba(249, 115, 22, 0.14);
+  color: #EA580C;
 }
 
 .panelHeader h3 {
   margin: 0;
-  color: var(--text);
+  color: #ffffff;
   font-size: clamp(1.2rem, 2vw, 1.55rem);
 }
 
 .panelHeader p {
   margin: 0.55rem 0 0;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.7;
 }
 
@@ -63,8 +63,8 @@
   min-height: 2rem;
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
-  background: var(--services-accent-surface);
-  color: var(--accent-dark);
+  background: rgba(249, 115, 22, 0.14);
+  color: #EA580C;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -73,23 +73,23 @@
 
 .header h2 {
   margin: 0.95rem 0 0.7rem;
-  color: var(--text);
+  color: #ffffff;
   font-size: clamp(1.9rem, 4vw, 2.9rem);
   line-height: 1.08;
 }
 
 .header p {
   margin: 0;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.7;
 }
 
 .formCard,
 .resultCard {
   border-radius: 24px;
-  border: 1px solid var(--border);
-  background: var(--header-bg);
-  box-shadow: 0 16px 34px var(--services-shadow-soft);
+  border: 1px solid #334155;
+  background: #111827;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
 }
 
 .formCard {
@@ -108,7 +108,7 @@
 }
 
 .field label {
-  color: var(--text);
+  color: #ffffff;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -122,16 +122,16 @@
   gap: 0.7rem;
   padding: 0 0.95rem;
   border-radius: 16px;
-  background: var(--services-surface-soft);
-  border: 1px solid var(--services-border-soft);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.24);
 }
 
 .inputWrap:focus-within {
-  border-color: var(--services-border-hover);
+  border-color: #F97316;
 }
 
 .inputWrap svg {
-  color: var(--accent-dark);
+  color: #EA580C;
   flex-shrink: 0;
 }
 
@@ -140,12 +140,12 @@
   border: 0;
   outline: none;
   background: transparent;
-  color: var(--text);
+  color: #ffffff;
   font-size: 1rem;
 }
 
 .inputWrap input::placeholder {
-  color: var(--muted);
+  color: #cbd5e1;
 }
 
 .submitButton {
@@ -158,7 +158,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  background: var(--accent);
+  background: #F97316;
   color: #ffffff;
   font-size: 0.98rem;
   font-weight: 700;
@@ -176,18 +176,18 @@
 }
 
 .successCard {
-  border-color: var(--services-border-medium);
+  border-color: #475569;
 }
 
 .infoCard,
 .errorCard {
-  color: var(--text);
+  color: #ffffff;
 }
 
 .infoCard p,
 .errorCard p {
   margin: 0.5rem 0 0;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.65;
 }
 
@@ -195,7 +195,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  color: var(--text);
+  color: #ffffff;
 }
 
 .resultHeader svg {
@@ -212,13 +212,13 @@
 .detailBlock {
   padding: 0.95rem;
   border-radius: 18px;
-  background: var(--services-surface-soft);
-  border: 1px solid var(--services-border-soft);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.24);
 }
 
 .detailLabel {
   display: block;
-  color: var(--muted);
+  color: #cbd5e1;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -228,7 +228,7 @@
 .detailValue {
   display: block;
   margin-top: 0.35rem;
-  color: var(--text);
+  color: #ffffff;
   line-height: 1.5;
 }
 
@@ -251,3 +251,4 @@
     align-items: flex-start;
   }
 }
+

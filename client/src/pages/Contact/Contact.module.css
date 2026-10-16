@@ -1,4 +1,4 @@
-.page {
+﻿.page {
   max-width: 1100px;
   margin: 0 auto;
   padding: 56px 1.5rem 80px;
@@ -15,7 +15,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #F97316;
   margin-bottom: 12px;
 }
 
@@ -23,13 +23,13 @@
   font-size: clamp(1.9rem, 5vw, 3rem);
   font-weight: 500;
   line-height: 1.1;
-  color: var(--text);
+  color: #ffffff;
   margin-bottom: 14px;
 }
 
 .hero p {
   font-size: 1rem;
-  color: var(--muted);
+  color: #cbd5e1;
   max-width: 480px;
   margin: 0 auto;
   line-height: 1.7;
@@ -53,8 +53,8 @@
 .card,
 .waCard,
 .formCard {
-  background: var(--header-bg);
-  border: 1px solid var(--border-color);
+  background: #111827;
+  border: 1px solid #334155;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
@@ -68,13 +68,13 @@
 .formCard h2 {
   font-size: 1.15rem;
   font-weight: 600;
-  color: var(--text);
+  color: #ffffff;
   margin-bottom: 6px;
 }
 
 .formSub {
   font-size: 0.88rem;
-  color: var(--muted);
+  color: #cbd5e1;
   margin-bottom: 24px;
   line-height: 1.55;
 }
@@ -89,7 +89,7 @@
 .field label {
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--muted);
+  color: #cbd5e1;
   letter-spacing: 0.02em;
 }
 
@@ -99,9 +99,9 @@
   box-sizing: border-box;
   padding: 11px 12px;
   border-radius: 10px;
-  border: 1px solid var(--border-color);
-  background: var(--body-bg);
-  color: var(--text);
+  border: 1px solid #334155;
+  background: #020617;
+  color: #ffffff;
   font-size: 0.9rem;
   font-family: inherit;
   transition: all 0.2s ease;
@@ -110,8 +110,8 @@
 
 .field input:focus,
 .field textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
+  border-color: #F97316;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #F97316 15%, transparent);
 }
 
 .field textarea {
@@ -145,7 +145,7 @@
   padding: 13px;
   border-radius: 10px;
   border: none;
-  background: var(--accent);
+  background: #F97316;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
@@ -167,7 +167,7 @@
 .fallback {
   margin-top: 12px;
   font-size: 0.78rem;
-  color: var(--muted);
+  color: #cbd5e1;
   text-align: center;
   line-height: 1.5;
 }
@@ -200,13 +200,13 @@
 .waInfo h3 {
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--text);
+  color: #ffffff;
   margin-bottom: 2px;
 }
 
 .waInfo p {
   font-size: 0.8rem;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.4;
   word-break: break-word;
 }
@@ -244,7 +244,7 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #F97316;
   margin-bottom: 18px;
 }
 
@@ -265,8 +265,8 @@
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: color-mix(in srgb, var(--accent) 10%, transparent);
-  color: var(--accent);
+  background: color-mix(in srgb, #F97316 10%, transparent);
+  color: #F97316;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -282,12 +282,12 @@
 
 .contactLabel {
   font-size: 0.78rem;
-  color: var(--muted);
+  color: #cbd5e1;
   font-weight: 600;
 }
 
 .contactValue {
-  color: var(--text);
+  color: #ffffff;
   font-size: 0.9rem;
   text-decoration: none;
   line-height: 1.5;
@@ -295,7 +295,7 @@
 }
 
 .contactValue:hover {
-  color: var(--accent);
+  color: #F97316;
 }
 
 /* Steps */
@@ -315,8 +315,8 @@
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  background: color-mix(in srgb, var(--accent) 12%, transparent);
-  color: var(--accent);
+  background: color-mix(in srgb, #F97316 12%, transparent);
+  color: #F97316;
   font-size: 0.7rem;
   font-weight: 700;
   display: flex;
@@ -328,7 +328,7 @@
 
 .stepText {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.58;
   padding-top: 5px;
   word-break: break-word;
@@ -337,9 +337,9 @@
 .note {
   margin-top: 18px;
   padding-top: 16px;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid #334155;
   font-size: 0.82rem;
-  color: var(--muted);
+  color: #cbd5e1;
   line-height: 1.6;
 }
 

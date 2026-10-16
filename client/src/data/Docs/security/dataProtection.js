@@ -3,30 +3,53 @@ export const DataProtection = {
   updated: "January 2026",
   sections: [
     {
-      heading: "Scope",
+      heading: "Purpose",
       content: [
-        "This policy applies to employees, trainees, contractors, and applicable client data."
-      ]
+        "Pandit Soft Solution protects personal and business data collected through its website, services, training programs, and internal processes.",
+        "This policy explains how data is handled, stored, and protected in line with responsible business practices.",
+      ],
     },
     {
-      heading: "Data Classification",
+      heading: "Information Collected",
       content: [
-        "Data is classified as Public, Internal, Confidential, or Sensitive."
-      ]
+        "We may collect names, contact details, resume information, project requirements, billing information, and communication records.",
+        "Technical information such as IP address, browser type, device details, and usage logs may also be collected for security and service improvement.",
+      ],
     },
     {
-      heading: "Security Practices",
+      heading: "Use of Data",
       content: [
-        "Access is restricted on a need-to-know basis.",
-        "Encryption and secure authentication are applied where appropriate."
-      ]
+        "Data is used to respond to enquiries, deliver services, manage training and internships, maintain records, and support business operations.",
+        "We use data only for legitimate business purposes and do not process it beyond what is necessary.",
+      ],
     },
     {
-      heading: "Employee Responsibilities",
+      heading: "Data Security",
       content: [
-        "Employees must report suspected data incidents immediately.",
-        "Failure to comply may result in disciplinary action."
-      ]
-    }
-  ]
+        "Reasonable technical and organisational measures are used to protect data from unauthorised access, misuse, loss, or disclosure.",
+        "Access to sensitive data is restricted to authorised personnel based on role and business need.",
+      ],
+    },
+    {
+      heading: "Sharing and Disclosure",
+      content: [
+        "We do not share personal data unnecessarily with third parties.",
+        "Data may be shared with trusted service providers or authorities when required by law or legitimate operational needs.",
+      ],
+    },
+    {
+      heading: "Retention",
+      content: [
+        "Data is retained only as long as required for business purpose, legal compliance, or contractual obligations.",
+        "When no longer necessary, information is securely deleted or archived in accordance with policy.",
+      ],
+    },
+    {
+      heading: "Rights and Contact",
+      content: [
+        "Individuals may request access, correction, or clarification regarding their data where applicable.",
+        "For privacy or data protection concerns, contact panditsoftsolution@gmail.com.",
+      ],
+    },
+  ],
 };

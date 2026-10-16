@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom";
-import courses from "../../../../data/Training/trainingCourses.json";
 import CourseSnapshot from "../../../../components/Training/CourseSnapshot/CourseSnapshot";
 import CourseModules from "../../../../components/Training/CourseModules/CourseModules";
 import CourseCTA from "../../../../components/Training/CourseCTA/CourseCTA";
+import { useTrainingCourses } from "../../../../utils/useTrainingCourses.js";
 import styles from "./CourseDetail.module.css";
 
 const CourseDetail = () => {
   const { slug } = useParams();
+  const courses = useTrainingCourses();
   const course = courses.find((c) => c.slug === slug);
 
   if (!course) {

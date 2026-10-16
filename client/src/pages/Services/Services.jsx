@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useCallback, useRef, useState } from "react";
+import { Link, useOutletContext } from "react-router-dom";
 import {
   FiActivity,
+  FiArrowDown,
   FiArrowRight,
   FiCheckCircle,
   FiGlobe,
@@ -12,210 +12,297 @@ import {
   FiShoppingBag,
 } from "react-icons/fi";
 import styles from "./Services.module.css";
-import { services } from "../../data/Services/List.data";
-import { steps } from "../../data/Services/Process.data";
-import { techGroups } from "../../data/Services/Tech.data";
+import { useLiveContentRefresh } from "../../utils/liveContent.js";
 
 const iconMap = {
-  "Business Websites": FiGlobe,
-  "Custom Web Applications": FiMonitor,
-  "E-commerce Stores": FiShoppingBag,
-  "Frontend Development": FiLayout,
-  "Backend & API Development": FiServer,
-  "Maintenance & Feature Support": FiActivity,
+  FiGlobe,
+  FiMonitor,
+  FiShoppingBag,
+  FiLayout,
+  FiServer,
+  FiActivity,
 };
 
+const apiBase = import.meta.env.VITE_API_BASE_URL?.trim().replace(/\/$/, "");
+
 const Services = () => {
+  const { serviceOffer } = useOutletContext();
+  const [services, setServices] = useState([]);
+  const [packageCategories, setPackageCategories] = useState([]);
+  const [catalogLoading, setCatalogLoading] = useState(true);
+  const [catalogError, setCatalogError] = useState("");
+  const catalogLoaded = useRef(false);
+  const [activeCategoryId, setActiveCategoryId] = useState("");
+  const [activeTierId, setActiveTierId] = useState("");
+
+  const refreshCatalog = useCallback(async () => {
+    try {
+      const response = await fetch(`${apiBase || ""}/api/service-catalog`, {
+        cache: "no-store",
+      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || "Unable to load services and packages.");
+      }
+      if (!Array.isArray(data.services) || !Array.isArray(data.packageCategories)) {
+        throw new Error("The services catalog response was invalid.");
+      }
+      setServices(data.services);
+      setPackageCategories(data.packageCategories);
+      setCatalogError("");
+      catalogLoaded.current = true;
+    } catch (requestError) {
+      if (!catalogLoaded.current) setCatalogError(requestError.message);
+      throw requestError;
+    } finally {
+      setCatalogLoading(false);
+    }
+  }, []);
+
+  useLiveContentRefresh("service-catalog", refreshCatalog);
+
+  const activeCategory =
+    packageCategories.find((category) => category.id === activeCategoryId) ??
+    packageCategories[0];
+  const activeTier =
+    activeCategory?.tiers.find((tier) => tier.id === activeTierId) ??
+    activeCategory?.tiers[0];
+
+  const selectCategory = (category) => {
+    setActiveCategoryId(category.id);
+    setActiveTierId(category.tiers[0].id);
+  };
+
   return (
-    <>
-      <section className={styles.servicesHero}>
-        <div className={styles.servicesHeroBackdrop} />
-
-        <div className={styles.servicesHeroShell}>
-          <motion.div
-            className={styles.servicesHeroContent}
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, ease: "easeOut" }}
-          >
-            <span className={styles.servicesHeroEyebrow}>
-              Web Development Services
-            </span>
-            <h1>
-              Websites and apps built for{" "}
-              <span>clarity, speed, and reliability.</span>
-            </h1>
-            <p>
-              We build business websites, dashboards, web apps, and backend
-              systems with clear scope and reliable delivery.
-            </p>
-
-            <div className={styles.servicesHeroActions}>
-              <Link
-                to="/Contact"
-                className={styles.servicesHeroPrimaryAction}
-              >
-                Start a Project
-                <FiArrowRight aria-hidden="true" />
-              </Link>
-              <Link
-                to="/Projects"
-                className={styles.servicesHeroSecondaryAction}
-              >
-                View Projects
-              </Link>
+    <main className={styles.servicesPage}>
+      {serviceOffer && (
+        <section className={styles.offerBanner} aria-label="Current offer">
+          <div className={styles.offerBannerContent}>
+            <div>
+              {serviceOffer.label && (
+                <span className={styles.offerLabel}>{serviceOffer.label}</span>
+              )}
+              <h2>{serviceOffer.title}</h2>
+              <p>{serviceOffer.description}</p>
             </div>
-          </motion.div>
+            <Link to={serviceOffer.ctaLink} className={styles.offerButton}>
+              {serviceOffer.ctaText}
+              <FiArrowRight aria-hidden="true" />
+            </Link>
+          </div>
+        </section>
+      )}
+      <section className={styles.servicesHero}>
+        <div className={styles.servicesHeroContent}>
+          <span className={styles.servicesHeroEyebrow}>Our Services</span>
+          <h1>
+            Digital services shaped around <span>your business.</span>
+          </h1>
+          <p>
+            Explore what we build, compare package levels, and see what is
+            included before you get in touch.
+          </p>
+          <div className={styles.servicesHeroActions}>
+            <a href="#services" className={styles.servicesHeroPrimaryAction}>
+              Explore services
+              <FiArrowDown aria-hidden="true" />
+            </a>
+            <a href="#packages" className={styles.servicesHeroSecondaryAction}>
+              Compare packages
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className={styles.servicesListSection}>
-        <div className={styles.servicesListWrapper}>
-          <header className={styles.servicesListHeader}>
-            <span className={styles.servicesListKicker}>Service Areas</span>
-            <h2>Services built around clear business needs.</h2>
-            <p>
-              From websites to dashboards and ongoing support, we focus on work
-              that is practical and easy to maintain.
-            </p>
+      <section
+        className={styles.servicesSection}
+        id="services"
+        aria-labelledby="services-title"
+      >
+        <div className={styles.servicesSectionInner}>
+          <header className={styles.sectionHeader}>
+            <span className={styles.sectionEyebrow}>Services</span>
+            <h2 id="services-title">What we can help you build</h2>
           </header>
 
-          <div className={styles.servicesListGrid}>
-            {services.map((item, i) => (
-              <motion.div
-                key={item.title}
-                className={styles.servicesListCardShell}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ delay: i * 0.06, duration: 0.42 }}
-              >
-                <article className={styles.servicesListBlock}>
-                  <div className={styles.servicesListTop}>
-                    <span className={styles.servicesListIconWrap}>
-                      {React.createElement(iconMap[item.title], {
-                        "aria-hidden": true,
-                      })}
+          {catalogLoading && (
+            <p className={styles.catalogMessage}>Loading services…</p>
+          )}
+          {catalogError && (
+            <p className={styles.catalogError} role="alert">{catalogError}</p>
+          )}
+          {!catalogLoading && !catalogError && services.length === 0 && (
+            <p className={styles.catalogMessage}>
+              Services are being updated. Please check back soon.
+            </p>
+          )}
+          <div className={styles.servicesGrid}>
+            {services.map((item) => {
+              const Icon = iconMap[item.icon] || FiLayout;
+              const category = packageCategories.find(
+                (packageCategory) =>
+                  packageCategory.id === item.packageCategory,
+              );
+              if (!category) return null;
+
+              return (
+                <article key={item.id} className={styles.serviceCard}>
+                  <div className={styles.serviceCardTop}>
+                    <span className={styles.serviceIcon}>
+                      <Icon aria-hidden="true" />
                     </span>
-
-                    <div className={styles.servicesListCopy}>
-                      <h3>{item.title}</h3>
-                      <p>{item.desc}</p>
-                    </div>
+                    <h3>{item.title}</h3>
                   </div>
-
-                  <ul className={styles.servicesListPoints}>
+                  <p>{item.desc}</p>
+                  <ul className={styles.servicePoints}>
                     {item.points.map((point) => (
                       <li key={point}>{point}</li>
                     ))}
                   </ul>
+                  <a
+                    href="#packages"
+                    className={styles.servicePackageLink}
+                    onClick={() => selectCategory(category)}
+                  >
+                    View {category.label} packages
+                    <FiArrowRight aria-hidden="true" />
+                  </a>
                 </article>
-              </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className={styles.servicesProcessSection}>
-        <div className={styles.servicesProcessWrapper}>
-          <header className={styles.servicesProcessHeader}>
-            <span className={styles.servicesProcessKicker}>
-              Delivery Process
-            </span>
-            <h2>A clear process keeps the project on track.</h2>
+      <section
+        className={styles.packagesSection}
+        id="packages"
+        aria-labelledby="packages-title"
+      >
+        <div className={styles.packagesInner}>
+          <header className={styles.sectionHeader}>
+            <span className={styles.sectionEyebrow}>Packages & Pricing</span>
+            <h2 id="packages-title">Choose a package level</h2>
             <p>
-              Each stage is planned so progress, feedback, and delivery stay
-              clear.
+              Select a service, then choose a package to see its full
+              inclusions.
             </p>
           </header>
 
-          <div className={styles.servicesProcessPath}>
-            {steps.map((step, i) => (
-              <motion.article
-                key={step.title}
-                className={styles.servicesProcessNode}
-                initial={{ opacity: 0, y: 22 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ delay: i * 0.08, duration: 0.4 }}
-              >
-                <div className={styles.servicesProcessMarker}>
-                  {String(i + 1).padStart(2, "0")}
-                </div>
+          {packageCategories.length > 0 && (
+            <>
+              <div className={styles.categoryTabs} aria-label="Package categories">
+                {packageCategories.map((category) => (
+                  <button
+                    key={category.id}
+                    type="button"
+                    className={`${styles.categoryTab} ${
+                      activeCategory?.id === category.id
+                        ? styles.categoryTabActive
+                        : ""
+                    }`}
+                    aria-pressed={activeCategory?.id === category.id}
+                    onClick={() => selectCategory(category)}
+                  >
+                    {category.label}
+                  </button>
+                ))}
+              </div>
 
-                <div className={styles.servicesProcessContent}>
-                  <span className={styles.servicesProcessFocus}>
-                    {step.focus}
-                  </span>
-                  <h3>{step.title}</h3>
-                  <p>{step.desc}</p>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </section>
+              {activeCategory && activeTier && (
+                <>
+                  <div className={styles.packagesGrid}>
+                    {activeCategory.tiers.map((tier) => (
+                      <button
+                        key={tier.id}
+                        type="button"
+                        className={`${styles.packageCard} ${
+                          activeTier.id === tier.id
+                            ? styles.packageCardActive
+                            : ""
+                        }`}
+                        aria-pressed={activeTier.id === tier.id}
+                        aria-controls="package-details"
+                        onClick={() => setActiveTierId(tier.id)}
+                      >
+                        <span className={styles.packageName}>{tier.name}</span>
+                        <span className={styles.packagePriceLabel}>
+                          Indicative price range
+                        </span>
+                        <span className={styles.packagePrice}>{tier.price}</span>
+                        <span className={styles.packageSummary}>{tier.summary}</span>
+                        <span className={styles.packageSelect}>
+                          {activeTier.id === tier.id ? "Selected" : "View inclusions"}
+                          <FiArrowDown aria-hidden="true" />
+                        </span>
+                      </button>
+                    ))}
+                  </div>
 
-      <section className={styles.servicesTechSection}>
-        <div className={styles.servicesTechWrapper}>
-          <div className={styles.servicesTechHeader}>
-            <span className={styles.servicesTechKicker}>
-              Technology Choices
-            </span>
-            <h2>Technology should fit the product.</h2>
-            <p>
-              We choose tools based on project needs, performance, and
-              long-term support.
-            </p>
-          </div>
+                  <section
+                    className={styles.packageDetails}
+                    id="package-details"
+                    aria-labelledby="package-details-title"
+                    aria-live="polite"
+                  >
+                    <div className={styles.packageDetailsIntro}>
+                      <span className={styles.sectionEyebrow}>
+                        {activeCategory.label}
+                      </span>
+                      <h3 id="package-details-title">{activeTier.name} Package</h3>
+                      <p>{activeTier.summary}</p>
+                      <div className={styles.packageDetailsPrice}>
+                        {activeTier.price}
+                        <small> indicative</small>
+                      </div>
+                      <p className={styles.packageMeta}>
+                        Typical timeline: {activeTier.timeline}
+                      </p>
+                    </div>
 
-          <div className={styles.servicesTechList}>
-            {techGroups.map((group) => (
-              <article key={group.title} className={styles.servicesTechGroup}>
-                <div className={styles.servicesTechGroupHeader}>
-                  <h3>{group.title}</h3>
-                  <p>{group.desc}</p>
-                </div>
+                    <div className={styles.packageDetailsContent}>
+                      <h4>What&apos;s included</h4>
+                      <ul className={styles.packageFeatures}>
+                        {activeTier.features.map((feature) => (
+                          <li key={feature}>
+                            <FiCheckCircle aria-hidden="true" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <Link to="/Contact" className={styles.packageLink}>
+                        Get a quote for this package
+                        <FiArrowRight aria-hidden="true" />
+                      </Link>
+                    </div>
+                  </section>
+                </>
+              )}
+            </>
+          )}
 
-                <ul className={styles.servicesTechItems}>
-                  {group.items.map((item) => (
-                    <li key={item}>
-                      <FiCheckCircle aria-hidden="true" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
-          </div>
+          <p className={styles.pricingNote}>
+            Prices are indicative estimates in INR, not a fixed quote. Final
+            pricing depends on project scope, content, integrations, and
+            requirements. Domain, hosting, paid third-party services, gateway
+            charges, and applicable taxes may be additional.
+          </p>
         </div>
       </section>
 
       <section className={styles.servicesCtaSection}>
-        <motion.div
-          className={styles.servicesCtaInner}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-        >
-          <div className={styles.servicesCtaCopy}>
-            <span className={styles.servicesCtaKicker}>Ready To Build</span>
-            <h2>Need a website, web app, or system for your business?</h2>
-            <p>
-              Share your requirements and we will suggest the right approach.
-            </p>
+        <div className={styles.servicesCtaInner}>
+          <div>
+            <h2>Need a package tailored to your requirements?</h2>
+            <p>Tell us what you need and get a clear scope and quote.</p>
           </div>
-
-          <div className={styles.servicesCtaActions}>
-            <Link to="/Contact" className={styles.servicesCtaButton}>
-              Start a Project
-              <FiArrowRight aria-hidden="true" />
-            </Link>
-          </div>
-        </motion.div>
+          <Link to="/Contact" className={styles.servicesCtaButton}>
+            Get a project quote
+            <FiArrowRight aria-hidden="true" />
+          </Link>
+        </div>
       </section>
-    </>
+    </main>
   );
 };
 

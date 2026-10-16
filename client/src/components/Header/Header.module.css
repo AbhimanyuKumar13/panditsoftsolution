@@ -1,22 +1,22 @@
-/* ── Header ─────────────────────────────────────────────── */
+﻿/* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .header {
   position: sticky;
   top: 0;
   z-index: 50;
 
   /* frosted glass */
-  background: color-mix(in srgb, var(--header-bg) 72%, transparent);
+  background: color-mix(in srgb, #111827 72%, transparent);
   backdrop-filter: blur(18px) saturate(1.6);
   -webkit-backdrop-filter: blur(18px) saturate(1.6);
 
   /* subtle bottom rule that fades to nothing */
-  border-bottom: 1px solid color-mix(in srgb, var(--hover-bg) 60%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, #1e293b 60%, transparent);
   box-shadow:
-    0 1px 0 0 color-mix(in srgb, var(--hover-bg) 40%, transparent),
-    0 4px 24px -4px color-mix(in srgb, var(--text) 6%, transparent);
+    0 1px 0 0 color-mix(in srgb, #1e293b 40%, transparent),
+    0 4px 24px -4px color-mix(in srgb, #ffffff 6%, transparent);
 }
 
-/* ── Inner ──────────────────────────────────────────────── */
+/* â”€â”€ Inner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .inner {
   max-width: 1200px;
   margin: auto;
@@ -28,13 +28,13 @@
   gap: 1rem;
 }
 
-/* ── Brand ──────────────────────────────────────────────── */
+/* â”€â”€ Brand â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .brand {
   display: flex;
   align-items: center;
   gap: 0.55rem;
   text-decoration: none;
-  color: var(--text);
+  color: #ffffff;
   flex-shrink: 0;
 }
 
@@ -42,8 +42,8 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  object-fit: cover; 
-} 
+  object-fit: cover;
+}
 
 .name {
   font-size: 1.5rem;
@@ -51,15 +51,15 @@
   letter-spacing: -0.02em;
   background: linear-gradient(
     135deg,
-    var(--text) 0%,
-    color-mix(in srgb, var(--text) 65%, var(--accent)) 100%
+    #ffffff 0%,
+    color-mix(in srgb, #ffffff 65%, #f97316) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* ── Nav ────────────────────────────────────────────────── */
+/* â”€â”€ Nav â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .nav {
   display: flex;
   align-items: center;
@@ -69,7 +69,7 @@
 .nav a {
   position: relative;
   text-decoration: none;
-  color: var(--muted);
+  color: #cbd5e1;
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.01em;
@@ -89,29 +89,29 @@
   transform: translateX(-50%) scaleX(0);
   width: calc(100% - 1.3rem);
   height: 1.5px;
-  background: var(--accent);
+  background: #f97316;
   border-radius: 2px;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center;
 }
 
 .nav a:hover {
-  color: var(--text);
-  background: color-mix(in srgb, var(--hover-bg) 60%, transparent);
+  color: #ffffff;
+  background: color-mix(in srgb, #1e293b 60%, transparent);
 }
 
 .nav a:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 .active {
-  color: var(--text) !important; 
+  color: #ffffff !important;
 }
 
 .active::after {
   transform: translateX(-50%) scaleX(1) !important;
 }
 
-/* ── Right ──────────────────────────────────────────────── */
+/* â”€â”€ Right â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .right {
   display: flex;
   align-items: center;
@@ -119,16 +119,16 @@
   flex-shrink: 0;
 }
 
-/* ── Skill Lab CTA ──────────────────────────────────────── */
+/* â”€â”€ Skill Lab CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .floatingBtn {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  background: var(--accent);
+  background: #f97316;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
-  box-shadow: 0 2px 12px -2px color-mix(in srgb, var(--accent) 50%, transparent);
+  box-shadow: 0 2px 12px -2px color-mix(in srgb, #f97316 50%, transparent);
 }
 
 /* shimmer sweep */
@@ -148,7 +148,7 @@
 
 .floatingBtn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px -4px color-mix(in srgb, var(--accent) 65%, transparent);
+  box-shadow: 0 6px 20px -4px color-mix(in srgb, #f97316 65%, transparent);
 }
 
 .floatingBtn:hover::before {
@@ -181,7 +181,7 @@
   transform: translateX(3px);
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (max-width: 768px) {
   .nav {
     display: none;
@@ -191,7 +191,7 @@
     display: none;
   }
 
-  /* Mobile par sirf brand + ThemeToggle — centered brand */
+  /* Mobile par sirf brand centered rahega */
   .inner {
     justify-content: space-between;
   }

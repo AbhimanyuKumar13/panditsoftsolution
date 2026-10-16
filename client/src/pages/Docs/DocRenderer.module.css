@@ -1,16 +1,16 @@
-.doc {
+﻿.doc {
   font-family: "Inter", system-ui, sans-serif;
-  color: var(--text);
-  background: var(--body-bg);
+  color: #ffffff;
+  background: #020617;
 }
 
 /* ===== HEADER ===== */
 .header {
   position: sticky;
   top: 0;
-  background: var(--body-bg);
+  background: #020617;
   z-index: 5;
-  border-bottom: 1px solid var(--hover-bg);
+  border-bottom: 1px solid #1e293b;
 }
 
 .headerInner {
@@ -27,7 +27,7 @@
 
 .updated {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: #cbd5e1;
 }
 
 /* ===== BODY ===== */
@@ -52,7 +52,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--hover-bg);
+  background: #1e293b;
 }
 
 /* Section header */
@@ -67,7 +67,7 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: var(--accent);
+  background: #F97316;
   color: #000;
   font-size: 0.75rem;
   font-weight: 600;
@@ -86,7 +86,7 @@
 .content p {
   font-size: 0.95rem;
   line-height: 1.75;
-  color: var(--text);
+  color: #ffffff;
   margin-bottom: 0.9rem;
 }
 
@@ -113,3 +113,4 @@
     font-size: 0.9rem;
   }
 }
+
