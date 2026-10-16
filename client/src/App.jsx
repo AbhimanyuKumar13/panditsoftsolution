@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen.jsx";
 import Home from "./pages/Home/Home.jsx";
 import Layout from "./layout/Layout.jsx";
 
@@ -27,6 +28,8 @@ const Admin = lazy(() => import("./pages/Admin/Admin.jsx"));
 
 export const AppRoutes = () => {
   useEffect(() => {
+    document.getElementById("boot-loader")?.remove();
+
     let frameId = null;
 
     const updatePointerGlow = (event) => {
@@ -63,7 +66,7 @@ export const AppRoutes = () => {
     <>
       <ScrollToTop />
 
-      <Suspense fallback={<div role="status">Loading page...</div>}>
+      <Suspense fallback={<LoadingScreen label="Loading page..." />}>
         <Routes>
           <Route path="/admin" element={<Admin />} />
           <Route element={<Layout />}>

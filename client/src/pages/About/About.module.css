@@ -121,7 +121,7 @@
 .cofounderImage,
 .cofounderImage2 {
   position: relative;
-  min-height: 320px;
+  height: 320px;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, #F97316 40%, #334155);
   border-radius: 16px;
@@ -155,7 +155,6 @@
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 320px;
   object-fit: cover;
   object-position: center 25%;
   transition: transform 0.45s ease;
@@ -447,7 +446,21 @@
   .founder,
   .cofounder,
   .cofounder2 {
-    grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.15fr);
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .founderImage,
+  .cofounderImage,
+  .cofounderImage2 {
+    height: clamp(240px, 42vw, 320px);
+  }
+
+  .cofounderImage,
+  .cofounder .founderText,
+  .cofounderImage2,
+  .cofounder2 .founderText {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .heroActions {
@@ -489,19 +502,8 @@
 
   .founderImage,
   .cofounderImage,
-  .cofounderImage2,
-  .founderImage img,
-  .cofounderImage img,
-  .cofounderImage2 img {
-    min-height: 280px;
-  }
-
-  .cofounderImage,
-  .cofounder .founderText,
-  .cofounderImage2,
-  .cofounder2 .founderText {
-    grid-column: auto;
-    grid-row: auto;
+  .cofounderImage2 {
+    height: clamp(240px, 72vw, 300px);
   }
 
   .founderText {

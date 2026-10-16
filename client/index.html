@@ -5,9 +5,61 @@
     <link rel="icon" type="image/svg+xml" href="favicon.ico" style="border-radius: 50%;" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pandit Soft Solution</title>
+    <style>
+      html,
+      body {
+        min-height: 100%;
+        background: #060d1a;
+      }
+
+      #boot-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        background: linear-gradient(135deg, #060d1a 0%, #0f172a 52%, #111827 100%);
+        color: #cbd5e1;
+        font: 0.9rem system-ui, sans-serif;
+      }
+
+      #boot-loader span:first-child {
+        color: #f97316;
+        font-size: 2.75rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        animation: boot-blink 1.1s ease-in-out infinite;
+      }
+
+      @keyframes boot-blink {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        50% {
+          opacity: 0.35;
+          transform: scale(0.94);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #boot-loader span:first-child {
+          animation: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <div id="boot-loader" role="status" aria-live="polite">
+      <span>PSS</span>
+      <span>Loading...</span>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

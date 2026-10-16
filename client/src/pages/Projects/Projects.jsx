@@ -1,6 +1,7 @@
 import React, { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import LoadingScreen from "../../components/LoadingScreen/LoadingScreen.jsx";
 import styles from "./Projects.module.css";
 import { points } from "../../data/Projects/Approach.data";
 import { useLiveContentRefresh } from "../../utils/liveContent.js";
@@ -202,7 +203,10 @@ const Projects = () => {
         </div>
 
         <div className={styles.projectsListList}>
-          {filtered.map((project, i) => (
+          {loadingProjects && (
+            <LoadingScreen inline label="Loading projects..." />
+          )}
+          {!loadingProjects && filtered.map((project, i) => (
             <MotionDiv
               key={project.id}
               className={styles.projectsListCard}
@@ -289,7 +293,7 @@ const Projects = () => {
                 </div>
               )}
             </MotionDiv>
-          ))}
+            ))}
           {!loadingProjects && !projectsError && filtered.length === 0 && (
             <p className={styles.projectsApiError}>
               No published projects in this category yet.
